@@ -6,11 +6,11 @@ namespace Assets.Character.Scripts.AnimationManager
     {
         [SerializeField] Animator animator;
 
-        [SerializeField] private Player player;
-
+        [SerializeField] private PlayerMove player;
 
         private void Update()
         {
+            animator.SetBool("isMove", !player.hasMoved);
         }
 
     }
