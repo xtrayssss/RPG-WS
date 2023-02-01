@@ -3152,6 +3152,8 @@ GameObject:
   - component: {fileID: 1360107030}
   - component: {fileID: 1360107032}
   - component: {fileID: 1360107033}
+  - component: {fileID: 1360107034}
+  - component: {fileID: 1360107035}
   m_Layer: 0
   m_Name: Warrior_1
   m_TagString: Untagged
@@ -3188,7 +3190,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1360107026}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.876, y: 0.909, z: 0}
+  m_LocalPosition: {x: 3.586, y: 2.606, z: 0}
   m_LocalScale: {x: 0.0442966, y: 0.0442966, z: 0.0442966}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3269,6 +3271,8 @@ MonoBehaviour:
   player: {fileID: 1360107030}
   _rigidbody2D: {fileID: 1360107027}
   playerData: {fileID: 11400000, guid: 1a36a3f000de9ef4e81b64c126175687, type: 2}
+  tilemap: {fileID: 449996327}
+  <totalDelaySeconds>k__BackingField: 0.1
 --- !u!114 &1360107033
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3283,6 +3287,41 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 1891269780}
   player: {fileID: 1360107032}
+  totalTimerIdleState: 0.02
+--- !u!114 &1360107034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1360107026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ba1259b4121e3f489048a0086a8a594, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inputHandler: {fileID: 1360107030}
+  playerMove: {fileID: 1360107032}
+--- !u!95 &1360107035
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1360107026}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 05aa4effde273d64a8c344a9ee5dbfb3, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1643211804
 GameObject:
   m_ObjectHideFlags: 0
@@ -3430,7 +3469,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1750729737}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.876, y: 0.909, z: -10}
+  m_LocalPosition: {x: 3.586, y: 2.606, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3516,7 +3555,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1841469114}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.876, y: 0.909, z: -10}
+  m_LocalPosition: {x: 3.586, y: 2.606, z: -10}
   m_LocalScale: {x: 1, y: 0.5875, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
