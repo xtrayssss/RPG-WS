@@ -19,8 +19,8 @@ namespace Assets.Character.Scripts
 
         [field: SerializeField] private float totalDelaySeconds { get; set; } = 0.1f;
 
-        private const float directionPositionX = 0.72f;
-        private const float directionPositionY = 0.81f;
+        private const float DirectionPositionX = 0.72f;
+        private const float DirectionPositionY = 0.81f;
 
         private void Awake()
         {
@@ -76,13 +76,13 @@ namespace Assets.Character.Scripts
 
         private void SetDirection(ref Vector2 direction)
         {
-            if (player.moveInput.x < 0.0f) direction = new Vector2(-directionPositionX, 0);
+            if (player.moveInput.x < 0.0f) direction = new Vector2(-DirectionPositionX, 0);
 
-            if (player.moveInput.x > 0.0f) direction = new Vector2(directionPositionX, 0);
+            if (player.moveInput.x > 0.0f) direction = new Vector2(DirectionPositionX, 0);
 
-            if (player.moveInput.y < 0.0f) direction = new Vector2(0, -directionPositionY);
+            if (player.moveInput.y < 0.0f) direction = new Vector2(0, -DirectionPositionY);
 
-            if (player.moveInput.y > 0.0f) direction = new Vector2(0, directionPositionY);
+            if (player.moveInput.y > 0.0f) direction = new Vector2(0, DirectionPositionY);
         }
     }
 }

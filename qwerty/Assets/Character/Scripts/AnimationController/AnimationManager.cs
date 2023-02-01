@@ -13,9 +13,9 @@ namespace Assets.Character.Scripts.AnimationManager
         
         private float timerIdleState;
 
-        private const bool isMove = false;
+        private const bool IsMove = false;
 
-        private const string animBoolName = "isMove";
+        private const string AnimBoolName = "isMove";
 
         private void Awake()
         {
@@ -34,13 +34,13 @@ namespace Assets.Character.Scripts.AnimationManager
             }
             if (timerIdleState <= 0 && player.player.moveInput == Vector2.zero)
             {
-                animator.SetBool(animBoolName, isMove);
+                animator.SetBool(AnimBoolName, IsMove);
 
                 timerIdleState = totalTimerIdleState;
             }
             if (!player.hasMoved)
             {
-                animator.SetBool(animBoolName, !isMove);
+                animator.SetBool(AnimBoolName, !IsMove);
             }
         }
     }
