@@ -3151,6 +3151,7 @@ GameObject:
   - component: {fileID: 1360107031}
   - component: {fileID: 1360107030}
   - component: {fileID: 1360107032}
+  - component: {fileID: 1360107033}
   m_Layer: 0
   m_Name: Warrior_1
   m_TagString: Untagged
@@ -3187,7 +3188,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1360107026}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.07, y: -0.217, z: 0}
+  m_LocalPosition: {x: 1.876, y: 0.909, z: 0}
   m_LocalScale: {x: 0.0442966, y: 0.0442966, z: 0.0442966}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3268,6 +3269,20 @@ MonoBehaviour:
   player: {fileID: 1360107030}
   _rigidbody2D: {fileID: 1360107027}
   playerData: {fileID: 11400000, guid: 1a36a3f000de9ef4e81b64c126175687, type: 2}
+--- !u!114 &1360107033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1360107026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2ba89a036764b546b596e90a354d57e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 1891269780}
+  player: {fileID: 1360107032}
 --- !u!1 &1643211804
 GameObject:
   m_ObjectHideFlags: 0
@@ -3391,7 +3406,7 @@ MonoBehaviour:
   m_Follow: {fileID: 1360107029}
   m_Lens:
     FieldOfView: 60
-    OrthographicSize: 4.4976864
+    OrthographicSize: 1.03
     NearClipPlane: 0.3
     FarClipPlane: 1000
     Dutch: 0
@@ -3415,7 +3430,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1750729737}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.07, y: -0.217, z: -10}
+  m_LocalPosition: {x: 1.876, y: 0.909, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3477,7 +3492,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 4.4976864
+  orthographic size: 1.03
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -3501,7 +3516,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1841469114}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.07, y: -0.217, z: -10}
+  m_LocalPosition: {x: 1.876, y: 0.909, z: -10}
   m_LocalScale: {x: 1, y: 0.5875, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3618,7 +3633,7 @@ SpriteRenderer:
   m_SortingOrder: 10
   m_Sprite: {fileID: 21300000, guid: 092425ddd0925ca4196b4893c93c6b51, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 18.5625, y: 21.25}
