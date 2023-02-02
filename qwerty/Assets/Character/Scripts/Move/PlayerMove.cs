@@ -16,6 +16,7 @@ namespace Assets.Character.Scripts
         private Vector3 targetPosition;
 
         private float delaySeconds;
+        public Vector2 CurrentMoveInput { get; set; }
 
         [field: SerializeField] private float totalDelaySeconds { get; set; } = 0.1f;
 
@@ -46,6 +47,8 @@ namespace Assets.Character.Scripts
         {
             if (hasMoved && player.moveInput != Vector2.zero)
             {
+                CurrentMoveInput = player.moveInput;
+
                 SetDirection(ref direction);
                 hasMoved = false;
                 Vector3 directionMove = new Vector3(direction.x, direction.y, 0);

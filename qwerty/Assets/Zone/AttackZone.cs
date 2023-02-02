@@ -1,16 +1,24 @@
-using System.Collections;
-using System.Collections.Generic;
+using Assets.Zone.BaseZone;
 using UnityEngine;
+using System;
 
-public class AttackZone : MonoBehaviour
+namespace Assets.Zone.AttackZone
 {
-    [SerializeField] private Rigidbody2D _rigidbody2D;
-    void OnTriggerEnter2D(Collider2D other)
+    public class AttackZone : BaseZone.BaseZone
     {
-        if (other.gameObject.name == "Warrior_1")
+        protected override void SomethingAction(Func<bool, bool> action, bool isEnter)
         {
-            Debug.Log("collsion");
-            _rigidbody2D.velocity = Vector2.zero;
+            base.SomethingAction(baseEntity.CheckEnterPlayerInAttackZone, isEnter);
         }
+        protected override void OnTriggerEnter2D(Collider2D collision)
+        {
+            base.OnTriggerEnter2D(collision);
+        }
+
+        protected override void OnTriggerExit2D(Collider2D collision)
+        {
+            base.OnTriggerExit2D(collision);
+        }
+
     }
 }
