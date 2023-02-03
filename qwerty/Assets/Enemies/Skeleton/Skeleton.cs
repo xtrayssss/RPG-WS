@@ -7,10 +7,7 @@ public class Skeleton : BaseEntity
     {
         base.Attack();
     }
-    protected override void FixedUpdate()
-    {
-        base.FixedUpdate();
-    }
+   
     protected override void Update()
     {
         base.Update();
@@ -33,5 +30,9 @@ public class Skeleton : BaseEntity
     protected override void Move()
     {
         base.Move();
+    }
+    protected override void Awake()
+    {
+        base.Awake();
     }
 }

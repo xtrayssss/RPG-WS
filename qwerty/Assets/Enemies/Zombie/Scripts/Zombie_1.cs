@@ -14,10 +14,7 @@ namespace Assets.Enemies.Zombie
             base.Death();
         }
 
-        protected override void FixedUpdate()
-        {
-            base.FixedUpdate();
-        }
+        
 
         protected override void Hurt()
         {

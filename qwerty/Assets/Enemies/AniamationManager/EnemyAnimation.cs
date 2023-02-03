@@ -4,7 +4,7 @@ namespace Assets.Enemies.AniamationManager
 {
     public class EnemyAnimation : MonoBehaviour
     {
-         private Animator _animator;
+        private Animator _animator;
 
         private void Awake()
         {

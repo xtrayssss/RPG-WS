@@ -16,3 +16,4 @@ MonoBehaviour:
   damage: 3
   health: 30
   isEnterAgroZone: 0
+  isEnterAttackZone: 0

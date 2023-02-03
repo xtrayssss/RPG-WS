@@ -1,5 +1,6 @@
 using UnityEngine;
 using Assets.Enemies.AniamationManager;
+using Assets.Character.Scripts;
 
 namespace Assets.Enemies.BaseEntity
 {
@@ -8,43 +9,46 @@ namespace Assets.Enemies.BaseEntity
         protected virtual void Awake()
         {
             _animation = GetComponent<EnemyAnimation>();
+            targetPosition = transform.position;
         }
         protected virtual void Update()
         {
             SwitcherState();
             Debug.Log(currentState);
         }
-        protected virtual void FixedUpdate()
-        {
-            if (currentState == State.Move)
-            {
-                Move();
-            }
-        }
+        //protected virtual void FixedUpdate()
+        //{
+        //    if (currentState == State.Move)
+        //    {
+        //        Move();
+        //    }
+        //}
         private enum State
         {
-            Idle,
+            Idle,   
             Move,
             Attack,
             Hurt,
             Death,
         }
+        private State currentState = State.Idle;
 
         [SerializeField] protected EnemyData enemyData;
         [SerializeField] protected PlayerInputHandler player;
         [SerializeField] protected Rigidbody2D _rigidbody2D;
-
+        [SerializeField] protected PlayerMove playerMove;
+        
+        [SerializeField] protected float timerStopAfterMove;
+        [SerializeField] protected float totalStopAfterMove;
+        protected bool hasMoved = true;
         protected AniamationManager.EnemyAnimation _animation;
-        
-        [SerializeField] protected float timer;
-
-        private State currentState = State.Idle;
-        
         protected bool isIdle = false;
         protected bool isMove = false;
         protected bool isAttack = false;
         
         protected bool facingRight;
+
+        private Vector2 targetPosition;
 
         protected void SwitcherState()
         {
@@ -62,6 +66,9 @@ namespace Assets.Enemies.BaseEntity
                 case State.Death:
                     Death();
                     break;
+                case State.Move:
+                    Move();
+                    break;
                 default:
                     break;
             }
@@ -69,28 +76,48 @@ namespace Assets.Enemies.BaseEntity
         protected virtual void Idle()
         {
             _animation.IdleAnimation();
-
+            timerStopAfterMove = 0;
             if (enemyData.IsEnterAgroZone)
             {
                 currentState = State.Move;
             }
+            
         }
         protected virtual void Move()
         {
-            _animation.MoveAnimation();
-
-            DirectionMove();
-            
-            FlipEnemy();
-            
             if (!enemyData.IsEnterAgroZone)
             {
                 currentState = State.Idle;
             }
-            if (enemyData.IsEnterAttackZone)
+            if (enemyData.IsEnterAttackZone && (Vector2)transform.position == targetPosition)
             {
-                currentState = State.Attack;
+                 currentState = State.Attack;
             }
+
+            if ((Vector2)transform.position == targetPosition)
+            {
+                timerStopAfterMove -= Time.deltaTime;
+            }
+
+            if (timerStopAfterMove <= 0)
+            {
+                targetPosition = (Vector2)transform.position + DirectionMove();
+                timerStopAfterMove = totalStopAfterMove;
+            }
+            if (targetPosition != (Vector2)transform.position)
+            {
+                StepOnNextTile();
+            }
+            
+            _animation.MoveAnimation();
+            
+            
+            FlipEnemy();
+
+            //if (enemyData.IsEnterAttackZone)
+            //{
+            //    currentState = State.Attack;
+            //}
         }
         protected virtual void Attack()
         {
@@ -130,57 +157,46 @@ namespace Assets.Enemies.BaseEntity
         }
         #endregion
 
-        protected void DirectionMove()
+        #region StepOnNextTile
+        protected void StepOnNextTile()
+        {
+             transform.position = Vector2.MoveTowards(
+                 transform.position, 
+                 targetPosition, 
+                 2 * Time.deltaTime);
+        }
+        #endregion
+
+        #region DirectionMove
+        private Vector2 DirectionMove()
         {
             Vector2 direction = player.transform.position - transform.position;
-            
+           
             direction = direction.normalized;
+            Debug.Log(direction);
             
-            if (direction.x < 0.0f)
+            if (direction.x < 0.0f && playerMove.CurrentMoveInput.y == 0.0f)
             {
-                timer -= Time.deltaTime;
-
-                if (timer <= 0)
-                {
-                    _rigidbody2D.position += SetDirection(-0.72f, 0);
-                    timer = 1;
-                }
+                return new Vector2(-0.72f,0);
             }
-            if (direction.x > 0.0f)
+            else if (direction.x > 0.0f && playerMove.CurrentMoveInput.y == 0.0f)
             {
-                timer -= Time.deltaTime;
-
-                if (timer <= 0)
-                {
-                    _rigidbody2D.position += SetDirection(0.72f, 0);
-                    timer = 1;
-                }
+                return new Vector2(0.72f, 0);
             }
-            if (direction.y < 0.0f)
+            else if (direction.y > 0.0f && playerMove.CurrentMoveInput.y != 0.0f)
             {
-                timer -= Time.deltaTime;
-
-                if (timer <= 0)
-                {
-                    _rigidbody2D.position += SetDirection(0, -0.81f);
-                    timer = 1;
-                }
+                return new Vector2(0, 0.81f);
             }
-            if (direction.y > 0.0f)
+            else if (direction.y < 0.0f && playerMove.CurrentMoveInput.y != 0.0f)
             {
-                timer -= Time.deltaTime;
-
-                if (timer <= 0)
-                {
-                    _rigidbody2D.position += SetDirection(0, 0.81f);
-                    timer = 1;
-                }
+                return new Vector2(0, -0.81f);
             }
-            if (!enemyData.IsEnterAgroZone)
+            else
             {
-                currentState = State.Idle;
+                return new Vector2(0f, 0f);
             }
         }
+        #endregion
 
         #region SetDirection
         protected Vector2 SetDirection(float x, float y)
