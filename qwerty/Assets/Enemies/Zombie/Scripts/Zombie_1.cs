@@ -4,17 +4,20 @@ namespace Assets.Enemies.Zombie
 {
     public class Zombie_1 : BaseEntity.BaseEntity
     {
+        Behavior.EnemyBehavior enemyBehavior;
+        protected override void Awake()
+        {
+            base.Awake();
+        }
         protected override void Attack()
         {
             base.Attack();
         }
 
-        protected override void Death()
+        protected override void DieEnemy()
         {
-            base.Death();
+            
         }
-
-        
 
         protected override void Hurt()
         {

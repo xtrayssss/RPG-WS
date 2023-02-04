@@ -12,9 +12,9 @@ public class Skeleton : BaseEntity
     {
         base.Update();
     }
-    protected override void Death()
+    protected override void DieEnemy()
     {
-        base.Death();
+        base.DieEnemy();
     }
 
     protected override void Hurt()

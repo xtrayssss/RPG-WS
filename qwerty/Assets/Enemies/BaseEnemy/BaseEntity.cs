@@ -1,20 +1,30 @@
 using UnityEngine;
 using Assets.Enemies.AniamationManager;
 using Assets.Character.Scripts;
+using Unity.VisualScripting;
+using Assets.Interfaces;
+using UnityEngine.Tilemaps;
+using System.Collections.Generic;
 
 namespace Assets.Enemies.BaseEntity
 {
-    public abstract class BaseEntity : MonoBehaviour
+    public abstract class BaseEntity : MonoBehaviour, IDamagable, IDying
     {
         protected virtual void Awake()
         {
+
+            transform.position = bridgeTileMap.WorldToCell(transform.position);
+            playerMove = new PlayerMove();
             _animation = GetComponent<EnemyAnimation>();
             targetPosition = transform.position;
+            
+            enemyData.IsEnterAgroZone = false;
+            enemyData.IsEnterAttackZone = false;
         }
         protected virtual void Update()
         {
             SwitcherState();
-            Debug.Log(currentState);
+            //Debug.Log(currentState);
         }
         //protected virtual void FixedUpdate()
         //{
@@ -23,20 +33,13 @@ namespace Assets.Enemies.BaseEntity
         //        Move();
         //    }
         //}
-        private enum State
-        {
-            Idle,   
-            Move,
-            Attack,
-            Hurt,
-            Death,
-        }
+
         private State currentState = State.Idle;
 
         [SerializeField] protected EnemyData enemyData;
         [SerializeField] protected PlayerInputHandler player;
         [SerializeField] protected Rigidbody2D _rigidbody2D;
-        [SerializeField] protected PlayerMove playerMove;
+         protected PlayerMove playerMove;
         
         [SerializeField] protected float timerStopAfterMove;
         [SerializeField] protected float totalStopAfterMove;
@@ -49,7 +52,17 @@ namespace Assets.Enemies.BaseEntity
         protected bool facingRight;
 
         private Vector2 targetPosition;
+        private Vector3Int targetPositionInt;
 
+        private bool isIdleAnim;
+
+        [SerializeField] private Tilemap groundTileMap;
+        [SerializeField] private Tilemap bridgeTileMap;
+        
+        [SerializeField] private GameObject prefabGrave;
+
+        [HideInInspector] public List<Collider2D> hittObjects = new List<Collider2D>();
+        
         protected void SwitcherState()
         {
             switch (currentState)
@@ -64,7 +77,7 @@ namespace Assets.Enemies.BaseEntity
                     Hurt();
                     break;
                 case State.Death:
-                    Death();
+                    DieEnemy();
                     break;
                 case State.Move:
                     Move();
@@ -77,13 +90,42 @@ namespace Assets.Enemies.BaseEntity
         {
             _animation.IdleAnimation();
             timerStopAfterMove = 0;
+            
             if (enemyData.IsEnterAgroZone)
             {
                 currentState = State.Move;
             }
-            
         }
+
         protected virtual void Move()
+        {
+            // enemyMove.CheckNextState(targetPosition, currentState, State.Idle, State.Attack);
+
+            //enemyMove.TimerTick(isIdleAnim, targetPosition, timerStopAfterMove, totalStopAfterMove);
+
+            CheckNextState();
+
+            TimerTick();
+
+            if (targetPosition != (Vector2)transform.position)
+            {
+               StepOnNextTile(targetPosition);
+            }
+            if (!isIdleAnim)
+            {
+                _animation.MoveAnimation();
+            }
+            if (isIdleAnim)
+            {
+                _animation.IdleAnimation();
+            }           
+            
+            FlipEnemy();
+        }
+
+
+        #region CheckNextState
+        private void CheckNextState()
         {
             if (!enemyData.IsEnterAgroZone)
             {
@@ -91,37 +133,44 @@ namespace Assets.Enemies.BaseEntity
             }
             if (enemyData.IsEnterAttackZone && (Vector2)transform.position == targetPosition)
             {
-                 currentState = State.Attack;
+                currentState = State.Attack;
             }
+        }
+        #endregion
 
+        #region TimerTick
+        private void TimerTick()
+        {
             if ((Vector2)transform.position == targetPosition)
             {
                 timerStopAfterMove -= Time.deltaTime;
+                isIdleAnim = true;
             }
 
             if (timerStopAfterMove <= 0)
             {
                 targetPosition = (Vector2)transform.position + DirectionMove();
-                timerStopAfterMove = totalStopAfterMove;
-            }
-            if (targetPosition != (Vector2)transform.position)
-            {
-                StepOnNextTile();
-            }
-            
-            _animation.MoveAnimation();
-            
-            
-            FlipEnemy();
 
-            //if (enemyData.IsEnterAttackZone)
-            //{
-            //    currentState = State.Attack;
-            //}
+                targetPositionInt = groundTileMap.WorldToCell(new Vector3(targetPosition.x, targetPosition.y, 1));
+
+                if (!groundTileMap.HasTile(targetPositionInt) && !bridgeTileMap.HasTile(targetPositionInt))
+                {
+                    targetPosition = transform.position;
+                }
+
+                timerStopAfterMove = totalStopAfterMove;
+
+                isIdleAnim = false;
+            }
         }
+        #endregion
+
+        #region Attack
         protected virtual void Attack()
         {
             _animation.AttackAnimation();
+            
+            FlipEnemy();
 
             if (!enemyData.IsEnterAttackZone && enemyData.IsEnterAgroZone)
             {
@@ -132,15 +181,19 @@ namespace Assets.Enemies.BaseEntity
                 currentState = State.Idle;
             }
         }
+        #endregion
 
         protected virtual void Hurt()
         {
-            
+            if (CheckDeath())
+            {
+                currentState = State.Death;
+            }
         }
 
-        protected virtual void Death()
+        protected virtual void DieEnemy()
         {
-            
+            Death(0);
         }
 
         #region CheckEnterPlayerInAgroZone
@@ -156,55 +209,7 @@ namespace Assets.Enemies.BaseEntity
             return enemyData.IsEnterAttackZone = isEnter;
         }
         #endregion
-
-        #region StepOnNextTile
-        protected void StepOnNextTile()
-        {
-             transform.position = Vector2.MoveTowards(
-                 transform.position, 
-                 targetPosition, 
-                 2 * Time.deltaTime);
-        }
-        #endregion
-
-        #region DirectionMove
-        private Vector2 DirectionMove()
-        {
-            Vector2 direction = player.transform.position - transform.position;
-           
-            direction = direction.normalized;
-            Debug.Log(direction);
-            
-            if (direction.x < 0.0f && playerMove.CurrentMoveInput.y == 0.0f)
-            {
-                return new Vector2(-0.72f,0);
-            }
-            else if (direction.x > 0.0f && playerMove.CurrentMoveInput.y == 0.0f)
-            {
-                return new Vector2(0.72f, 0);
-            }
-            else if (direction.y > 0.0f && playerMove.CurrentMoveInput.y != 0.0f)
-            {
-                return new Vector2(0, 0.81f);
-            }
-            else if (direction.y < 0.0f && playerMove.CurrentMoveInput.y != 0.0f)
-            {
-                return new Vector2(0, -0.81f);
-            }
-            else
-            {
-                return new Vector2(0f, 0f);
-            }
-        }
-        #endregion
-
-        #region SetDirection
-        protected Vector2 SetDirection(float x, float y)
-        {
-            return new Vector2(x, y);
-        }
-        #endregion
-
+       
         #region Flip
         protected void Flip()
         {
@@ -221,6 +226,72 @@ namespace Assets.Enemies.BaseEntity
             if (player.transform.position.x > transform.position.x && !facingRight)
                 Flip();
         }
+
         #endregion
+
+        #region AcceptDamage
+        public void AcceptDamage(int damage)
+        {
+            enemyData.Health -= damage;
+        }
+        #endregion
+
+        #region TakeDamage
+        public void TakeDamage()
+        {
+            foreach (var item in hittObjects)
+            {
+                var hit = item.GetComponent<IDamagable>();
+
+                hit?.AcceptDamage(enemyData.Damage);
+            }
+        }
+        #endregion
+
+        public void Death(float destroyTime)
+        {
+            Instantiate(prefabGrave, transform.position, Quaternion.identity);
+            Destroy(this, destroyTime);
+            Destroy(gameObject, destroyTime);
+        }
+        private bool CheckDeath()
+        {
+            return enemyData.Health <= 0;
+        }
+        public Vector2 DirectionMove()
+        {
+            Vector2 direction = player.transform.position - transform.position;
+
+            direction = direction.normalized;
+            Debug.Log(direction);
+
+            if (direction.x < 0.0f && playerMove.CurrentMoveInput.y == 0.0f)
+            {
+                return new Vector2(-0.72f, 0);
+            }
+            else if (direction.x > 0.0f && playerMove.CurrentMoveInput.y == 0.0f)
+            {
+                return new Vector2(0.72f, 0);
+            }
+            else if (direction.y > 0.0f && playerMove.CurrentMoveInput.y != 0.0f)
+            {
+                return new Vector2(0, 0.81f + 0.405f);
+            }
+            else if (direction.y < 0.0f && playerMove.CurrentMoveInput.y != 0.0f)
+            {
+                return new Vector2(0, -(0.81f + 0.405f));
+            }
+            else
+            {
+                return new Vector2(0f, 0f);
+            }
+        }
+        public void StepOnNextTile(Vector2 target)
+        {
+            transform.position = Vector2.MoveTowards(
+                transform.position,
+                target,
+                2 * Time.deltaTime);
+        }
     }
 }
