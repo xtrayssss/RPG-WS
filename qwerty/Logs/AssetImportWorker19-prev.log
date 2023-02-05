@@ -1,0 +1,397 @@
+Using pre-set license
+Built from '2021.3/staging' branch; Version is '2021.3.9f1 (ad3870b89536) revision 11352176'; Using compiler version '192829333'; Build Type 'Release'
+OS: 'Windows 10  (10.0.19044) 64bit Professional' Language: 'ru' Physical Memory: 7561 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
+
+COMMAND LINE ARGUMENTS:
+D:\games\Unity\Unity Files (Dont Touch)\2021.3.9f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker19
+-projectPath
+D:/games/UnityRepository/AS/RPG-WS/qwerty
+-logFile
+Logs/AssetImportWorker19.log
+-srvPort
+58351
+Successfully changed project path to: D:/games/UnityRepository/AS/RPG-WS/qwerty
+D:/games/UnityRepository/AS/RPG-WS/qwerty
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Refreshing native plugins compatible for Editor in 134.40 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2021.3.9f1 (ad3870b89536)
+[Subsystems] Discovering subsystems at path D:/games/Unity/Unity Files (Dont Touch)/2021.3.9f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path D:/games/UnityRepository/AS/RPG-WS/qwerty/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: AMD Radeon (TM) Graphics (ID=0x15e7)
+    Vendor:   ATI
+    VRAM:     3780 MB
+    Driver:   31.0.12018.5
+Initialize mono
+Mono path[0] = 'D:/games/Unity/Unity Files (Dont Touch)/2021.3.9f1/Editor/Data/Managed'
+Mono path[1] = 'D:/games/Unity/Unity Files (Dont Touch)/2021.3.9f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'D:/games/Unity/Unity Files (Dont Touch)/2021.3.9f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56504
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: D:/games/Unity/Unity Files (Dont Touch)/2021.3.9f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: D:/games/Unity/Unity Files (Dont Touch)/2021.3.9f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
+Register platform support module: D:/games/Unity/Unity Files (Dont Touch)/2021.3.9f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.004210 seconds.
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 157.07 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.689 seconds
+Domain Reload Profiling:
+	ReloadAssembly (690ms)
+		BeginReloadAssembly (64ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (0ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (1ms)
+		EndReloadAssembly (539ms)
+			LoadAssemblies (64ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (92ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (22ms)
+			SetupLoadedEditorAssemblies (380ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (47ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (157ms)
+				BeforeProcessingInitializeOnLoad (1ms)
+				ProcessInitializeOnLoadAttributes (110ms)
+				ProcessInitializeOnLoadMethodAttributes (64ms)
+				AfterProcessingInitializeOnLoad (0ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (0ms)
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.006585 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\games\UnityRepository\AS\RPG-WS\qwerty\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\games\UnityRepository\AS\RPG-WS\qwerty\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 103.35 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.303 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1304ms)
+		BeginReloadAssembly (112ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (6ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (21ms)
+		EndReloadAssembly (1097ms)
+			LoadAssemblies (145ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (266ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (62ms)
+			SetupLoadedEditorAssemblies (591ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (12ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (103ms)
+				BeforeProcessingInitializeOnLoad (92ms)
+				ProcessInitializeOnLoadAttributes (341ms)
+				ProcessInitializeOnLoadMethodAttributes (40ms)
+				AfterProcessingInitializeOnLoad (3ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (5ms)
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
+Refreshing native plugins compatible for Editor in 1.43 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4647 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 54 unused Assets / (128.3 KB). Loaded Objects now: 5106.
+Memory consumption went from 174.9 MB to 174.8 MB.
+Total: 6.635200 ms (FindLiveObjects: 0.404000 ms CreateObjectMapping: 0.352700 ms MarkObjects: 5.740800 ms  DeleteObjects: 0.136700 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 16837.209070 seconds.
+  path: Assets/Enemies/Skeleton/Sprites/Idle/1_animation_idle_008.png
+  artifactKey: Guid(00ce632ea459b494aa289db18c44cb6c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Enemies/Skeleton/Sprites/Idle/1_animation_idle_008.png using Guid(00ce632ea459b494aa289db18c44cb6c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b7b49a42fc09fc8c13fafd0363379e0a') in 0.155409 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 9.904937 seconds.
+  path: Assets/Enemies/Skeleton/Sprites/Idle/1_animation_idle_010.png
+  artifactKey: Guid(3fdfe7668b7e9fc408396d9485d1bb0d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Enemies/Skeleton/Sprites/Idle/1_animation_idle_010.png using Guid(3fdfe7668b7e9fc408396d9485d1bb0d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6d185be06a8dd420310ef7fb011d3891') in 0.017251 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.028596 seconds.
+  path: Assets/Enemies/Skeleton/Sprites/Idle/1_animation_idle_006.png
+  artifactKey: Guid(7c4c0a92c126ecf4096ba0fb62de889c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Enemies/Skeleton/Sprites/Idle/1_animation_idle_006.png using Guid(7c4c0a92c126ecf4096ba0fb62de889c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fde1970f280600ae1301bb1249205390') in 0.015726 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.205639 seconds.
+  path: Assets/Enemies/Skeleton/Sprites/Idle/1_animation_idle_002.png
+  artifactKey: Guid(fa04541f41b47be4ab0835ef9a55dbe3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Enemies/Skeleton/Sprites/Idle/1_animation_idle_002.png using Guid(fa04541f41b47be4ab0835ef9a55dbe3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '18408c9244aa83918d91a44be3a408dd') in 0.018680 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 31.413911 seconds.
+  path: Assets/Enemies/Skeleton/Sprites/Idle/1_animation_idle_008.png
+  artifactKey: Guid(00ce632ea459b494aa289db18c44cb6c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Enemies/Skeleton/Sprites/Idle/1_animation_idle_008.png using Guid(00ce632ea459b494aa289db18c44cb6c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '64abb07ac0080cb899f9be61f67d99e8') in 0.014107 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000057 seconds.
+  path: Assets/Enemies/Skeleton/Sprites/Idle/1_animation_idle_016.png
+  artifactKey: Guid(fd86309e100e0ad43b6a2b3e2c72e977) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Enemies/Skeleton/Sprites/Idle/1_animation_idle_016.png using Guid(fd86309e100e0ad43b6a2b3e2c72e977) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1421f6c7d5ac8605c2820fb55887fe82') in 0.021054 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.485278 seconds.
+  path: Assets/Enemies/Skeleton/Sprites/Idle/1_animation_idle_008.png
+  artifactKey: Guid(00ce632ea459b494aa289db18c44cb6c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Enemies/Skeleton/Sprites/Idle/1_animation_idle_008.png using Guid(00ce632ea459b494aa289db18c44cb6c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c48891e9693d9ab1561ca19c23d9974a') in 0.014746 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/Enemies/Skeleton/Sprites/Idle/1_animation_idle_012.png
+  artifactKey: Guid(1154824f63d9fa94baee51c3fa34530e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Enemies/Skeleton/Sprites/Idle/1_animation_idle_012.png using Guid(1154824f63d9fa94baee51c3fa34530e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2f793f1dedc7299be8747e5e8f74f21a') in 0.028420 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000040 seconds.
+  path: Assets/Enemies/Skeleton/Sprites/Idle/1_animation_idle_017.png
+  artifactKey: Guid(270751a8459f7374dbeb92281506bde9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Enemies/Skeleton/Sprites/Idle/1_animation_idle_017.png using Guid(270751a8459f7374dbeb92281506bde9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '70550620bed0b7b8c8f117516a1ff591') in 0.024343 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 9.041488 seconds.
+  path: Assets/Enemies/Skeleton/Sprites/Idle/1_animation_idle_008.png
+  artifactKey: Guid(00ce632ea459b494aa289db18c44cb6c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Enemies/Skeleton/Sprites/Idle/1_animation_idle_008.png using Guid(00ce632ea459b494aa289db18c44cb6c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'def0ba0c6ef98ecc211dc4bcc2627b9a') in 0.013870 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/Enemies/Skeleton/Sprites/Idle/1_animation_idle_012.png
+  artifactKey: Guid(1154824f63d9fa94baee51c3fa34530e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Enemies/Skeleton/Sprites/Idle/1_animation_idle_012.png using Guid(1154824f63d9fa94baee51c3fa34530e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a393f47c72679a2368274a48b1189618') in 0.027373 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.167230 seconds.
+  path: Assets/Enemies/Skeleton/Sprites/Idle/1_animation_idle_008.png
+  artifactKey: Guid(00ce632ea459b494aa289db18c44cb6c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Enemies/Skeleton/Sprites/Idle/1_animation_idle_008.png using Guid(00ce632ea459b494aa289db18c44cb6c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '72817a78d380368f9503255c3174d116') in 0.014555 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000035 seconds.
+  path: Assets/Enemies/Skeleton/Sprites/Idle/1_animation_idle_012.png
+  artifactKey: Guid(1154824f63d9fa94baee51c3fa34530e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Enemies/Skeleton/Sprites/Idle/1_animation_idle_012.png using Guid(1154824f63d9fa94baee51c3fa34530e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c218cb7c59304cfdffcbb3ac39b6189d') in 0.032640 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.399061 seconds.
+  path: Assets/Enemies/Skeleton/Sprites/Idle/1_animation_idle_008.png
+  artifactKey: Guid(00ce632ea459b494aa289db18c44cb6c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Enemies/Skeleton/Sprites/Idle/1_animation_idle_008.png using Guid(00ce632ea459b494aa289db18c44cb6c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cd565c3eac9bd6cdec728e1df04fb7b9') in 0.014301 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Enemies/Skeleton/Sprites/Idle/1_animation_idle_012.png
+  artifactKey: Guid(1154824f63d9fa94baee51c3fa34530e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Enemies/Skeleton/Sprites/Idle/1_animation_idle_012.png using Guid(1154824f63d9fa94baee51c3fa34530e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e715530cee7991f969df546a2eda1229') in 0.021388 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000040 seconds.
+  path: Assets/Enemies/Skeleton/Sprites/Idle/1_animation_idle_017.png
+  artifactKey: Guid(270751a8459f7374dbeb92281506bde9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Enemies/Skeleton/Sprites/Idle/1_animation_idle_017.png using Guid(270751a8459f7374dbeb92281506bde9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a17f147e3b8cf8c4416fdf7c52e446fc') in 0.017834 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 36.874237 seconds.
+  path: Assets/Enemies/Skeleton/Sprites/Walk/1_animation_walk_001.png
+  artifactKey: Guid(5f50d509399e0d548a3b9d7c7c777793) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Enemies/Skeleton/Sprites/Walk/1_animation_walk_001.png using Guid(5f50d509399e0d548a3b9d7c7c777793) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c09f978549907b7d54eeecbe924608d2') in 0.062948 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/Enemies/Skeleton/Sprites/Walk/1_animation_walk_010.png
+  artifactKey: Guid(083c08900738e7e489bc5ae5d47a2b2c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Enemies/Skeleton/Sprites/Walk/1_animation_walk_010.png using Guid(083c08900738e7e489bc5ae5d47a2b2c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2ceec04c9cdfecc0923fe3a351ffe651') in 0.024008 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.516405 seconds.
+  path: Assets/Enemies/Skeleton/Sprites/Walk/1_animation_walk_011.png
+  artifactKey: Guid(e350ffb90fd7a7e4c9a20afc63326f34) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Enemies/Skeleton/Sprites/Walk/1_animation_walk_011.png using Guid(e350ffb90fd7a7e4c9a20afc63326f34) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f69c5ff310427744fefe3b87083af824') in 0.016139 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 6.646488 seconds.
+  path: Assets/Enemies/Skeleton/Sprites/Walk/1_animation_walk_004.png
+  artifactKey: Guid(2060e6612bc03f74c959c981160fa34b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Enemies/Skeleton/Sprites/Walk/1_animation_walk_004.png using Guid(2060e6612bc03f74c959c981160fa34b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c0bbc1e9cd9aca7ad3ff7c3e4afed202') in 0.015665 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Enemies/Skeleton/Sprites/Walk/1_animation_walk_012.png
+  artifactKey: Guid(8ead8bafa85ac3f4dba71f422901d6c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Enemies/Skeleton/Sprites/Walk/1_animation_walk_012.png using Guid(8ead8bafa85ac3f4dba71f422901d6c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3f491851b832edb103cd74c9c3654176') in 0.038867 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 8.252479 seconds.
+  path: Assets/Enemies/Skeleton/Sprites/Attack/1_animation_attack_000.png
+  artifactKey: Guid(3f124a463c67fa540bba2534cb19635d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Enemies/Skeleton/Sprites/Attack/1_animation_attack_000.png using Guid(3f124a463c67fa540bba2534cb19635d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '022015f9d21862f09f6fcd53f53277d0') in 0.014245 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/Enemies/Skeleton/Sprites/Attack/1_animation_attack_012.png
+  artifactKey: Guid(75b78e977b1722940b3f0ed05517c529) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Enemies/Skeleton/Sprites/Attack/1_animation_attack_012.png using Guid(75b78e977b1722940b3f0ed05517c529) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '27c238a865aa88fec5e4de7bcb9aa28c') in 0.022626 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Enemies/Skeleton/Sprites/Attack/1_animation_attack_019.png
+  artifactKey: Guid(90e0290cd221636448e62a17a393a9a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Enemies/Skeleton/Sprites/Attack/1_animation_attack_019.png using Guid(90e0290cd221636448e62a17a393a9a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '528ef4db15eac786ee420f60c814484d') in 0.019118 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 173.435386 seconds.
+  path: Assets/Enemies/Skeleton/Sprites/Idle/1_animation_idle_001.png
+  artifactKey: Guid(59453fd8f90dc7440b86c06ce6dfd58b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Enemies/Skeleton/Sprites/Idle/1_animation_idle_001.png using Guid(59453fd8f90dc7440b86c06ce6dfd58b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2bdcfbf32e0a94ca78ffb1912d55a696') in 0.021108 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.545233 seconds.
+  path: Assets/Enemies/Skeleton/Sprites/Idle/1_animation_idle_000.png
+  artifactKey: Guid(ced8f113670d75e4da8472d3d03b784e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Enemies/Skeleton/Sprites/Idle/1_animation_idle_000.png using Guid(ced8f113670d75e4da8472d3d03b784e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd8094193ee59b4937fffe62bf85f9bbf') in 0.013278 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.953926 seconds.
+  path: Assets/Enemies/Zombie/Idle/2_animation_idle_000.png
+  artifactKey: Guid(c35a108a563ccd6458e032e2c00b7a56) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Enemies/Zombie/Idle/2_animation_idle_000.png using Guid(c35a108a563ccd6458e032e2c00b7a56) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'acefea6d3f9e67d850951dc0524bcda6') in 0.030263 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/Enemies/Zombie/Idle/2_animation_idle_004.png
+  artifactKey: Guid(a007aa79294e86548a2581689bca3c4f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Enemies/Zombie/Idle/2_animation_idle_004.png using Guid(a007aa79294e86548a2581689bca3c4f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e3803c16ad143d7300c2239bbb8674bf') in 0.057238 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Enemies/Zombie/Idle/2_animation_idle_009.png
+  artifactKey: Guid(e32bcb86949e3f74c9a7801468a71dee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Enemies/Zombie/Idle/2_animation_idle_009.png using Guid(e32bcb86949e3f74c9a7801468a71dee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '37108d46bc79569c449ce81ca62ebc38') in 0.020792 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Enemies/Zombie/Idle/2_animation_idle_007.png
+  artifactKey: Guid(5bdbc37c86d16164294191b00c20ec8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Enemies/Zombie/Idle/2_animation_idle_007.png using Guid(5bdbc37c86d16164294191b00c20ec8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4c7a6ffd63e288018f54a40337b8eee7') in 0.020747 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 11.832812 seconds.
+  path: Assets/Enemies/Skeleton/Sprites/Idle/1_animation_idle_005.png
+  artifactKey: Guid(4a7a4893b57f7b442b14b524632bea5a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Enemies/Skeleton/Sprites/Idle/1_animation_idle_005.png using Guid(4a7a4893b57f7b442b14b524632bea5a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6a783cf6337dd1abf09111546f265367') in 0.017329 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Enemies/Skeleton/Sprites/Idle/1_animation_idle_009.png
+  artifactKey: Guid(8c56d3811d68fb84ab4a4baa0ddc7781) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Enemies/Skeleton/Sprites/Idle/1_animation_idle_009.png using Guid(8c56d3811d68fb84ab4a4baa0ddc7781) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1953df3a8366bef574ab7c4befa8f46f') in 0.023328 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000053 seconds.
+  path: Assets/Enemies/Skeleton/Sprites/Idle/1_animation_idle_007.png
+  artifactKey: Guid(164fc8f10cd52f445b6960d8adf3dca8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Enemies/Skeleton/Sprites/Idle/1_animation_idle_007.png using Guid(164fc8f10cd52f445b6960d8adf3dca8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f27119e869e7b1f680d6d1b3b9537ad1') in 0.021535 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 30.371639 seconds.
+  path: Assets/Enemies/Skeleton/Sprites/Walk/1_animation_walk_002.png
+  artifactKey: Guid(583e0fd1990a0b948a7efef2792c4cdf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Enemies/Skeleton/Sprites/Walk/1_animation_walk_002.png using Guid(583e0fd1990a0b948a7efef2792c4cdf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '411b8aefb0b110823c513a25723fa321') in 0.019410 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Enemies/Skeleton/Sprites/Walk/1_animation_walk_006.png
+  artifactKey: Guid(ef27dc41819c1764b9d72cd6868c30ba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Enemies/Skeleton/Sprites/Walk/1_animation_walk_006.png using Guid(ef27dc41819c1764b9d72cd6868c30ba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6ca5bcc511d53a1926b304ad710e800f') in 0.026773 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/Enemies/Skeleton/Sprites/Walk/1_animation_walk_009.png
+  artifactKey: Guid(6b8241bb45b8fa64c80751ee1e6ade1a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Enemies/Skeleton/Sprites/Walk/1_animation_walk_009.png using Guid(6b8241bb45b8fa64c80751ee1e6ade1a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bfaa75bd799702a97c9d811c6a2e7a9f') in 0.020447 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 21.162818 seconds.
+  path: Assets/Enemies/Skeleton/Sprites/Attack/1_animation_attack_004.png
+  artifactKey: Guid(eed3410ad668e4d4c94277bf0a04780a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Enemies/Skeleton/Sprites/Attack/1_animation_attack_004.png using Guid(eed3410ad668e4d4c94277bf0a04780a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd8cfb7d0d07b70a4fb1f3767c77ee6e5') in 0.017728 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/Enemies/Skeleton/Sprites/Attack/1_animation_attack_008.png
+  artifactKey: Guid(e9e39661694483c4fb3cafe6f0fd69fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Enemies/Skeleton/Sprites/Attack/1_animation_attack_008.png using Guid(e9e39661694483c4fb3cafe6f0fd69fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1ec7743d97cfde9120721aa197a17218') in 0.025045 seconds 
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0

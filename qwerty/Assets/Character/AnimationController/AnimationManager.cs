@@ -20,5 +20,10 @@ namespace Assets.Character.Scripts.AnimationManager
         {
             base.MoveAnimation();
         }
-   }
+
+        public override void HurtAnimation()
+        {
+            base.HurtAnimation();
+        }
+    }
 }

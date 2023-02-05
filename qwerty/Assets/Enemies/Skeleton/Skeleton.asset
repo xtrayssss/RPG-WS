@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Skeleton
   m_EditorClassIdentifier: 
   speedMove: 10
-  damage: 3
-  health: 0
-  isEnterAgroZone: 1
-  isEnterAttackZone: 1
+  damage: 1
+  health: 30
+  isEnterAgroZone: 0
+  isEnterAttackZone: 0

@@ -1,48 +1,60 @@
 using UnityEngine;
 using Assets.Enemies.AniamationManager;
 using Assets.Character.Scripts;
-using Unity.VisualScripting;
 using Assets.Interfaces;
 using UnityEngine.Tilemaps;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Assets.Enemies.BaseEntity
 {
     public abstract class BaseEntity : MonoBehaviour, IDamagable, IDying
     {
-        protected virtual void Awake()
-        {
+        private Player playerBehavior;
 
-            transform.position = bridgeTileMap.WorldToCell(transform.position);
+        [SerializeField] protected MoveEnemy moveEnemy;
+
+        private void Init()
+        {
+            Vector3Int startPosition = groundTileMap.WorldToCell(transform.position);
+
+            transform.position = groundTileMap.CellToLocal(startPosition);
+
+            enemyData.Health = enemyData.MaxHealth;
+
+            player = FindObjectOfType<PlayerInputHandler>();
+
             playerMove = new PlayerMove();
+
             _animation = GetComponent<EnemyAnimation>();
-            targetPosition = transform.position;
-            
+
             enemyData.IsEnterAgroZone = false;
             enemyData.IsEnterAttackZone = false;
+
+            playerBehavior = FindObjectOfType<Player>();
+
+            moveEnemy = new MoveEnemy(transform, player, _animation, groundTileMap, bridgeTileMap, enemyData);
+
+            moveEnemy.Initilize(totalStopAfterMove);
+
+        }
+
+        protected virtual void Awake()
+        {
+            Init();
         }
         protected virtual void Update()
         {
-            SwitcherState();
-            //Debug.Log(currentState);
+            SwitcherState(); 
         }
-        //protected virtual void FixedUpdate()
-        //{
-        //    if (currentState == State.Move)
-        //    {
-        //        Move();
-        //    }
-        //}
 
         private State currentState = State.Idle;
 
         [SerializeField] protected EnemyData enemyData;
-        [SerializeField] protected PlayerInputHandler player;
+         protected PlayerInputHandler player;
         [SerializeField] protected Rigidbody2D _rigidbody2D;
          protected PlayerMove playerMove;
         
-        [SerializeField] protected float timerStopAfterMove;
-        [SerializeField] protected float totalStopAfterMove;
         protected bool hasMoved = true;
         protected AniamationManager.EnemyAnimation _animation;
         protected bool isIdle = false;
@@ -58,13 +70,15 @@ namespace Assets.Enemies.BaseEntity
 
         [SerializeField] private Tilemap groundTileMap;
         [SerializeField] private Tilemap bridgeTileMap;
-        
+        [SerializeField] protected float totalStopAfterMove;
         [SerializeField] private GameObject prefabGrave;
 
         [HideInInspector] public List<Collider2D> hittObjects = new List<Collider2D>();
-        
+
+        #region SwitcherState
         protected void SwitcherState()
         {
+            Hurt();
             switch (currentState)
             {
                 case State.Idle:
@@ -86,10 +100,12 @@ namespace Assets.Enemies.BaseEntity
                     break;
             }
         }
+        #endregion
+
         protected virtual void Idle()
         {
             _animation.IdleAnimation();
-            timerStopAfterMove = 0;
+            //timerStopAfterMove = 0;
             
             if (enemyData.IsEnterAgroZone)
             {
@@ -99,27 +115,11 @@ namespace Assets.Enemies.BaseEntity
 
         protected virtual void Move()
         {
-            // enemyMove.CheckNextState(targetPosition, currentState, State.Idle, State.Attack);
-
-            //enemyMove.TimerTick(isIdleAnim, targetPosition, timerStopAfterMove, totalStopAfterMove);
-
-            CheckNextState();
-
-            TimerTick();
-
-            if (targetPosition != (Vector2)transform.position)
-            {
-               StepOnNextTile(targetPosition);
-            }
-            if (!isIdleAnim)
-            {
-                _animation.MoveAnimation();
-            }
-            if (isIdleAnim)
-            {
-                _animation.IdleAnimation();
-            }           
+            //CheckNextState();
             
+            
+            moveEnemy.Tick();
+            moveEnemy.CheckNextState(ref currentState);
             FlipEnemy();
         }
 
@@ -134,33 +134,6 @@ namespace Assets.Enemies.BaseEntity
             if (enemyData.IsEnterAttackZone && (Vector2)transform.position == targetPosition)
             {
                 currentState = State.Attack;
-            }
-        }
-        #endregion
-
-        #region TimerTick
-        private void TimerTick()
-        {
-            if ((Vector2)transform.position == targetPosition)
-            {
-                timerStopAfterMove -= Time.deltaTime;
-                isIdleAnim = true;
-            }
-
-            if (timerStopAfterMove <= 0)
-            {
-                targetPosition = (Vector2)transform.position + DirectionMove();
-
-                targetPositionInt = groundTileMap.WorldToCell(new Vector3(targetPosition.x, targetPosition.y, 1));
-
-                if (!groundTileMap.HasTile(targetPositionInt) && !bridgeTileMap.HasTile(targetPositionInt))
-                {
-                    targetPosition = transform.position;
-                }
-
-                timerStopAfterMove = totalStopAfterMove;
-
-                isIdleAnim = false;
             }
         }
         #endregion
@@ -233,65 +206,43 @@ namespace Assets.Enemies.BaseEntity
         public void AcceptDamage(int damage)
         {
             enemyData.Health -= damage;
+            Debug.Log(enemyData.Health);
         }
         #endregion
 
         #region TakeDamage
         public void TakeDamage()
         {
-            foreach (var item in hittObjects)
+            var listColliders = hittObjects.Where(x => !x.isTrigger);
+
+
+            foreach (var item in listColliders)
             {
                 var hit = item.GetComponent<IDamagable>();
 
-                hit?.AcceptDamage(enemyData.Damage);
+                if (hit != null)
+                {
+                    hit.AcceptDamage(enemyData.Damage);
+
+                    //Debug.Log(item.name);
+                }
             }
         }
         #endregion
 
+        #region Death
         public void Death(float destroyTime)
         {
             Instantiate(prefabGrave, transform.position, Quaternion.identity);
             Destroy(this, destroyTime);
             Destroy(gameObject, destroyTime);
         }
+        #endregion
         private bool CheckDeath()
         {
             return enemyData.Health <= 0;
         }
-        public Vector2 DirectionMove()
-        {
-            Vector2 direction = player.transform.position - transform.position;
 
-            direction = direction.normalized;
-            Debug.Log(direction);
-
-            if (direction.x < 0.0f && playerMove.CurrentMoveInput.y == 0.0f)
-            {
-                return new Vector2(-0.72f, 0);
-            }
-            else if (direction.x > 0.0f && playerMove.CurrentMoveInput.y == 0.0f)
-            {
-                return new Vector2(0.72f, 0);
-            }
-            else if (direction.y > 0.0f && playerMove.CurrentMoveInput.y != 0.0f)
-            {
-                return new Vector2(0, 0.81f + 0.405f);
-            }
-            else if (direction.y < 0.0f && playerMove.CurrentMoveInput.y != 0.0f)
-            {
-                return new Vector2(0, -(0.81f + 0.405f));
-            }
-            else
-            {
-                return new Vector2(0f, 0f);
-            }
-        }
-        public void StepOnNextTile(Vector2 target)
-        {
-            transform.position = Vector2.MoveTowards(
-                transform.position,
-                target,
-                2 * Time.deltaTime);
-        }
+       
     }
 }

@@ -7,7 +7,7 @@ namespace Assets.Character.PlayerData
     {
         private void Awake()
         {
-            currentHealth = maxHealth;
+            currentHealth = MaxHealth;
         }
 
         [SerializeField] private float speedMove = 10.0f;
@@ -17,6 +17,7 @@ namespace Assets.Character.PlayerData
         public float SpeedMove { get => speedMove; private set => speedMove = value; }
         public int CurrentHealth { get => currentHealth; set => currentHealth = value; }
         public int Damage { get => damage; private set => damage = value; }
+        public int MaxHealth { get => maxHealth; private set => maxHealth = value; }
     }
 }
 

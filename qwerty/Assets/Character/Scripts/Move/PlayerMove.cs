@@ -11,6 +11,7 @@ namespace Assets.Character.Scripts
         private Tilemap groundTileMap;
         private Tilemap bridgeTileMap;
         private AnimationManager.AnimationManager animationManager;
+        private Player playerBehavior;
         #endregion
 
         #region Variables
@@ -31,7 +32,7 @@ namespace Assets.Character.Scripts
 
         public PlayerMove(Transform currentTransform, PlayerInputHandler player,
             PlayerData.PlayerData playerData, Tilemap groundTileMap, 
-            Tilemap bridgeTileMap, AnimationManager.AnimationManager animationManager)
+            Tilemap bridgeTileMap, AnimationManager.AnimationManager animationManager,Player playerBehavior)
         {
             this.currentTransform = currentTransform;
             this.player = player;
@@ -39,6 +40,7 @@ namespace Assets.Character.Scripts
             this.groundTileMap = groundTileMap;
             this.bridgeTileMap = bridgeTileMap;
             this.animationManager = animationManager;
+            this.playerBehavior = playerBehavior;
         }
         public PlayerMove() { }
 
@@ -71,8 +73,8 @@ namespace Assets.Character.Scripts
         {
             if (hasMoved && player.moveInput != Vector2.zero)
             {
+                playerBehavior.CurrentMoveInput = player.moveInput;
                 CurrentMoveInput = player.moveInput;
-
                 SetDirection(ref direction);
                 hasMoved = false;
                 

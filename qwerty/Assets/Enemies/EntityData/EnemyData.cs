@@ -17,6 +17,8 @@ public class EnemyData : ScriptableObject
 
     [SerializeField] private int health = 30;
 
+    [SerializeField] private int maxHealth = 30;
+
     [SerializeField] private bool isEnterAgroZone;
    
     [SerializeField] private bool isEnterAttackZone;
@@ -25,4 +27,5 @@ public class EnemyData : ScriptableObject
     public int Health { get => health; set => health = value; }
     public bool IsEnterAgroZone { get => isEnterAgroZone; set => isEnterAgroZone = value; }
     public bool IsEnterAttackZone { get => isEnterAttackZone; set => isEnterAttackZone = value; }
+    public int MaxHealth { get => maxHealth; private set => maxHealth = value; }
 }

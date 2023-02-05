@@ -3,13 +3,25 @@ using UnityEngine;
 
 namespace Assets.Character.Scripts
 {
-    class InjuredPlayer : MonoBehaviour, IDamagable
+    public class InjuredPlayer :  IDamagable
     {
-        [SerializeField] PlayerData.PlayerData playerData;
+       private PlayerData.PlayerData playerData;
+
+        private AnimationManager.AnimationManager animationManager;
+        public InjuredPlayer(PlayerData.PlayerData playerData, AnimationManager.AnimationManager animationManager)
+        {
+            this.playerData = playerData;
+            this.animationManager = animationManager;
+        }
         public void AcceptDamage(int damage)
         {
             playerData.CurrentHealth -= damage;
-            Debug.Log(playerData.CurrentHealth);
+
+            animationManager.HurtAnimation();
+
+            //Debug.Log(playerData.CurrentHealth);
         }
+
+
     }
 }

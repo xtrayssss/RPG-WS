@@ -4,23 +4,42 @@ using UnityEngine;
 
 namespace Assets.Character.Scripts
 {
-    class AttackPlayer
+   public class AttackPlayer
     {
         // TODO: rewrite AttackPlayerClass
-
-        [SerializeField] private PlayerData.PlayerData playerData;
         
         private PlayerInputHandler inputHandler;
 
-        public List<Collider2D> hitObjects = new List<Collider2D>();
-      
-        private void Attack()
+        private PlayerData.PlayerData playerData;
+
+        private Player player;
+
+        private AnimationManager.AnimationManager animationManager;
+
+        public AttackPlayer(PlayerData.PlayerData playerData,
+            PlayerInputHandler inputHandler, 
+            AnimationManager.AnimationManager animationManager,
+            Player player)
         {
-            foreach (var item in hitObjects)
+            this.playerData = playerData;
+            this.inputHandler = inputHandler;
+            this.animationManager = animationManager;
+            this.player = player;
+        }
+        public void Initialize()
+        {
+        }
+        public AttackPlayer(){}
+      
+        public void Attack()
+        {
+            foreach (var item in player.hittObjects)
             {
                 item.GetComponent<IDamagable>()?.AcceptDamage(playerData.Damage);
                 Debug.Log(item.name);
             }
         }
-    }
+
+        public bool CheckAttack() => inputHandler.isAttack;
+   }
 }

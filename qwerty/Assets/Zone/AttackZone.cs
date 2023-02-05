@@ -14,14 +14,17 @@ namespace Assets.Zone.AttackZone
         {
             base.OnTriggerEnter2D(collision);
 
-            baseEntity.hittObjects.Add(collision);
+            if (!baseEntity.hittObjects.Contains(collision))
+            {
+                baseEntity.hittObjects.Add(collision);
+            }
         }
 
         protected override void OnTriggerExit2D(Collider2D collision)
         {
             base.OnTriggerExit2D(collision);
 
-            baseEntity.hittObjects.Remove(collision);
+           baseEntity.hittObjects.Clear();
         }
 
     }
