@@ -15,7 +15,7 @@ D:/games/UnityRepository/AS/RPG-WS/qwerty
 -logFile
 Logs/AssetImportWorker5.log
 -srvPort
-58351
+63740
 Successfully changed project path to: D:/games/UnityRepository/AS/RPG-WS/qwerty
 D:/games/UnityRepository/AS/RPG-WS/qwerty
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -47,7 +47,7 @@ D:/games/UnityRepository/AS/RPG-WS/qwerty
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Refreshing native plugins compatible for Editor in 170.39 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 212.07 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.3.9f1 (ad3870b89536)
 [Subsystems] Discovering subsystems at path D:/games/Unity/Unity Files (Dont Touch)/2021.3.9f1/Editor/Data/Resources/UnitySubsystems
@@ -63,95 +63,95 @@ Initialize mono
 Mono path[0] = 'D:/games/Unity/Unity Files (Dont Touch)/2021.3.9f1/Editor/Data/Managed'
 Mono path[1] = 'D:/games/Unity/Unity Files (Dont Touch)/2021.3.9f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'D:/games/Unity/Unity Files (Dont Touch)/2021.3.9f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56268
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56328
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: D:/games/Unity/Unity Files (Dont Touch)/2021.3.9f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: D:/games/Unity/Unity Files (Dont Touch)/2021.3.9f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
 Register platform support module: D:/games/Unity/Unity Files (Dont Touch)/2021.3.9f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.006313 seconds.
+Registered in 0.007634 seconds.
 Native extension for WindowsStandalone target not found
 Native extension for Android target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 147.05 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 183.20 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.870 seconds
+- Completed reload, in  1.048 seconds
 Domain Reload Profiling:
-	ReloadAssembly (871ms)
-		BeginReloadAssembly (95ms)
+	ReloadAssembly (1048ms)
+		BeginReloadAssembly (107ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (624ms)
-			LoadAssemblies (94ms)
+		EndReloadAssembly (772ms)
+			LoadAssemblies (106ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (142ms)
+			SetupTypeCache (155ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (39ms)
-			SetupLoadedEditorAssemblies (378ms)
+			RebuildScriptCaches (45ms)
+			SetupLoadedEditorAssemblies (492ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (53ms)
+				InitializePlatformSupportModulesInManaged (66ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (147ms)
-				BeforeProcessingInitializeOnLoad (1ms)
-				ProcessInitializeOnLoadAttributes (124ms)
-				ProcessInitializeOnLoadMethodAttributes (52ms)
+				RefreshPlugins (183ms)
+				BeforeProcessingInitializeOnLoad (2ms)
+				ProcessInitializeOnLoadAttributes (168ms)
+				ProcessInitializeOnLoadMethodAttributes (72ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.005237 seconds.
+Registered in 0.007711 seconds.
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image D:\games\UnityRepository\AS\RPG-WS\qwerty\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory doesn't match image D:\games\UnityRepository\AS\RPG-WS\qwerty\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
 Native extension for WindowsStandalone target not found
 Native extension for Android target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 138.56 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 210.16 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.474 seconds
+- Completed reload, in  1.987 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1475ms)
-		BeginReloadAssembly (109ms)
+	ReloadAssembly (1988ms)
+		BeginReloadAssembly (161ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (6ms)
+			DisableScriptedObjects (8ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (23ms)
-		EndReloadAssembly (1243ms)
-			LoadAssemblies (82ms)
+			CreateAndSetChildDomain (32ms)
+		EndReloadAssembly (1650ms)
+			LoadAssemblies (117ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (290ms)
+			SetupTypeCache (357ms)
 			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (85ms)
-			SetupLoadedEditorAssemblies (721ms)
+			RebuildScriptCaches (98ms)
+			SetupLoadedEditorAssemblies (995ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (16ms)
+				InitializePlatformSupportModulesInManaged (23ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (139ms)
-				BeforeProcessingInitializeOnLoad (114ms)
-				ProcessInitializeOnLoadAttributes (392ms)
-				ProcessInitializeOnLoadMethodAttributes (56ms)
-				AfterProcessingInitializeOnLoad (4ms)
+				RefreshPlugins (210ms)
+				BeforeProcessingInitializeOnLoad (156ms)
+				ProcessInitializeOnLoadAttributes (525ms)
+				ProcessInitializeOnLoadMethodAttributes (74ms)
+				AfterProcessingInitializeOnLoad (6ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (6ms)
+			AwakeInstancesAfterBackupRestoration (7ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
 Launched and connected shader compiler UnityShaderCompiler.exe after 0.06 seconds
-Refreshing native plugins compatible for Editor in 1.62 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 2.33 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4646 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 54 unused Assets / (73.9 MB). Loaded Objects now: 5105.
-Memory consumption went from 174.6 MB to 100.7 MB.
-Total: 9.561700 ms (FindLiveObjects: 0.592100 ms CreateObjectMapping: 0.553300 ms MarkObjects: 8.306200 ms  DeleteObjects: 0.109200 ms)
+Unloading 4647 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 54 unused Assets / (128.3 KB). Loaded Objects now: 5106.
+Memory consumption went from 174.9 MB to 174.8 MB.
+Total: 4.948700 ms (FindLiveObjects: 0.467800 ms CreateObjectMapping: 0.270400 ms MarkObjects: 4.068800 ms  DeleteObjects: 0.140600 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -165,10 +165,40 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 1326.387086 seconds.
-  path: Assets/Effects/BrainEffect/Sprites/8_animation_brain_002.png
-  artifactKey: Guid(1232abec39165184dabea6772fc239ba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Effects/BrainEffect/Sprites/8_animation_brain_002.png using Guid(1232abec39165184dabea6772fc239ba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9c06bc422ee0645c2b74569c3a49495c') in 0.228179 seconds 
+  Time since last request: 4918.180491 seconds.
+  path: Assets/Enemies/Skeleton/Sprites/Walk/1_animation_walk_012.png
+  artifactKey: Guid(8ead8bafa85ac3f4dba71f422901d6c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Enemies/Skeleton/Sprites/Walk/1_animation_walk_012.png using Guid(8ead8bafa85ac3f4dba71f422901d6c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6f27a8faefb12a77cbf5b70168f7f6de') in 0.213161 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.215524 seconds.
+  path: Assets/Enemies/Skeleton/Sprites/Hurt/1_animation_hurt_005.png
+  artifactKey: Guid(c1bd0986506a05444b877c41fbbd5633) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Enemies/Skeleton/Sprites/Hurt/1_animation_hurt_005.png using Guid(c1bd0986506a05444b877c41fbbd5633) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '40a500406019afcd8884988ccf51230c') in 0.040619 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000120 seconds.
+  path: Assets/Enemies/Skeleton/Sprites/Hurt/1_animation_hurt_007.png
+  artifactKey: Guid(76eeebdb70a91574391934c48a65a11f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Enemies/Skeleton/Sprites/Hurt/1_animation_hurt_007.png using Guid(76eeebdb70a91574391934c48a65a11f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ca58806505b271d923f1f612e8f76adb') in 0.037189 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000059 seconds.
+  path: Assets/Enemies/Skeleton/Sprites/Hurt/1_animation_hurt_012.png
+  artifactKey: Guid(597f96e03ce24b44c88a2fb387361e41) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Enemies/Skeleton/Sprites/Hurt/1_animation_hurt_012.png using Guid(597f96e03ce24b44c88a2fb387361e41) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7c9e375ddcbacc755795c6a7314e671b') in 0.028987 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 9.293964 seconds.
+  path: Assets/Enemies/Skeleton/Sprites/Hurt/1_animation_hurt_013.png
+  artifactKey: Guid(c9f43f28f3c589f4f942a90c26ebbb53) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Enemies/Skeleton/Sprites/Hurt/1_animation_hurt_013.png using Guid(c9f43f28f3c589f4f942a90c26ebbb53) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '16cea711953061b36aebd6ff4b3a1247') in 0.048867 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000064 seconds.
+  path: Assets/Enemies/Skeleton/Sprites/Hurt/1_animation_hurt_019.png
+  artifactKey: Guid(2ea808fdb47d92140821bd7f7ada0e01) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Enemies/Skeleton/Sprites/Hurt/1_animation_hurt_019.png using Guid(2ea808fdb47d92140821bd7f7ada0e01) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '39f580fce14fe834f263e38d0ad62997') in 0.036473 seconds 
 Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
 AssetImportWorker is now disconnected from the server
 Process exiting

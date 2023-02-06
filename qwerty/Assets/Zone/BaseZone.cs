@@ -14,14 +14,14 @@ namespace Assets.Zone.BaseZone
         {
             if (collision.tag == "Player")
             {
-                SomethingAction(baseEntity.CheckEnterPlayerInAgroZone, true);
+                SomethingAction(baseEntity.zoneCheckerEnemy.CheckEnterPlayerInAgroZone, true);
             }
         }
         protected virtual void OnTriggerExit2D(Collider2D collision)
         {
             if (collision.tag == "Player")
             {
-                SomethingAction(baseEntity.CheckEnterPlayerInAgroZone,false);
+                SomethingAction(baseEntity.zoneCheckerEnemy.CheckEnterPlayerInAgroZone, false);
             }
         }
 

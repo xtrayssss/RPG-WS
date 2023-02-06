@@ -4,40 +4,84 @@ using Assets.Character.Scripts;
 using Assets.Interfaces;
 using UnityEngine.Tilemaps;
 using System.Collections.Generic;
-using System.Linq;
+using Assets.Enemies.BaseEnemy;
 
 namespace Assets.Enemies.BaseEntity
 {
     public abstract class BaseEntity : MonoBehaviour, IDamagable, IDying
     {
+        #region Variables
+
+        [SerializeField] private Tilemap groundTileMap;
+        [SerializeField] private Tilemap bridgeTileMap;
+        [SerializeField] protected float totalStopAfterMove;
+        public GameObject prefabGrave;
+        [HideInInspector] public List<Collider2D> hittObjects = new List<Collider2D>();
+        protected Collider2D _collider2D;
+       
+        private State currentState = State.Idle;
+        #endregion
+
+        #region Dependency
         private Player playerBehavior;
 
         [SerializeField] protected MoveEnemy moveEnemy;
 
+        private FlipEnemy flipEnemy;
+
+        [SerializeField] protected EnemyData enemyData;
+       
+        protected PlayerInputHandler player;
+       
+        protected PlayerMove playerMove;
+       
+        protected AniamationManager.EnemyAnimation _animation;
+        public ZoneCheckerEnemy zoneCheckerEnemy { get; set; }
+
+        private EnemyAcceptedDamage enemyAccepted;
+        public EnemyTakeDamage EnemyTakeDamage { get; set; }
+        [field: SerializeField] public EnemyDeath EnemyDeath { get; set; }
+        #endregion
+
+        #region InitializeDependency
+        private void InitializeDependency()
+        {
+            _animation = GetComponent<AniamationManager.EnemyAnimation>();
+            player = FindObjectOfType<PlayerInputHandler>();
+            playerMove = new PlayerMove();
+            playerBehavior = FindObjectOfType<Player>();
+            moveEnemy = new MoveEnemy(transform, player, _animation, groundTileMap, bridgeTileMap, enemyData);
+            flipEnemy = new FlipEnemy(transform, playerBehavior);
+            zoneCheckerEnemy = new ZoneCheckerEnemy(enemyData);
+            enemyAccepted = new EnemyAcceptedDamage(enemyData);
+            EnemyTakeDamage = new EnemyTakeDamage(enemyData, hittObjects);
+            EnemyDeath = new EnemyDeath(this, gameObject);
+        }
+        #endregion
+
+        #region Init
         private void Init()
         {
+            InitializeDependency();
+
             Vector3Int startPosition = groundTileMap.WorldToCell(transform.position);
 
             transform.position = groundTileMap.CellToLocal(startPosition);
 
             enemyData.Health = enemyData.MaxHealth;
 
-            player = FindObjectOfType<PlayerInputHandler>();
+            _collider2D = GetComponent<Collider2D>();
 
-            playerMove = new PlayerMove();
 
             _animation = GetComponent<EnemyAnimation>();
 
             enemyData.IsEnterAgroZone = false;
+
             enemyData.IsEnterAttackZone = false;
 
-            playerBehavior = FindObjectOfType<Player>();
-
-            moveEnemy = new MoveEnemy(transform, player, _animation, groundTileMap, bridgeTileMap, enemyData);
-
             moveEnemy.Initilize(totalStopAfterMove);
-
         }
+        #endregion
 
         protected virtual void Awake()
         {
@@ -45,35 +89,10 @@ namespace Assets.Enemies.BaseEntity
         }
         protected virtual void Update()
         {
-            SwitcherState(); 
+            SwitcherState();
+
+            flipEnemy.FlipRealize();
         }
-
-        private State currentState = State.Idle;
-
-        [SerializeField] protected EnemyData enemyData;
-         protected PlayerInputHandler player;
-        [SerializeField] protected Rigidbody2D _rigidbody2D;
-         protected PlayerMove playerMove;
-        
-        protected bool hasMoved = true;
-        protected AniamationManager.EnemyAnimation _animation;
-        protected bool isIdle = false;
-        protected bool isMove = false;
-        protected bool isAttack = false;
-        
-        protected bool facingRight;
-
-        private Vector2 targetPosition;
-        private Vector3Int targetPositionInt;
-
-        private bool isIdleAnim;
-
-        [SerializeField] private Tilemap groundTileMap;
-        [SerializeField] private Tilemap bridgeTileMap;
-        [SerializeField] protected float totalStopAfterMove;
-        [SerializeField] private GameObject prefabGrave;
-
-        [HideInInspector] public List<Collider2D> hittObjects = new List<Collider2D>();
 
         #region SwitcherState
         protected void SwitcherState()
@@ -102,49 +121,30 @@ namespace Assets.Enemies.BaseEntity
         }
         #endregion
 
+        #region IdleState
         protected virtual void Idle()
         {
             _animation.IdleAnimation();
-            //timerStopAfterMove = 0;
             
             if (enemyData.IsEnterAgroZone)
             {
                 currentState = State.Move;
             }
         }
+        #endregion
 
+        #region MoveState
         protected virtual void Move()
         {
-            //CheckNextState();
-            
-            
             moveEnemy.Tick();
             moveEnemy.CheckNextState(ref currentState);
-            FlipEnemy();
-        }
-
-
-        #region CheckNextState
-        private void CheckNextState()
-        {
-            if (!enemyData.IsEnterAgroZone)
-            {
-                currentState = State.Idle;
-            }
-            if (enemyData.IsEnterAttackZone && (Vector2)transform.position == targetPosition)
-            {
-                currentState = State.Attack;
-            }
         }
         #endregion
 
-        #region Attack
+        #region AttackState
         protected virtual void Attack()
         {
             _animation.AttackAnimation();
-            
-            FlipEnemy();
-
             if (!enemyData.IsEnterAttackZone && enemyData.IsEnterAgroZone)
             {
                 currentState = State.Move;
@@ -156,6 +156,7 @@ namespace Assets.Enemies.BaseEntity
         }
         #endregion
 
+        #region HurtState
         protected virtual void Hurt()
         {
             if (CheckDeath())
@@ -163,86 +164,32 @@ namespace Assets.Enemies.BaseEntity
                 currentState = State.Death;
             }
         }
+        #endregion
 
+        #region DieEnemyState
         protected virtual void DieEnemy()
         {
             Death(0);
         }
-
-        #region CheckEnterPlayerInAgroZone
-        public bool CheckEnterPlayerInAgroZone(bool isEnter)
-        {
-            return enemyData.IsEnterAgroZone = isEnter;
-        }
-        #endregion
-
-        #region CheckEnterPlayerInAttackZone
-        public bool CheckEnterPlayerInAttackZone(bool isEnter)
-        {
-            return enemyData.IsEnterAttackZone = isEnter;
-        }
         #endregion
        
-        #region Flip
-        protected void Flip()
-        {
-            facingRight = !facingRight;
-            transform.localScale = new Vector2(transform.localScale.x * -1.0f, transform.localScale.y);
-        }
-        #endregion
-
-        #region FlipEnemy
-        protected void FlipEnemy()
-        {
-            if (player.transform.position.x < transform.position.x && facingRight)
-                Flip();
-            if (player.transform.position.x > transform.position.x && !facingRight)
-                Flip();
-        }
-
-        #endregion
-
         #region AcceptDamage
         public void AcceptDamage(int damage)
         {
-            enemyData.Health -= damage;
-            Debug.Log(enemyData.Health);
+            enemyAccepted.AcceptDamage(damage);
         }
         #endregion
 
-        #region TakeDamage
-        public void TakeDamage()
-        {
-            var listColliders = hittObjects.Where(x => !x.isTrigger);
-
-
-            foreach (var item in listColliders)
-            {
-                var hit = item.GetComponent<IDamagable>();
-
-                if (hit != null)
-                {
-                    hit.AcceptDamage(enemyData.Damage);
-
-                    //Debug.Log(item.name);
-                }
-            }
-        }
-        #endregion
-
-        #region Death
-        public void Death(float destroyTime)
-        {
-            Instantiate(prefabGrave, transform.position, Quaternion.identity);
-            Destroy(this, destroyTime);
-            Destroy(gameObject, destroyTime);
-        }
-        #endregion
         private bool CheckDeath()
         {
             return enemyData.Health <= 0;
         }
 
-       
+        #region DeathState
+        public void Death(float destroyTime)
+        {
+            EnemyDeath.Death(destroyTime, prefabGrave, _collider2D);
+        }
+        #endregion
     }
 }

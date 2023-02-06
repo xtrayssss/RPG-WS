@@ -8,7 +8,7 @@ namespace Assets.Enemies.AnimationEventEnemy
 
         public void AttackForAnimationEvent()
         {
-            baseEntity.TakeDamage();
+            baseEntity.EnemyTakeDamage.TakeDamage();
         }
     }
 }

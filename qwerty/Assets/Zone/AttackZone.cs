@@ -8,7 +8,7 @@ namespace Assets.Zone.AttackZone
     {
         protected override void SomethingAction(Func<bool, bool> action, bool isEnter)
         {
-            base.SomethingAction(baseEntity.CheckEnterPlayerInAttackZone, isEnter);
+            base.SomethingAction(baseEntity.zoneCheckerEnemy.CheckEnterPlayerInAttackZone, isEnter);
         }
         protected override void OnTriggerEnter2D(Collider2D collision)
         {

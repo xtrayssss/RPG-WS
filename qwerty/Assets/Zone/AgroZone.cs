@@ -18,7 +18,7 @@ namespace Assets.Zone.AgroZone
 
         protected override void SomethingAction(Func<bool, bool> action, bool isEnter)
         {
-            base.SomethingAction(baseEntity.CheckEnterPlayerInAgroZone, isEnter);
+            base.SomethingAction(baseEntity.zoneCheckerEnemy.CheckEnterPlayerInAgroZone, isEnter);
         }
     }
 }
