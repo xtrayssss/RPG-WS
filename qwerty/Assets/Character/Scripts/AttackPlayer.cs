@@ -1,6 +1,7 @@
 ﻿using Assets.Interfaces;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 namespace Assets.Character.Scripts
 {
@@ -33,7 +34,9 @@ namespace Assets.Character.Scripts
       
         public void Attack()
         {
-            foreach (var item in player.hittObjects)
+            var filterList = player.hittObjects.Where(x => !x.isTrigger);
+
+            foreach (var item in filterList)
             {
                 item.GetComponent<IDamagable>()?.AcceptDamage(playerData.Damage);
                 Debug.Log(item.name);

@@ -51,12 +51,15 @@ TagManager:
   - name: Bridge
     uniqueID: 1294421997
     locked: 0
+  - name: Effect
+    uniqueID: 217603663
+    locked: 0
+  - name: Grave
+    uniqueID: 2778703261
+    locked: 0
   - name: Enemies
     uniqueID: 4154349429
     locked: 0
   - name: PlayerLayer
     uniqueID: 4158626899
-    locked: 0
-  - name: test
-    uniqueID: 2778703261
     locked: 0

@@ -16,6 +16,7 @@ namespace Assets.Enemies.BaseEntity
         [SerializeField] private Tilemap bridgeTileMap;
         [SerializeField] protected float totalStopAfterMove;
         public GameObject prefabGrave;
+        public GameObject prefabEffectDeath;
         [HideInInspector] public List<Collider2D> hittObjects = new List<Collider2D>();
         protected Collider2D _collider2D;
        
@@ -55,7 +56,7 @@ namespace Assets.Enemies.BaseEntity
             zoneCheckerEnemy = new ZoneCheckerEnemy(enemyData);
             enemyAccepted = new EnemyAcceptedDamage(enemyData);
             EnemyTakeDamage = new EnemyTakeDamage(enemyData, hittObjects);
-            EnemyDeath = new EnemyDeath(this, gameObject);
+            EnemyDeath = new EnemyDeath(this, gameObject, groundTileMap);
         }
         #endregion
 
@@ -64,10 +65,8 @@ namespace Assets.Enemies.BaseEntity
         {
             InitializeDependency();
 
-            Vector3Int startPosition = groundTileMap.WorldToCell(transform.position);
-
-            transform.position = groundTileMap.CellToLocal(startPosition);
-
+            transform.position = StaticFunction.StaticFunction.SetPositionOnTheCenterTile(groundTileMap, transform.position);
+            
             enemyData.Health = enemyData.MaxHealth;
 
             _collider2D = GetComponent<Collider2D>();

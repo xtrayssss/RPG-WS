@@ -47,9 +47,7 @@ namespace Assets.Character.Scripts
         #region Initialize
         public void Initialize()
         {
-            Vector3Int startposition = Vector3Int.RoundToInt(currentTransform.position);
-
-            currentTransform.position = groundTileMap.GetCellCenterWorld(startposition);
+           
         }
         #endregion
 

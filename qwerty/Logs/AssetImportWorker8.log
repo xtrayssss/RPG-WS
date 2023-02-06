@@ -1,0 +1,284 @@
+Using pre-set license
+Built from '2021.3/staging' branch; Version is '2021.3.9f1 (ad3870b89536) revision 11352176'; Using compiler version '192829333'; Build Type 'Release'
+OS: 'Windows 10  (10.0.19044) 64bit Professional' Language: 'ru' Physical Memory: 7561 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
+
+COMMAND LINE ARGUMENTS:
+D:\games\Unity\Unity Files (Dont Touch)\2021.3.9f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker8
+-projectPath
+D:/games/WS GAME/RPG-WS/qwerty
+-logFile
+Logs/AssetImportWorker8.log
+-srvPort
+63621
+Successfully changed project path to: D:/games/WS GAME/RPG-WS/qwerty
+D:/games/WS GAME/RPG-WS/qwerty
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Refreshing native plugins compatible for Editor in 180.23 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2021.3.9f1 (ad3870b89536)
+[Subsystems] Discovering subsystems at path D:/games/Unity/Unity Files (Dont Touch)/2021.3.9f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path D:/games/WS GAME/RPG-WS/qwerty/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: AMD Radeon (TM) Graphics (ID=0x15e7)
+    Vendor:   ATI
+    VRAM:     3780 MB
+    Driver:   31.0.12018.5
+Initialize mono
+Mono path[0] = 'D:/games/Unity/Unity Files (Dont Touch)/2021.3.9f1/Editor/Data/Managed'
+Mono path[1] = 'D:/games/Unity/Unity Files (Dont Touch)/2021.3.9f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'D:/games/Unity/Unity Files (Dont Touch)/2021.3.9f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56020
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: D:/games/Unity/Unity Files (Dont Touch)/2021.3.9f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: D:/games/Unity/Unity Files (Dont Touch)/2021.3.9f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
+Register platform support module: D:/games/Unity/Unity Files (Dont Touch)/2021.3.9f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.006197 seconds.
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 180.17 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.020 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1021ms)
+		BeginReloadAssembly (97ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (0ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (1ms)
+		EndReloadAssembly (776ms)
+			LoadAssemblies (96ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (162ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (50ms)
+			SetupLoadedEditorAssemblies (482ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (72ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (180ms)
+				BeforeProcessingInitializeOnLoad (2ms)
+				ProcessInitializeOnLoadAttributes (161ms)
+				ProcessInitializeOnLoadMethodAttributes (66ms)
+				AfterProcessingInitializeOnLoad (0ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (0ms)
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.008875 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\games\WS GAME\RPG-WS\qwerty\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\games\WS GAME\RPG-WS\qwerty\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 188.57 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.158 seconds
+Domain Reload Profiling:
+	ReloadAssembly (2159ms)
+		BeginReloadAssembly (224ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (8ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (30ms)
+		EndReloadAssembly (1756ms)
+			LoadAssemblies (189ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (434ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (102ms)
+			SetupLoadedEditorAssemblies (998ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (21ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (189ms)
+				BeforeProcessingInitializeOnLoad (177ms)
+				ProcessInitializeOnLoadAttributes (541ms)
+				ProcessInitializeOnLoadMethodAttributes (65ms)
+				AfterProcessingInitializeOnLoad (4ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (7ms)
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.07 seconds
+Refreshing native plugins compatible for Editor in 1.87 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4655 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 54 unused Assets / (128.4 KB). Loaded Objects now: 5113.
+Memory consumption went from 175.0 MB to 174.9 MB.
+Total: 5.723000 ms (FindLiveObjects: 0.455900 ms CreateObjectMapping: 0.214500 ms MarkObjects: 4.912400 ms  DeleteObjects: 0.138900 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 26655.532412 seconds.
+  path: Assets/Effects/Blood/BloodEffect.prefab
+  artifactKey: Guid(bcaceaf807602894f8e187b9f85f314c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Effects/Blood/BloodEffect.prefab using Guid(bcaceaf807602894f8e187b9f85f314c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '599b26d2e2ee1103264ad9bea51563fb') in 0.200921 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 45.010034 seconds.
+  path: Assets/Effects/Blood/BloodEffect.prefab
+  artifactKey: Guid(bcaceaf807602894f8e187b9f85f314c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Effects/Blood/BloodEffect.prefab using Guid(bcaceaf807602894f8e187b9f85f314c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '425cde1b975b918723f9ef3f453bd431') in 0.036647 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.576661 seconds.
+  path: Assets/Effects/Blood/BloodEffect.prefab
+  artifactKey: Guid(bcaceaf807602894f8e187b9f85f314c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Effects/Blood/BloodEffect.prefab using Guid(bcaceaf807602894f8e187b9f85f314c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b3c60319b64cb56804b78c756c7f2079') in 0.029232 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 33.714143 seconds.
+  path: Assets/Enemies/Skeleton/Prefabs/SkeletonGrave.prefab
+  artifactKey: Guid(530f5f54b5e783d49996bea0f559fd5d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Enemies/Skeleton/Prefabs/SkeletonGrave.prefab using Guid(530f5f54b5e783d49996bea0f559fd5d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f27aa481cd663e6718384b6b99bcbca7') in 0.017289 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 7.269538 seconds.
+  path: ProjectSettings/TagManager.asset
+  artifactKey: Guid(00000000000000003000000000000000) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing ProjectSettings/TagManager.asset using Guid(00000000000000003000000000000000) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8745099ea8fb46cc76b7561227ee7472') in 0.004863 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 19.329298 seconds.
+  path: Assets/Enemies/Skeleton/Prefabs/SkeletonGrave.prefab
+  artifactKey: Guid(530f5f54b5e783d49996bea0f559fd5d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Enemies/Skeleton/Prefabs/SkeletonGrave.prefab using Guid(530f5f54b5e783d49996bea0f559fd5d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e58db9502cf4a855839d2f84a5a67e7b') in 0.012648 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.293481 seconds.
+  path: Assets/Enemies/Skeleton/Prefabs/ZombieGrave.prefab
+  artifactKey: Guid(5c9d9c43213f86445b4aed4b98023678) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Enemies/Skeleton/Prefabs/ZombieGrave.prefab using Guid(5c9d9c43213f86445b4aed4b98023678) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd0792eeaefb2ab6d6c067d9903237974') in 0.015357 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.099270 seconds.
+  path: Assets/Enemies/Skeleton/Prefabs/SkeletonGrave.prefab
+  artifactKey: Guid(530f5f54b5e783d49996bea0f559fd5d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Enemies/Skeleton/Prefabs/SkeletonGrave.prefab using Guid(530f5f54b5e783d49996bea0f559fd5d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7e79fa69d52e1466b4576d229e5d81ac') in 0.014049 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 40.633513 seconds.
+  path: Assets/Effects/Blood/BloodEffect.prefab
+  artifactKey: Guid(bcaceaf807602894f8e187b9f85f314c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Effects/Blood/BloodEffect.prefab using Guid(bcaceaf807602894f8e187b9f85f314c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '87fe94fbcf43d78a52c52b1f188308b6') in 0.031257 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.715914 seconds.
+  path: Assets/Effects/Blood/BloodEffect.prefab
+  artifactKey: Guid(bcaceaf807602894f8e187b9f85f314c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Effects/Blood/BloodEffect.prefab using Guid(bcaceaf807602894f8e187b9f85f314c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ca50f9f6e1a752e97cc94edd2ff75cd5') in 0.028797 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 13.881639 seconds.
+  path: Assets/Effects/BrainEffect/BrainEffect.prefab
+  artifactKey: Guid(e64d300f4f8155e4f8c9aeec5c9ca4a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Effects/BrainEffect/BrainEffect.prefab using Guid(e64d300f4f8155e4f8c9aeec5c9ca4a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bab7bcbd6f3300b70b8f6633c7f8774f') in 0.043234 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.388320 seconds.
+  path: Assets/Effects/BrainEffect/Sprites
+  artifactKey: Guid(6d565abbfa8cdee429d928d2f8bedda3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Effects/BrainEffect/Sprites using Guid(6d565abbfa8cdee429d928d2f8bedda3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ed8870adc802c6a39e495ca7b059d899') in 0.001971 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.044115 seconds.
+  path: Assets/Effects/BrainEffect/Sprites/8_animation_brain_003.png
+  artifactKey: Guid(3fb59d6151009d049b932b9c5272fb2e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Effects/BrainEffect/Sprites/8_animation_brain_003.png using Guid(3fb59d6151009d049b932b9c5272fb2e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '04e8c8da5214b395a8f6573b44d8d32c') in 0.074681 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000062 seconds.
+  path: Assets/Effects/BrainEffect/Sprites/8_animation_brain_008.png
+  artifactKey: Guid(fa0b00d296b36264997677175c7752f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Effects/BrainEffect/Sprites/8_animation_brain_008.png using Guid(fa0b00d296b36264997677175c7752f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5eda93f96a0954a1b5f36a59f68b7d52') in 0.031119 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000068 seconds.
+  path: Assets/Effects/BrainEffect/Sprites/8_animation_brain_010.png
+  artifactKey: Guid(0a19bff5fe9dc044d95619c0cbac4e71) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Effects/BrainEffect/Sprites/8_animation_brain_010.png using Guid(0a19bff5fe9dc044d95619c0cbac4e71) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5cc1977fde791dec3024ef833864e833') in 0.031538 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000049 seconds.
+  path: Assets/Effects/BrainEffect/Sprites/8_animation_brain_007.png
+  artifactKey: Guid(56fedcc35dd81c84f883ed591fb4b6be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Effects/BrainEffect/Sprites/8_animation_brain_007.png using Guid(56fedcc35dd81c84f883ed591fb4b6be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2d6b494f9e306525ac570f8c8bbec94f') in 0.036724 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 7.204896 seconds.
+  path: Assets/Effects/BrainEffect/Sprites/8_animation_brain_005.png
+  artifactKey: Guid(8b14feaee7a399e4faa991188e85770a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Effects/BrainEffect/Sprites/8_animation_brain_005.png using Guid(8b14feaee7a399e4faa991188e85770a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4670d074d068e532ff979847c543ec69') in 0.036297 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000038 seconds.
+  path: Assets/Effects/BrainEffect/Sprites/8_animation_brain_000.png
+  artifactKey: Guid(6cc1eb5b2daf31a4cb5384038343f6a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Effects/BrainEffect/Sprites/8_animation_brain_000.png using Guid(6cc1eb5b2daf31a4cb5384038343f6a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9eb18d8ee72a0bf394bb0e279b8f3881') in 0.031660 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/Effects/BrainEffect/Sprites/8_animation_brain_011.png
+  artifactKey: Guid(2e156eed3c87ffd43b5b02ca297b1171) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Effects/BrainEffect/Sprites/8_animation_brain_011.png using Guid(2e156eed3c87ffd43b5b02ca297b1171) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3dc8c5cf50b252526b7acea47e5ea830') in 0.027627 seconds 
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0

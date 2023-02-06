@@ -31,6 +31,7 @@ namespace Assets.BaseAnim
             _animator.SetBool(ANIM_BOOL_NAME_IDLE, !IS_IDLE);
 
             _animator.SetBool(ANIM_BOOL_NAME_ATTACK, !IS_ATTACK);
+            
             _animator.SetBool(ANIM_BOOL_NAME_HURT, !IS_HURT);
 
         }

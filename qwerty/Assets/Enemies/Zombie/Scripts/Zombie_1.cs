@@ -1,22 +1,29 @@
 using Assets.Enemies.BaseEntity;
+using Assets.Interfaces;
+using UnityEngine;
 
 namespace Assets.Enemies.Zombie
 {
-    public class Zombie_1 : BaseEntity.BaseEntity
+    public class Zombie_1 : BaseEntity.BaseEntity, IEffectAfterDeath
     {
-        Behavior.EnemyBehavior enemyBehavior;
-        protected override void Awake()
+        public void InstantiateEffect(GameObject prefab, Vector3 position)
         {
-            base.Awake();
+            Instantiate(prefab, position, Quaternion.identity);
         }
+
         protected override void Attack()
         {
             base.Attack();
         }
 
+        protected override void Awake()
+        {
+            base.Awake();
+        }
+
         protected override void DieEnemy()
         {
-            
+            base.DieEnemy();
         }
 
         protected override void Hurt()

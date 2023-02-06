@@ -36,6 +36,8 @@ namespace Assets.Character.Scripts
 
         private void Awake()
         {
+            transform.position =  StaticFunction.StaticFunction.SetPositionOnTheCenterTile(groundTileMap,transform.position);
+
             playerData.CurrentHealth = playerData.MaxHealth;
             
             animationManager = GetComponent<AnimationManager.AnimationManager>();

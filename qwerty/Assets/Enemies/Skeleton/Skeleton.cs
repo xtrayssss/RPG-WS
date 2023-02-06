@@ -1,7 +1,8 @@
 using Assets.Enemies.BaseEntity;
+using Assets.Interfaces;
 using UnityEngine;
 
-public class Skeleton : BaseEntity
+public class Skeleton : BaseEntity, IEffectAfterDeath
 {
     protected override void Attack()
     {
@@ -34,5 +35,10 @@ public class Skeleton : BaseEntity
     protected override void Awake()
     {
         base.Awake();
+    }
+
+    public void InstantiateEffect(GameObject prefab, Vector3 position)
+    {
+        Instantiate(prefab, position, Quaternion.identity);
     }
 }

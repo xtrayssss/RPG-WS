@@ -15,22 +15,19 @@ public class AttackCollision : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        //var hittable = collision.GetComponent<BaseEntity>() as IDamagable;
-
         if (collision.tag == TAG_ENEMY)
         {
-            player.hittObjects.Add(collision);
+            if (!player.hittObjects.Contains(collision))
+            {
+                player.hittObjects.Add(collision);
+            }
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-       // var hittable = collision.GetComponent<BaseEntity>() as IDamagable;
-
         if (collision.tag == TAG_ENEMY)
         {
-            //attackPlayer.hitObjects.Clear();
-
-            Debug.Log("exit");
+            player.hittObjects.Clear();
         }
     }
 }

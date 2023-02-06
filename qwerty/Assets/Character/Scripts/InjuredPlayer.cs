@@ -19,7 +19,7 @@ namespace Assets.Character.Scripts
 
             animationManager.HurtAnimation();
 
-            //Debug.Log(playerData.CurrentHealth);
+            Debug.Log(playerData.CurrentHealth);
         }
 
 
