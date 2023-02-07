@@ -10,5 +10,13 @@ namespace Assets.Enemies.AnimationEventEnemy
         {
             baseEntity.EnemyTakeDamage.TakeDamage();
         }
+        public void HurtStart()
+        {
+            baseEntity.EnemyData.IsHurt = true;
+        }
+        public void HurtDone()
+        {
+            baseEntity.EnemyData.IsHurt = false;
+        }
     }
 }

@@ -48,12 +48,13 @@ namespace Assets.Character.Scripts
 
             playerMove = new PlayerMove(transform, player, playerData, groundTileMap, bridgeTileMap, animationManager, this);
 
+            playerMove.targetPosition = transform.position;
+            
             flipPlayer = new FlipPlayer(transform, playerMove);
 
             injuredPlayer = new InjuredPlayer(playerData, animationManager);
 
             attackPlayer = new AttackPlayer(playerData,inputHandler,animationManager, this);
-
         }
 
         private void Start()
@@ -68,17 +69,14 @@ namespace Assets.Character.Scripts
             
             CheckState();
             
-            if (attackPlayer.CheckAttack())
+            if (attackPlayer.CheckAttack(transform.position, playerMove.targetPosition))
             {
                 currentState = State.Attack;
             }
 
-            if (inputHandler.moveInput != Vector2.zero || playerMove.CurrentMoveInput != Vector2.zero && !attackPlayer.CheckAttack())
+            if (inputHandler.moveInput != Vector2.zero || playerMove.CurrentMoveInput != Vector2.zero && !attackPlayer.CheckAttack(transform.position, playerMove.targetPosition))
             {
                 currentState = State.Move;
-            }
-            if (playerMove.targetPosition == transform.position)
-            {
             }
 
             //Debug.Log(currentState);
@@ -117,6 +115,8 @@ namespace Assets.Character.Scripts
         public void AcceptDamage(int damage)
         {
             injuredPlayer.AcceptDamage(damage);
+
+            animationManager.HurtAnimation();
         }
     }
 }

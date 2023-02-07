@@ -30,7 +30,7 @@ namespace Assets.Enemies.BaseEntity
 
         private FlipEnemy flipEnemy;
 
-        [SerializeField] protected EnemyData enemyData;
+        [field: SerializeField] public EnemyData EnemyData { get; private set; }
        
         protected PlayerInputHandler player;
        
@@ -48,14 +48,14 @@ namespace Assets.Enemies.BaseEntity
         private void InitializeDependency()
         {
             _animation = GetComponent<AniamationManager.EnemyAnimation>();
+            enemyAccepted = new EnemyAcceptedDamage(EnemyData, _animation);
             player = FindObjectOfType<PlayerInputHandler>();
             playerMove = new PlayerMove();
             playerBehavior = FindObjectOfType<Player>();
-            moveEnemy = new MoveEnemy(transform, player, _animation, groundTileMap, bridgeTileMap, enemyData);
+            moveEnemy = new MoveEnemy(transform, player, _animation, groundTileMap, bridgeTileMap, EnemyData);
             flipEnemy = new FlipEnemy(transform, playerBehavior);
-            zoneCheckerEnemy = new ZoneCheckerEnemy(enemyData);
-            enemyAccepted = new EnemyAcceptedDamage(enemyData);
-            EnemyTakeDamage = new EnemyTakeDamage(enemyData, hittObjects);
+            zoneCheckerEnemy = new ZoneCheckerEnemy(EnemyData);
+            EnemyTakeDamage = new EnemyTakeDamage(EnemyData, hittObjects);
             EnemyDeath = new EnemyDeath(this, gameObject, groundTileMap);
         }
         #endregion
@@ -67,20 +67,24 @@ namespace Assets.Enemies.BaseEntity
 
             transform.position = StaticFunction.StaticFunction.SetPositionOnTheCenterTile(groundTileMap, transform.position);
             
-            enemyData.Health = enemyData.MaxHealth;
+            EnemyData.Health = EnemyData.MaxHealth;
 
             _collider2D = GetComponent<Collider2D>();
 
 
             _animation = GetComponent<EnemyAnimation>();
 
-            enemyData.IsEnterAgroZone = false;
+            EnemyData.IsEnterAgroZone = false;
 
-            enemyData.IsEnterAttackZone = false;
+            EnemyData.IsEnterAttackZone = false;
+
+            EnemyData.IsHurt = false;
 
             moveEnemy.Initilize(totalStopAfterMove);
         }
         #endregion
+
+
 
         protected virtual void Awake()
         {
@@ -91,12 +95,13 @@ namespace Assets.Enemies.BaseEntity
             SwitcherState();
 
             flipEnemy.FlipRealize();
+
+            Debug.Log(currentState);
         }
 
         #region SwitcherState
         protected void SwitcherState()
         {
-            Hurt();
             switch (currentState)
             {
                 case State.Idle:
@@ -125,9 +130,14 @@ namespace Assets.Enemies.BaseEntity
         {
             _animation.IdleAnimation();
             
-            if (enemyData.IsEnterAgroZone)
+            if (EnemyData.IsEnterAgroZone)
             {
                 currentState = State.Move;
+            }
+
+            if (EnemyData.IsHurt)
+            {
+                currentState = State.Hurt;
             }
         }
         #endregion
@@ -144,11 +154,16 @@ namespace Assets.Enemies.BaseEntity
         protected virtual void Attack()
         {
             _animation.AttackAnimation();
-            if (!enemyData.IsEnterAttackZone && enemyData.IsEnterAgroZone)
+
+            if (EnemyData.IsHurt)
+            {
+                currentState = State.Hurt;
+            }
+            if (!EnemyData.IsEnterAttackZone && EnemyData.IsEnterAgroZone)
             {
                 currentState = State.Move;
             }
-            if (!enemyData.IsEnterAttackZone && !enemyData.IsEnterAgroZone)
+            if (!EnemyData.IsEnterAttackZone && !EnemyData.IsEnterAgroZone)
             {
                 currentState = State.Idle;
             }
@@ -158,9 +173,19 @@ namespace Assets.Enemies.BaseEntity
         #region HurtState
         protected virtual void Hurt()
         {
+            _animation.HurtAnimation();
+
             if (CheckDeath())
             {
                 currentState = State.Death;
+            }
+            if (!EnemyData.IsHurt && EnemyData.IsEnterAgroZone)
+            {
+                currentState = State.Move;
+            }
+            if (!EnemyData.IsHurt && EnemyData.IsEnterAttackZone)
+            {
+                currentState = State.Attack;
             }
         }
         #endregion
@@ -176,13 +201,16 @@ namespace Assets.Enemies.BaseEntity
         public void AcceptDamage(int damage)
         {
             enemyAccepted.AcceptDamage(damage);
+            EnemyData.IsHurt = true;
         }
         #endregion
 
+        #region CheckDeath
         private bool CheckDeath()
         {
-            return enemyData.Health <= 0;
+            return EnemyData.Health <= 0;
         }
+        #endregion
 
         #region DeathState
         public void Death(float destroyTime)

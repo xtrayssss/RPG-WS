@@ -2894,7 +2894,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &462327060
 Transform:
   m_ObjectHideFlags: 0
@@ -2954,7 +2954,7 @@ MonoBehaviour:
   hittObjects: []
   moveEnemy:
     timerStopAfterMove: 0
-  enemyData: {fileID: 11400000, guid: ca8274fdefcc29a4b878c4678b4f1ce0, type: 2}
+  <EnemyData>k__BackingField: {fileID: 11400000, guid: ca8274fdefcc29a4b878c4678b4f1ce0, type: 2}
 --- !u!114 &462327064
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3247,7 +3247,7 @@ MonoBehaviour:
   hittObjects: []
   moveEnemy:
     timerStopAfterMove: 0
-  enemyData: {fileID: 11400000, guid: 0862b7f8ac6ece948a654fa5e8f1383c, type: 2}
+  <EnemyData>k__BackingField: {fileID: 11400000, guid: 0862b7f8ac6ece948a654fa5e8f1383c, type: 2}
 --- !u!70 &709121910
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -3261,8 +3261,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.06, y: 0.3}
-  m_Size: {x: 0.3, y: 0.7}
+  m_Offset: {x: -0.06242083, y: 0.20558769}
+  m_Size: {x: 0.29515836, y: 0.5111753}
   m_Direction: 0
 --- !u!4 &709121911
 Transform:
@@ -4346,7 +4346,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1360107026}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -5.35, y: 0.85, z: 0}
   m_LocalScale: {x: 0.0442966, y: 0.0442966, z: 0.0442966}
   m_ConstrainProportionsScale: 0
@@ -4656,7 +4656,7 @@ MonoBehaviour:
   m_Follow: {fileID: 1360107029}
   m_Lens:
     FieldOfView: 60
-    OrthographicSize: 0.7
+    OrthographicSize: 0.8
     NearClipPlane: 0.3
     FarClipPlane: 1000
     Dutch: 0
@@ -4742,7 +4742,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 0.7
+  orthographic size: 0.8
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2

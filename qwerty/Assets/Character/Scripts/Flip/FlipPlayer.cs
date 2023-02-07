@@ -27,11 +27,19 @@ namespace Assets.Character.Scripts
         #region Flip
         private void Flip()
         {
-            if (playerMove.CurrentMoveInput.x <= 0.0f)
+            if (playerMove.CurrentMoveInput.y < 0.0f)
             {
                 currentTransform.localScale = new Vector3(-ScaleSizePlayer, ScaleSizePlayer, ScaleSizePlayer);
             }
-            if (playerMove.CurrentMoveInput.x >= 0.0f)
+            if (playerMove.CurrentMoveInput.y > 0.0f)
+            {
+                currentTransform.localScale = new Vector3(ScaleSizePlayer, ScaleSizePlayer, ScaleSizePlayer);
+            }
+            if (playerMove.CurrentMoveInput.x < 0.0f)
+            {
+                currentTransform.localScale = new Vector3(-ScaleSizePlayer, ScaleSizePlayer, ScaleSizePlayer);
+            }
+            if (playerMove.CurrentMoveInput.x > 0.0f)
             {
                 currentTransform.localScale = new Vector3(ScaleSizePlayer, ScaleSizePlayer, ScaleSizePlayer);
             }

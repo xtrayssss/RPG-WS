@@ -27,7 +27,7 @@ namespace Assets.Character.Scripts
         public Vector2 CurrentMoveInput { get; set; }
 
         private const float DirectionPositionX = 0.72f;
-        private const float DirectionPositionY = 0.81f + 0.405f;
+        private const float DirectionPositionY = 0.81f - 0.18f;
         #endregion
 
         public PlayerMove(Transform currentTransform, PlayerInputHandler player,
@@ -100,7 +100,7 @@ namespace Assets.Character.Scripts
 
                 if (delaySeconds <= 0)
                 {
-                    delaySeconds = totalDelaySeconds;
+                    delaySeconds = playerData.TotalDelaySeconds;
                     targetPosition = currentTransform.position;
                     hasMoved = true;
                     animationManager.IdleAnimation();
@@ -124,9 +124,9 @@ namespace Assets.Character.Scripts
 
             if (player.moveInput.x > 0.0f) direction = new Vector2(DirectionPositionX, 0);
 
-            if (player.moveInput.y < 0.0f) direction = new Vector2(0, -DirectionPositionY);
+            if (player.moveInput.y < 0.0f) direction = new Vector2(-DirectionPositionX / 2.0f, -DirectionPositionY);
 
-            if (player.moveInput.y > 0.0f) direction = new Vector2(0, DirectionPositionY);
+            if (player.moveInput.y > 0.0f) direction = new Vector2(DirectionPositionX / 2.0f, DirectionPositionY);
         }
         #endregion
 

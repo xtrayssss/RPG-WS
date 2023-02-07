@@ -1,6 +1,5 @@
 using Assets.Character.Scripts;
 using UnityEngine;
-using System.Linq;
 
 public class AttackCollision : MonoBehaviour
 {
@@ -19,6 +18,7 @@ public class AttackCollision : MonoBehaviour
         {
             if (!player.hittObjects.Contains(collision))
             {
+                Debug.Log(collision);
                 player.hittObjects.Add(collision);
             }
         }
