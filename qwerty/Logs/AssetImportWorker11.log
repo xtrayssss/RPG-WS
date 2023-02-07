@@ -1,23 +1,23 @@
 Using pre-set license
-Built from '2021.3/staging' branch; Version is '2021.3.8f1 (b30333d56e81) revision 11731763'; Using compiler version '192829333'; Build Type 'Release'
-OS: 'Windows 10  (10.0.19044) 64bit ProfessionalEducation' Language: 'ru' Physical Memory: 32666 MB
+Built from '2021.3/staging' branch; Version is '2021.3.9f1 (ad3870b89536) revision 11352176'; Using compiler version '192829333'; Build Type 'Release'
+OS: 'Windows 10  (10.0.19044) 64bit Professional' Language: 'ru' Physical Memory: 7561 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
 
 COMMAND LINE ARGUMENTS:
-C:\Program Files\Unity\Hub\Editor\2021.3.8f1\Editor\Unity.exe
+D:\games\Unity\Unity Files (Dont Touch)\2021.3.9f1\Editor\Unity.exe
 -adb2
 -batchMode
 -noUpm
 -name
 AssetImportWorker11
 -projectPath
-C:/Users/lapuzin.ka1664/Desktop/WS/RPG-WS/qwerty
+D:/games/WS GAME/RPG-WS/qwerty
 -logFile
 Logs/AssetImportWorker11.log
 -srvPort
-60141
-Successfully changed project path to: C:/Users/lapuzin.ka1664/Desktop/WS/RPG-WS/qwerty
-C:/Users/lapuzin.ka1664/Desktop/WS/RPG-WS/qwerty
+55416
+Successfully changed project path to: D:/games/WS GAME/RPG-WS/qwerty
+D:/games/WS GAME/RPG-WS/qwerty
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
     "memorysetup-bucket-allocator-granularity=16"
     "memorysetup-bucket-allocator-bucket-count=8"
@@ -47,105 +47,111 @@ C:/Users/lapuzin.ka1664/Desktop/WS/RPG-WS/qwerty
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Refreshing native plugins compatible for Editor in 120.26 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 97.52 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Initialize engine version: 2021.3.8f1 (b30333d56e81)
-[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.3.8f1/Editor/Data/Resources/UnitySubsystems
-[Subsystems] Discovering subsystems at path C:/Users/lapuzin.ka1664/Desktop/WS/RPG-WS/qwerty/Assets
+Initialize engine version: 2021.3.9f1 (ad3870b89536)
+[Subsystems] Discovering subsystems at path D:/games/Unity/Unity Files (Dont Touch)/2021.3.9f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path D:/games/WS GAME/RPG-WS/qwerty/Assets
 GfxDevice: creating device client; threaded=0; jobified=0
 Direct3D:
     Version:  Direct3D 11.0 [level 11.1]
-    Renderer: NVIDIA GeForce RTX 3070 Ti (ID=0x2482)
-    Vendor:   NVIDIA
-    VRAM:     8041 MB
-    Driver:   31.0.15.1694
+    Renderer: AMD Radeon (TM) Graphics (ID=0x15e7)
+    Vendor:   ATI
+    VRAM:     3780 MB
+    Driver:   31.0.12018.5
 Initialize mono
-Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.3.8f1/Editor/Data/Managed'
-Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.3.8f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
-Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.3.8f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56500
+Mono path[0] = 'D:/games/Unity/Unity Files (Dont Touch)/2021.3.9f1/Editor/Data/Managed'
+Mono path[1] = 'D:/games/Unity/Unity Files (Dont Touch)/2021.3.9f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'D:/games/Unity/Unity Files (Dont Touch)/2021.3.9f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56340
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
-Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.8f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.005456 seconds.
+Register platform support module: D:/games/Unity/Unity Files (Dont Touch)/2021.3.9f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: D:/games/Unity/Unity Files (Dont Touch)/2021.3.9f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
+Register platform support module: D:/games/Unity/Unity Files (Dont Touch)/2021.3.9f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.002957 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 104.57 ms, found 4 plugins.
+Native extension for Android target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 96.93 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.618 seconds
+- Completed reload, in  0.526 seconds
 Domain Reload Profiling:
-	ReloadAssembly (618ms)
-		BeginReloadAssembly (58ms)
+	ReloadAssembly (527ms)
+		BeginReloadAssembly (50ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (463ms)
-			LoadAssemblies (56ms)
+		EndReloadAssembly (399ms)
+			LoadAssemblies (49ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (90ms)
+			SetupTypeCache (75ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (27ms)
-			SetupLoadedEditorAssemblies (302ms)
+			RebuildScriptCaches (20ms)
+			SetupLoadedEditorAssemblies (265ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (6ms)
+				InitializePlatformSupportModulesInManaged (34ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (105ms)
+				RefreshPlugins (97ms)
 				BeforeProcessingInitializeOnLoad (1ms)
-				ProcessInitializeOnLoadAttributes (142ms)
-				ProcessInitializeOnLoadMethodAttributes (48ms)
+				ProcessInitializeOnLoadAttributes (91ms)
+				ProcessInitializeOnLoadMethodAttributes (42ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.006270 seconds.
+Registered in 0.003695 seconds.
 Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image C:\Users\lapuzin.ka1664\Desktop\WS\RPG-WS\qwerty\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image C:\Users\lapuzin.ka1664\Desktop\WS\RPG-WS\qwerty\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image D:\games\WS GAME\RPG-WS\qwerty\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\games\WS GAME\RPG-WS\qwerty\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 102.35 ms, found 4 plugins.
+Native extension for Android target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 117.57 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.100 seconds
+- Completed reload, in  1.222 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1100ms)
-		BeginReloadAssembly (89ms)
+	ReloadAssembly (1223ms)
+		BeginReloadAssembly (97ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (5ms)
+			DisableScriptedObjects (6ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (15ms)
-		EndReloadAssembly (910ms)
-			LoadAssemblies (67ms)
+			CreateAndSetChildDomain (22ms)
+		EndReloadAssembly (1032ms)
+			LoadAssemblies (69ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (220ms)
+			SetupTypeCache (288ms)
 			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (57ms)
-			SetupLoadedEditorAssemblies (520ms)
+			RebuildScriptCaches (56ms)
+			SetupLoadedEditorAssemblies (572ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (4ms)
+				InitializePlatformSupportModulesInManaged (11ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (102ms)
-				BeforeProcessingInitializeOnLoad (96ms)
-				ProcessInitializeOnLoadAttributes (274ms)
-				ProcessInitializeOnLoadMethodAttributes (38ms)
-				AfterProcessingInitializeOnLoad (6ms)
+				RefreshPlugins (118ms)
+				BeforeProcessingInitializeOnLoad (89ms)
+				ProcessInitializeOnLoadAttributes (309ms)
+				ProcessInitializeOnLoadMethodAttributes (39ms)
+				AfterProcessingInitializeOnLoad (5ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (4ms)
+			AwakeInstancesAfterBackupRestoration (5ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.03 seconds
-Refreshing native plugins compatible for Editor in 1.01 ms, found 4 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
+Refreshing native plugins compatible for Editor in 1.41 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 4655 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 54 unused Assets / (128.2 KB). Loaded Objects now: 5111.
-Memory consumption went from 175.0 MB to 174.9 MB.
-Total: 3.641500 ms (FindLiveObjects: 0.339700 ms CreateObjectMapping: 0.301700 ms MarkObjects: 2.928700 ms  DeleteObjects: 0.070800 ms)
+Unloading 54 unused Assets / (128.4 KB). Loaded Objects now: 5114.
+Memory consumption went from 175.1 MB to 175.0 MB.
+Total: 6.035900 ms (FindLiveObjects: 0.663200 ms CreateObjectMapping: 0.437700 ms MarkObjects: 4.784400 ms  DeleteObjects: 0.149300 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -159,478 +165,886 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 84576.049487 seconds.
-  path: Assets/Tiles/SnowTiles/1.png
-  artifactKey: Guid(14f999dbeebf4e34e80e32c042fb8f01) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Tiles/SnowTiles/1.png using Guid(14f999dbeebf4e34e80e32c042fb8f01) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fc31d18586e085dd9a1cd11159d0fe46') in 0.105082 seconds 
+  Time since last request: 17369.168079 seconds.
+  path: Assets/UI/Sprites/ndead-warrior-character/PNG/undead/7
+  artifactKey: Guid(ee60a9e9eea689b42bd2e50b18419885) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/Sprites/ndead-warrior-character/PNG/undead/7 using Guid(ee60a9e9eea689b42bd2e50b18419885) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0560212bd11bc099e748bd3b33bd0be9') in 0.010885 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 3.436046 seconds.
-  path: Assets/Tiles/tail_1_square/1.png
-  artifactKey: Guid(8e6aed57e2e83cd409146d943b8116c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Tiles/tail_1_square/1.png using Guid(8e6aed57e2e83cd409146d943b8116c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8860f7a82a0ef780ecb206e36285ddd9') in 0.029341 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000018 seconds.
-  path: Assets/Tiles/tail_1_square/10.png
-  artifactKey: Guid(337413ff0a397774bb36a611dfab6d53) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Tiles/tail_1_square/10.png using Guid(337413ff0a397774bb36a611dfab6d53) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1dc1b877d8a98934860485941199ee23') in 0.033535 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000020 seconds.
-  path: Assets/Tiles/tail_1_square/11.png
-  artifactKey: Guid(281ca429224af4942bfe8f089c7ccf4f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Tiles/tail_1_square/11.png using Guid(281ca429224af4942bfe8f089c7ccf4f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5950f3660f19b6aad8ff553934864827') in 0.042333 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000020 seconds.
-  path: Assets/Tiles/tail_1_square/18.png
-  artifactKey: Guid(35022dce71efa1e48b835142ed7b91a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Tiles/tail_1_square/18.png using Guid(35022dce71efa1e48b835142ed7b91a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ad135c898416f0c2fdcd9f531a9927cc') in 0.044290 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 1.728144 seconds.
-  path: Assets/Tiles/tail_4_square/1.png
-  artifactKey: Guid(273d9559b0c3d794686c4787e53816fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Tiles/tail_4_square/1.png using Guid(273d9559b0c3d794686c4787e53816fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8c29f7214d7229e7a3df8d3128dd661b') in 0.023587 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000021 seconds.
-  path: Assets/Tiles/tail_4_square/18.png
-  artifactKey: Guid(97a42fa798f6eec4b99d80418c61bd3b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Tiles/tail_4_square/18.png using Guid(97a42fa798f6eec4b99d80418c61bd3b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '54ff4454866b677cb23f8e163a2d957b') in 0.024536 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000017 seconds.
-  path: Assets/Tiles/tail_4_square/10.png
-  artifactKey: Guid(bba21d9f2f1df684dacd64f01174f985) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Tiles/tail_4_square/10.png using Guid(bba21d9f2f1df684dacd64f01174f985) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2dc4f24c7e7006f284b9657d7bbb543e') in 0.039877 seconds 
+  Time since last request: 0.155323 seconds.
+  path: Assets/UI/Sprites/ndead-warrior-character/PNG/undead/7/7_animation_attack_000.png
+  artifactKey: Guid(af9782933d219e1489cb60fab2810d01) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/Sprites/ndead-warrior-character/PNG/undead/7/7_animation_attack_000.png using Guid(af9782933d219e1489cb60fab2810d01) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '25b8a87c222982112ecc6f170db6f79e') in 0.139131 seconds 
 ========================================================================
 Received Import Request.
   Time since last request: 0.000025 seconds.
-  path: Assets/Tiles/tail_4_square/8.png
-  artifactKey: Guid(413c2629a9b8f094fb123ee03dab477f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Tiles/tail_4_square/8.png using Guid(413c2629a9b8f094fb123ee03dab477f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f247dd5520517dc535bde0bcbd8d5510') in 0.051600 seconds 
+  path: Assets/UI/Sprites/ndead-warrior-character/PNG/undead/7/7_animation_attack_007.png
+  artifactKey: Guid(93dd6c6ede3e4fa42a034e8bf39482eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/Sprites/ndead-warrior-character/PNG/undead/7/7_animation_attack_007.png using Guid(93dd6c6ede3e4fa42a034e8bf39482eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0e9987edb366c929840457fe483a3d9d') in 0.034478 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 3.291812 seconds.
-  path: Assets/Tiles/tail_6/1.png
-  artifactKey: Guid(10d0caa6dd8e8814cbce0eef077a9ad1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Tiles/tail_6/1.png using Guid(10d0caa6dd8e8814cbce0eef077a9ad1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bbf6920b8bf3e5bea4cc4e32c4d6f567') in 0.025940 seconds 
+  Time since last request: 1.149609 seconds.
+  path: Assets/UI/Sprites/ndead-warrior-character/PNG/undead/7/7_animation_attack_013.png
+  artifactKey: Guid(e0d44450c0bc0df4fa2befd49e5dac66) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/Sprites/ndead-warrior-character/PNG/undead/7/7_animation_attack_013.png using Guid(e0d44450c0bc0df4fa2befd49e5dac66) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0b9eb739f4b91aab5ba5d398c35b0020') in 0.029930 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/UI/Sprites/ndead-warrior-character/PNG/undead/7/7_animation_hurt_000.png
+  artifactKey: Guid(2bf019e4b97dd744ea286aa89735f7e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/Sprites/ndead-warrior-character/PNG/undead/7/7_animation_hurt_000.png using Guid(2bf019e4b97dd744ea286aa89735f7e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b7c8c021845339963734b05c62c3c6b2') in 0.033460 seconds 
 ========================================================================
 Received Import Request.
   Time since last request: 0.000027 seconds.
-  path: Assets/Tiles/tail_6/19.png
-  artifactKey: Guid(260963be6de5ec148961c80d352bf57a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Tiles/tail_6/19.png using Guid(260963be6de5ec148961c80d352bf57a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e0fb68c3910d20e9018aaaa6d2c26b83') in 0.028146 seconds 
+  path: Assets/UI/Sprites/ndead-warrior-character/PNG/undead/7/7_animation_hurt_001.png
+  artifactKey: Guid(899e82d73a4a9b64381555ffc3dfaa8e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/Sprites/ndead-warrior-character/PNG/undead/7/7_animation_hurt_001.png using Guid(899e82d73a4a9b64381555ffc3dfaa8e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '06c5d209198ae5219c518f8689ef5a37') in 0.028826 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000031 seconds.
-  path: Assets/Tiles/tail_6/18.png
-  artifactKey: Guid(e5163e495e757984d8bdff26ddd14058) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Tiles/tail_6/18.png using Guid(e5163e495e757984d8bdff26ddd14058) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0daf0599fee6e8dc6ca491c66ff9b1dc') in 0.066609 seconds 
+  Time since last request: 0.241626 seconds.
+  path: Assets/UI/Sprites/ndead-warrior-character/PNG/undead/7/7_animation_hurt_003.png
+  artifactKey: Guid(c96dd4171bd750246b8026abefc7a1cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/Sprites/ndead-warrior-character/PNG/undead/7/7_animation_hurt_003.png using Guid(c96dd4171bd750246b8026abefc7a1cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '073cfc4737e1e4a93b474220679eb724') in 0.026314 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000015 seconds.
-  path: Assets/Tiles/tail_6/10.png
-  artifactKey: Guid(2b9eab9f080aa34479b5669d6d9b9820) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Tiles/tail_6/10.png using Guid(2b9eab9f080aa34479b5669d6d9b9820) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '40934c2f83b486306663d22e6aadddaa') in 0.058142 seconds 
+  Time since last request: 0.016326 seconds.
+  path: Assets/UI/Sprites/ndead-warrior-character/PNG/undead/7/7_animation_hurt_007.png
+  artifactKey: Guid(e9d8045e460fef44997647c05ae0d1b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/Sprites/ndead-warrior-character/PNG/undead/7/7_animation_hurt_007.png using Guid(e9d8045e460fef44997647c05ae0d1b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2128609680ec97a2968a84cede018f92') in 0.032376 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 7.991686 seconds.
-  path: Assets/Tiles/tail_6_square/1.png
-  artifactKey: Guid(9363a1e873550ba458c7e8d831142165) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Tiles/tail_6_square/1.png using Guid(9363a1e873550ba458c7e8d831142165) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a86e2df84cfbe82def2e5153ed0151ce') in 0.025320 seconds 
+  Time since last request: 0.026806 seconds.
+  path: Assets/UI/Sprites/ndead-warrior-character/PNG/undead/7/7_animation_hurt_011.png
+  artifactKey: Guid(598e98ee670de23468ed5bd83a47f7fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/Sprites/ndead-warrior-character/PNG/undead/7/7_animation_hurt_011.png using Guid(598e98ee670de23468ed5bd83a47f7fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3d95f6f319603ced8df4f6efd027e905') in 0.025443 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000028 seconds.
-  path: Assets/Tiles/tail_6_square/16.png
-  artifactKey: Guid(a125ca8e85188694c84ee188ef7709c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Tiles/tail_6_square/16.png using Guid(a125ca8e85188694c84ee188ef7709c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7fa3d212e296647da94b4e0eaffb2084') in 0.107331 seconds 
+  Time since last request: 0.246023 seconds.
+  path: Assets/UI/Sprites/ndead-warrior-character/PNG/undead/7/7_animation_hurt_013.png
+  artifactKey: Guid(a21679c20544d2c4bbd9d3c97d5d5b19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/Sprites/ndead-warrior-character/PNG/undead/7/7_animation_hurt_013.png using Guid(a21679c20544d2c4bbd9d3c97d5d5b19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '655c2dc5f886e344f3b5f12776915195') in 0.026537 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000020 seconds.
-  path: Assets/Tiles/tail_6_square/15.png
-  artifactKey: Guid(67dc04c0ff700b34d8bc94027078aad8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Tiles/tail_6_square/15.png using Guid(67dc04c0ff700b34d8bc94027078aad8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f358a0d0e73174c99e8761e3037ac1fb') in 0.032491 seconds 
+  Time since last request: 0.015196 seconds.
+  path: Assets/UI/Sprites/ndead-warrior-character/PNG/undead/7/7_animation_hurt_017.png
+  artifactKey: Guid(a923942823bea614493449b28053f96a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/Sprites/ndead-warrior-character/PNG/undead/7/7_animation_hurt_017.png using Guid(a923942823bea614493449b28053f96a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b6739c0e9c6ca6bbc19716f5e70687e4') in 0.029624 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 1.346545 seconds.
-  path: Assets/Tiles/WaterTiles/1.png
-  artifactKey: Guid(54e78ef7a61ce964787280fa4a4da911) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Tiles/WaterTiles/1.png using Guid(54e78ef7a61ce964787280fa4a4da911) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '299aec3af55997b3c795908e98dcbe96') in 0.027623 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000024 seconds.
-  path: Assets/Tiles/WaterTiles/10.png
-  artifactKey: Guid(b394abbbfe954aa48bb0984cd447b498) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Tiles/WaterTiles/10.png using Guid(b394abbbfe954aa48bb0984cd447b498) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5065e33f70c1a7ad402d10a3b5df1225') in 0.035963 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 1.341921 seconds.
-  path: Assets/Tiles/tail_5/1.png
-  artifactKey: Guid(a4d04f957c05d944096567aed14ae623) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Tiles/tail_5/1.png using Guid(a4d04f957c05d944096567aed14ae623) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '25bab515bef65882b70109d6a15b9db5') in 0.025932 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000016 seconds.
-  path: Assets/Tiles/tail_5/16.png
-  artifactKey: Guid(b2a13e9603aa4c6468496a89aace4a52) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Tiles/tail_5/16.png using Guid(b2a13e9603aa4c6468496a89aace4a52) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3a2188734e87cf2373ce54baadca8563') in 0.054766 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000016 seconds.
-  path: Assets/Tiles/tail_5/19.png
-  artifactKey: Guid(00de5d25573da16409aebf190cef031f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Tiles/tail_5/19.png using Guid(00de5d25573da16409aebf190cef031f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1b935ef7912b0db127e880535931d93d') in 0.062108 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 1.737628 seconds.
-  path: Assets/Tiles/tail_3_square/1.png
-  artifactKey: Guid(48370511f064acf4b8687f88b0f2ad2c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Tiles/tail_3_square/1.png using Guid(48370511f064acf4b8687f88b0f2ad2c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '51fed7508d9827323a47372beb1e6b29') in 0.023412 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000016 seconds.
-  path: Assets/Tiles/tail_3_square/11.png
-  artifactKey: Guid(a66e3f5f275a7424988fe8cb03c82c98) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Tiles/tail_3_square/11.png using Guid(a66e3f5f275a7424988fe8cb03c82c98) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6963d7ea60851e658101783d157213f3') in 0.019366 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000017 seconds.
-  path: Assets/Tiles/tail_3_square/8.png
-  artifactKey: Guid(cabdab1bb62a0dc47a15827712f32b87) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Tiles/tail_3_square/8.png using Guid(cabdab1bb62a0dc47a15827712f32b87) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3447a03b8853faf066d1c7103dd4e85e') in 0.017966 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000132 seconds.
-  path: Assets/Tiles/tail_3_square/12.png
-  artifactKey: Guid(ef22b5c0261637a4ab765f3f8613a41b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Tiles/tail_3_square/12.png using Guid(ef22b5c0261637a4ab765f3f8613a41b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b5acbfea9bd88e603b008578f7bd357f') in 0.017683 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 9.810105 seconds.
-  path: Assets/Tiles/tail_3_square/14.png
-  artifactKey: Guid(027c98a04598bc743828df3306d13fe1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Tiles/tail_3_square/14.png using Guid(027c98a04598bc743828df3306d13fe1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8c7fb0aea73d629838684f9dd69553e3') in 0.021013 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.002515 seconds.
-  path: Assets/Tiles/tail_3_square/1.png
-  artifactKey: Guid(48370511f064acf4b8687f88b0f2ad2c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Tiles/tail_3_square/1.png using Guid(48370511f064acf4b8687f88b0f2ad2c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a060c6dcc8e9d5d8f4bf4ec7e175872f') in 0.031299 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000020 seconds.
-  path: Assets/Tiles/tail_3_square/16.png
-  artifactKey: Guid(6b6616762b129684a962152293e1ef32) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Tiles/tail_3_square/16.png using Guid(6b6616762b129684a962152293e1ef32) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '224084fae6bce7482c478b9ee61e8bc9') in 0.018110 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000021 seconds.
-  path: Assets/Tiles/tail_3_square/8.png
-  artifactKey: Guid(cabdab1bb62a0dc47a15827712f32b87) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Tiles/tail_3_square/8.png using Guid(cabdab1bb62a0dc47a15827712f32b87) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f8f39a347560857c86b94f4d94fe43a6') in 0.016693 seconds 
+  Time since last request: 0.000033 seconds.
+  path: Assets/UI/Sprites/ndead-warrior-character/PNG/undead/7/7_animation_idle_002.png
+  artifactKey: Guid(e6e2a838b7fce6a429fcae0ca82db4d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/Sprites/ndead-warrior-character/PNG/undead/7/7_animation_idle_002.png using Guid(e6e2a838b7fce6a429fcae0ca82db4d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a2cfe406003cd807dfd990912d11df36') in 0.029222 seconds 
 ========================================================================
 Received Import Request.
   Time since last request: 0.000022 seconds.
-  path: Assets/Tiles/tail_3_square/7.png
-  artifactKey: Guid(a3f1a0876f1ed4f4f9d4d95b286a7af7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Tiles/tail_3_square/7.png using Guid(a3f1a0876f1ed4f4f9d4d95b286a7af7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '846afce56f5c13ff3dae8b9f9c114491') in 0.016373 seconds 
+  path: Assets/UI/Sprites/ndead-warrior-character/PNG/undead/7/7_animation_idle_003.png
+  artifactKey: Guid(119c9704ec93bfa4aa8d97f81fc00ecb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/Sprites/ndead-warrior-character/PNG/undead/7/7_animation_idle_003.png using Guid(119c9704ec93bfa4aa8d97f81fc00ecb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e4e00edc80f0197ffe49f7d388eafeee') in 0.036735 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 11.876609 seconds.
-  path: Assets/Tiles/tail_2_square
-  artifactKey: Guid(9c61cc25cbf22974dad09f5b10463938) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Tiles/tail_2_square using Guid(9c61cc25cbf22974dad09f5b10463938) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a5fc35338f3d31eee3361c150174545a') in 0.006459 seconds 
+  Time since last request: 0.281749 seconds.
+  path: Assets/UI/Sprites/ndead-warrior-character/PNG/undead/7/7_animation_idle_009.png
+  artifactKey: Guid(f83ffa2122f8f1d46a7751dc8ca974d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/Sprites/ndead-warrior-character/PNG/undead/7/7_animation_idle_009.png using Guid(f83ffa2122f8f1d46a7751dc8ca974d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9ab34621b0b182a52bceb99cfeec0a49') in 0.026357 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.042168 seconds.
-  path: Assets/Tiles/tail_2_square/1.png
-  artifactKey: Guid(d417632e6464be54a990f9e02e1102ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Tiles/tail_2_square/1.png using Guid(d417632e6464be54a990f9e02e1102ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8b9dac2935551a903d30ba475854e97b') in 0.030098 seconds 
+  Time since last request: 0.000040 seconds.
+  path: Assets/UI/Sprites/ndead-warrior-character/PNG/undead/7/7_animation_idle_013.png
+  artifactKey: Guid(f2ed669d83aed25429c131155eddc80d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/Sprites/ndead-warrior-character/PNG/undead/7/7_animation_idle_013.png using Guid(f2ed669d83aed25429c131155eddc80d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cd1e7f85aaea55426c42e95b4e5d904f') in 0.030938 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000018 seconds.
-  path: Assets/Tiles/tail_2_square/9.png
-  artifactKey: Guid(2b57f6f7364f0d245ae7f1fd3fe81b16) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Tiles/tail_2_square/9.png using Guid(2b57f6f7364f0d245ae7f1fd3fe81b16) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '03d051a9507de8d58b1823f74129ca16') in 0.038392 seconds 
+  Time since last request: 0.000017 seconds.
+  path: Assets/UI/Sprites/ndead-warrior-character/PNG/undead/7/7_animation_idle_015.png
+  artifactKey: Guid(856f647a5b5d7184a98cc4628d94c3f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/Sprites/ndead-warrior-character/PNG/undead/7/7_animation_idle_015.png using Guid(856f647a5b5d7184a98cc4628d94c3f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b64d7f3c4d783dc9680b8def59cd4172') in 0.027384 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000020 seconds.
-  path: Assets/Tiles/tail_2_square/10.png
-  artifactKey: Guid(3802b40d427bef2468e38327ee82f091) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Tiles/tail_2_square/10.png using Guid(3802b40d427bef2468e38327ee82f091) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6ab78ef97802e9cbc7eb875e1edfae6a') in 0.035083 seconds 
+  Time since last request: 0.017503 seconds.
+  path: Assets/UI/Sprites/ndead-warrior-character/PNG/undead/7/7_animation_idle_017.png
+  artifactKey: Guid(e7c8ff2f0ccdf1a45af0e0fa09eb949f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/Sprites/ndead-warrior-character/PNG/undead/7/7_animation_idle_017.png using Guid(e7c8ff2f0ccdf1a45af0e0fa09eb949f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a49b565670f3c1dd613c993d780da81b') in 0.024688 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000025 seconds.
-  path: Assets/Tiles/tail_2_square/15.png
-  artifactKey: Guid(1a9ad9908016db249b93c460f0f0d9cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Tiles/tail_2_square/15.png using Guid(1a9ad9908016db249b93c460f0f0d9cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '78aed8a643579483c46ca2d752edec9c') in 0.031969 seconds 
+  Time since last request: 0.306581 seconds.
+  path: Assets/UI/Sprites/ndead-warrior-character/PNG/undead/7/7_animation_idle_019.png
+  artifactKey: Guid(f9cfdf2bca094304aa479c2b93f44e27) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/Sprites/ndead-warrior-character/PNG/undead/7/7_animation_idle_019.png using Guid(f9cfdf2bca094304aa479c2b93f44e27) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '61e6f2892ecb30ec9a8d18cc6f855edc') in 0.028866 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 6.457884 seconds.
-  path: Assets/Tiles/tail_2_square/15.png
-  artifactKey: Guid(1a9ad9908016db249b93c460f0f0d9cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Tiles/tail_2_square/15.png using Guid(1a9ad9908016db249b93c460f0f0d9cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '182d50c147c11418c4255cb895c17cb2') in 0.016236 seconds 
+  Time since last request: 0.025849 seconds.
+  path: Assets/UI/Sprites/ndead-warrior-character/PNG/undead/7/7_animation_walk_003.png
+  artifactKey: Guid(1e24e2c4c0e8c4443bcba03df9598837) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/Sprites/ndead-warrior-character/PNG/undead/7/7_animation_walk_003.png using Guid(1e24e2c4c0e8c4443bcba03df9598837) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8c44f2d85e244d86c82b3702e295cbbd') in 0.035702 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.003170 seconds.
-  path: Assets/Tiles/tail_2_square/1.png
-  artifactKey: Guid(d417632e6464be54a990f9e02e1102ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Tiles/tail_2_square/1.png using Guid(d417632e6464be54a990f9e02e1102ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd934f79c6cb960f56a2294d760e6956b') in 0.027224 seconds 
+  Time since last request: 0.336077 seconds.
+  path: Assets/UI/Sprites/ndead-warrior-character/PNG/undead/7/7_animation_walk_009.png
+  artifactKey: Guid(60737c4c7dd90454f849053f6c53156d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/Sprites/ndead-warrior-character/PNG/undead/7/7_animation_walk_009.png using Guid(60737c4c7dd90454f849053f6c53156d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ffde3a830257190f538861cfafbbc043') in 0.032219 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.018296 seconds.
+  path: Assets/UI/Sprites/ndead-warrior-character/PNG/undead/7/7_animation_walk_015.png
+  artifactKey: Guid(481d7ac587a7fb041872c57152ca1913) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/Sprites/ndead-warrior-character/PNG/undead/7/7_animation_walk_015.png using Guid(481d7ac587a7fb041872c57152ca1913) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dec6271e84a34c746fce7c2a12a3bb09') in 0.028198 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.006609 seconds.
+  path: Assets/UI/Sprites/ndead-warrior-character/PNG/undead/7/7_animation_walk_019.png
+  artifactKey: Guid(a01927c643958774da2b0abb3b74d1b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/Sprites/ndead-warrior-character/PNG/undead/7/7_animation_walk_019.png using Guid(a01927c643958774da2b0abb3b74d1b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5841c3dfde208794ad921c53e6e34b43') in 0.025914 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 26.874522 seconds.
+  path: Assets/UI/Sprites/ndead-warrior-character/PNG/undead/3
+  artifactKey: Guid(ae0a1c9f2e5579f44aa57cc48b14cade) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/Sprites/ndead-warrior-character/PNG/undead/3 using Guid(ae0a1c9f2e5579f44aa57cc48b14cade) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '761c93a915bc8824abb4b816d333750c') in 0.001136 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.035943 seconds.
+  path: Assets/UI/Sprites/ndead-warrior-character/PNG/undead/3/3_animation_attack_000.png
+  artifactKey: Guid(99294de8400b1894f892795f37dbc45c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/Sprites/ndead-warrior-character/PNG/undead/3/3_animation_attack_000.png using Guid(99294de8400b1894f892795f37dbc45c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a87d78a7534fa6d783c8e1417d72df6a') in 0.025136 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/UI/Sprites/ndead-warrior-character/PNG/undead/3/3_animation_attack_013.png
+  artifactKey: Guid(0644a31cff2413742b7d7bceeeb2a3a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/Sprites/ndead-warrior-character/PNG/undead/3/3_animation_attack_013.png using Guid(0644a31cff2413742b7d7bceeeb2a3a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '37d07c1a3195bb8f5cffcafba948964a') in 0.027608 seconds 
 ========================================================================
 Received Import Request.
   Time since last request: 0.000029 seconds.
-  path: Assets/Tiles/tail_2_square/12.png
-  artifactKey: Guid(7650017cc97adf944acbdf3d6656738c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Tiles/tail_2_square/12.png using Guid(7650017cc97adf944acbdf3d6656738c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9802e563d7adfdd0502fc27113f4998d') in 0.016309 seconds 
+  path: Assets/UI/Sprites/ndead-warrior-character/PNG/undead/3/3_animation_attack_006.png
+  artifactKey: Guid(723ed03e852d22c4dbf52beae35f25a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/Sprites/ndead-warrior-character/PNG/undead/3/3_animation_attack_006.png using Guid(723ed03e852d22c4dbf52beae35f25a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '245bdc3e00b5b59f663e15333327ab72') in 0.032862 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000019 seconds.
-  path: Assets/Tiles/tail_2_square/13.png
-  artifactKey: Guid(beeb67506ce3fc54a801c0c2471d28bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Tiles/tail_2_square/13.png using Guid(beeb67506ce3fc54a801c0c2471d28bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c101acfec8a26760b3e23916d10bbeab') in 0.016539 seconds 
+  Time since last request: 0.000034 seconds.
+  path: Assets/UI/Sprites/ndead-warrior-character/PNG/undead/3/3_animation_attack_016.png
+  artifactKey: Guid(b0be80bfac4139543933199d37f9bb00) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/Sprites/ndead-warrior-character/PNG/undead/3/3_animation_attack_016.png using Guid(b0be80bfac4139543933199d37f9bb00) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ccfbfd052e849a4acba323c4ea2065ce') in 0.032734 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000020 seconds.
-  path: Assets/Tiles/tail_2_square/19.png
-  artifactKey: Guid(1a838401edf64cd46a43a13528d725dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Tiles/tail_2_square/19.png using Guid(1a838401edf64cd46a43a13528d725dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9a08b68b5b0748e5aadfb9048bb38b77') in 0.017809 seconds 
+  Time since last request: 0.000055 seconds.
+  path: Assets/UI/Sprites/ndead-warrior-character/PNG/undead/3/3_animation_attack_009.png
+  artifactKey: Guid(10986a4f3b0b22d44a0c30ef04ffe198) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/Sprites/ndead-warrior-character/PNG/undead/3/3_animation_attack_009.png using Guid(10986a4f3b0b22d44a0c30ef04ffe198) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd264db19fc1b869d87389f5eecef479f') in 0.026741 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 2.220568 seconds.
-  path: Assets/Tiles/tail_1_square
-  artifactKey: Guid(6388c5896c42b69469e66b75e4bbdbe1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Tiles/tail_1_square using Guid(6388c5896c42b69469e66b75e4bbdbe1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9078a1319085c6ff852917db10d7440f') in 0.006015 seconds 
+  Time since last request: 1.393675 seconds.
+  path: Assets/UI/Sprites/ndead-warrior-character/PNG/undead/3/3_animation_hurt_005.png
+  artifactKey: Guid(e829370afedff124b89e952cc2ef0a5f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/Sprites/ndead-warrior-character/PNG/undead/3/3_animation_hurt_005.png using Guid(e829370afedff124b89e952cc2ef0a5f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '66d5710963ea65ad7e4ce83d6dfb1d43') in 0.022076 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 7.138762 seconds.
-  path: Assets/Tiles/SnowTiles
-  artifactKey: Guid(29c312a9ca77d7a4e9a98e034708ff3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Tiles/SnowTiles using Guid(29c312a9ca77d7a4e9a98e034708ff3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '80126e80936a79a56b161a19b4931ab9') in 0.006141 seconds 
+  Time since last request: 0.000027 seconds.
+  path: Assets/UI/Sprites/ndead-warrior-character/PNG/undead/3/3_animation_hurt_010.png
+  artifactKey: Guid(c46999b91d08fd94ab668e17f4001ff3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/Sprites/ndead-warrior-character/PNG/undead/3/3_animation_hurt_010.png using Guid(c46999b91d08fd94ab668e17f4001ff3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '44386576c9550e3183c0ee68974f2bd5') in 0.029683 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 3.522831 seconds.
-  path: Assets/Tiles/tail_2
-  artifactKey: Guid(7e54fe87ef621c841addc46d0a74be3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Tiles/tail_2 using Guid(7e54fe87ef621c841addc46d0a74be3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f5d913594eeda8babbb3ff8eda0534c1') in 0.007111 seconds 
+  Time since last request: 0.000041 seconds.
+  path: Assets/UI/Sprites/ndead-warrior-character/PNG/undead/3/3_animation_idle_000.png
+  artifactKey: Guid(61cc8fd0dc0fefa4b9a113a808884f87) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/Sprites/ndead-warrior-character/PNG/undead/3/3_animation_idle_000.png using Guid(61cc8fd0dc0fefa4b9a113a808884f87) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '638f967ff39930a5b12b8707ea6c7004') in 0.027823 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.024268 seconds.
-  path: Assets/Tiles/tail_2/1.png
-  artifactKey: Guid(9ee75b8b354e90840889c08086ac3934) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Tiles/tail_2/1.png using Guid(9ee75b8b354e90840889c08086ac3934) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3034b04cc942947395e904a7c3d4e0c5') in 0.027325 seconds 
+  Time since last request: 0.000044 seconds.
+  path: Assets/UI/Sprites/ndead-warrior-character/PNG/undead/3/3_animation_idle_001.png
+  artifactKey: Guid(640ee22ee74d45c409ce5288df186c30) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/Sprites/ndead-warrior-character/PNG/undead/3/3_animation_idle_001.png using Guid(640ee22ee74d45c409ce5288df186c30) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5ba5a270da330b1f7e0d6853b65312c2') in 0.026363 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000024 seconds.
-  path: Assets/Tiles/tail_2/8.png
-  artifactKey: Guid(06e436203be1eae48aa69d0f747f38d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Tiles/tail_2/8.png using Guid(06e436203be1eae48aa69d0f747f38d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0163c233a9a52096c6660c6c88c77193') in 0.033945 seconds 
+  Time since last request: 0.244778 seconds.
+  path: Assets/UI/Sprites/ndead-warrior-character/PNG/undead/3/3_animation_idle_005.png
+  artifactKey: Guid(d86a7f954e21f9540ab604aeadc10f99) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/Sprites/ndead-warrior-character/PNG/undead/3/3_animation_idle_005.png using Guid(d86a7f954e21f9540ab604aeadc10f99) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '790b9b5e7db98de9ba45db7b46bdfd4c') in 0.021103 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000023 seconds.
-  path: Assets/Tiles/tail_2/16.png
-  artifactKey: Guid(dba81aaab5df6fa4cae2883aa6d761ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Tiles/tail_2/16.png using Guid(dba81aaab5df6fa4cae2883aa6d761ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '475ecf243e0358cc798a9edbdc3e6d56') in 0.081939 seconds 
+  Time since last request: 0.003287 seconds.
+  path: Assets/UI/Sprites/ndead-warrior-character/PNG/undead/3/3_animation_idle_009.png
+  artifactKey: Guid(5615b7ead8effff4ebf7b9a7a12de37d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/Sprites/ndead-warrior-character/PNG/undead/3/3_animation_idle_009.png using Guid(5615b7ead8effff4ebf7b9a7a12de37d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c16616e374b7b86770b166dbf13684a1') in 0.033315 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000022 seconds.
-  path: Assets/Tiles/tail_2/19.png
-  artifactKey: Guid(634c89f731ef3e7418c3b11bdbdc1ee8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Tiles/tail_2/19.png using Guid(634c89f731ef3e7418c3b11bdbdc1ee8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2f0745f75081f9de16bd34e67da3a453') in 0.034916 seconds 
+  Time since last request: 0.000035 seconds.
+  path: Assets/UI/Sprites/ndead-warrior-character/PNG/undead/3/3_animation_idle_016.png
+  artifactKey: Guid(d46b1d2f1d729e144ad4213717479d82) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/Sprites/ndead-warrior-character/PNG/undead/3/3_animation_idle_016.png using Guid(d46b1d2f1d729e144ad4213717479d82) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c06d1b64b266cb9d32499354426416e7') in 0.027817 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 3.417506 seconds.
-  path: Assets/Tiles/tail_6_square
-  artifactKey: Guid(14dbb197c7777e140ad8f69487112a30) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Tiles/tail_6_square using Guid(14dbb197c7777e140ad8f69487112a30) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c4dae0a8d27b46754669cba9028fc104') in 0.006756 seconds 
+  Time since last request: 0.000034 seconds.
+  path: Assets/UI/Sprites/ndead-warrior-character/PNG/undead/3/3_animation_walk_003.png
+  artifactKey: Guid(0452964ff10ad2441b8e709bd5abcb8e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/Sprites/ndead-warrior-character/PNG/undead/3/3_animation_walk_003.png using Guid(0452964ff10ad2441b8e709bd5abcb8e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6219a978deb729771ebc0fa72308e05c') in 0.029721 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 6.077637 seconds.
-  path: Assets/Tiles/tail_6_square/11.png
-  artifactKey: Guid(e751977ea5df6984f9d46847532bc516) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Tiles/tail_6_square/11.png using Guid(e751977ea5df6984f9d46847532bc516) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f6e8d655b382a9b8275e3c74245644c9') in 0.015223 seconds 
+  Time since last request: 0.000029 seconds.
+  path: Assets/UI/Sprites/ndead-warrior-character/PNG/undead/3/3_animation_idle_019.png
+  artifactKey: Guid(fd029b9e194eab444996389fa9792f24) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/Sprites/ndead-warrior-character/PNG/undead/3/3_animation_idle_019.png using Guid(fd029b9e194eab444996389fa9792f24) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5b1d3af91945448302464745a16ed2ab') in 0.018722 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.002906 seconds.
-  path: Assets/Tiles/tail_6_square/1.png
-  artifactKey: Guid(9363a1e873550ba458c7e8d831142165) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Tiles/tail_6_square/1.png using Guid(9363a1e873550ba458c7e8d831142165) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2795ac928e12e31842ae0ddca57821aa') in 0.045753 seconds 
+  Time since last request: 0.188003 seconds.
+  path: Assets/UI/Sprites/ndead-warrior-character/PNG/undead/3/3_animation_walk_005.png
+  artifactKey: Guid(3fbd09f6063ffc64a8adbcf867f2a6cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/Sprites/ndead-warrior-character/PNG/undead/3/3_animation_walk_005.png using Guid(3fbd09f6063ffc64a8adbcf867f2a6cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0f1345326cdaef975d8244954edd9ded') in 0.032781 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000018 seconds.
-  path: Assets/Tiles/tail_6_square/8.png
-  artifactKey: Guid(ac9896d8dc16b8448964758d7b98550f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Tiles/tail_6_square/8.png using Guid(ac9896d8dc16b8448964758d7b98550f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '021f4381089a296f1b36c0ae44162f90') in 0.024978 seconds 
+  Time since last request: 0.000038 seconds.
+  path: Assets/UI/Sprites/ndead-warrior-character/PNG/undead/3/3_animation_walk_016.png
+  artifactKey: Guid(e6cfa3de8ef1c934bb5c76f1b7ea5aa0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/Sprites/ndead-warrior-character/PNG/undead/3/3_animation_walk_016.png using Guid(e6cfa3de8ef1c934bb5c76f1b7ea5aa0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4c385c3ecb3125b383dec0927cc4e753') in 0.027111 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000018 seconds.
-  path: Assets/Tiles/tail_6_square/13.png
-  artifactKey: Guid(ad24b54f1845e7849b682b373aa60a95) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Tiles/tail_6_square/13.png using Guid(ad24b54f1845e7849b682b373aa60a95) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b98bfd4244a8c505dbef605044c218b2') in 0.023877 seconds 
+  Time since last request: 0.000041 seconds.
+  path: Assets/UI/Sprites/ndead-warrior-character/PNG/undead/3/3_animation_walk_010.png
+  artifactKey: Guid(fc375e062e8bc9449a741b49ab4192fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/Sprites/ndead-warrior-character/PNG/undead/3/3_animation_walk_010.png using Guid(fc375e062e8bc9449a741b49ab4192fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd5d550b74c4518b97fc4900b1de7999f') in 0.030002 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000020 seconds.
-  path: Assets/Tiles/tail_6_square/19.png
-  artifactKey: Guid(c38b72e8f635c4044895f8c34cf77269) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Tiles/tail_6_square/19.png using Guid(c38b72e8f635c4044895f8c34cf77269) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c066a33a94e1205a4b42543a3dd0e265') in 0.034241 seconds 
+  Time since last request: 5.141445 seconds.
+  path: Assets/UI/Sprites/ndead-warrior-character/PNG/undead/4
+  artifactKey: Guid(ded06ba3068162d448f8804536a55129) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/Sprites/ndead-warrior-character/PNG/undead/4 using Guid(ded06ba3068162d448f8804536a55129) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '11a5c29508062eda354c29952b361368') in 0.001414 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 6.699718 seconds.
-  path: Assets/Character/HumanWarrior/Sprites/Attack/1_animation_attack_019.png
-  artifactKey: Guid(c2306bc3be677af4cac01acd29b97d7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Character/HumanWarrior/Sprites/Attack/1_animation_attack_019.png using Guid(c2306bc3be677af4cac01acd29b97d7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c87d27e1d8a8246a37929f240e38705f') in 0.032396 seconds 
+  Time since last request: 0.043655 seconds.
+  path: Assets/UI/Sprites/ndead-warrior-character/PNG/undead/4/4_animation_attack_000.png
+  artifactKey: Guid(b179036df7c338a488fc95937e521710) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/Sprites/ndead-warrior-character/PNG/undead/4/4_animation_attack_000.png using Guid(b179036df7c338a488fc95937e521710) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a4fb822d302031bd54cb14b16497f475') in 0.026692 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000015 seconds.
-  path: Assets/Sprites/people-warrior-character/PNG/human/1/1_animation_walk_019.png
-  artifactKey: Guid(b533fe5a35a44434fa4519d0e505d05a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/people-warrior-character/PNG/human/1/1_animation_walk_019.png using Guid(b533fe5a35a44434fa4519d0e505d05a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b0d028d9f9bb343c9fae838bc1bc0df1') in 0.024738 seconds 
+  Time since last request: 0.000027 seconds.
+  path: Assets/UI/Sprites/ndead-warrior-character/PNG/undead/4/4_animation_attack_013.png
+  artifactKey: Guid(0eb8f39eaf4beae4ab565877d0400669) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/Sprites/ndead-warrior-character/PNG/undead/4/4_animation_attack_013.png using Guid(0eb8f39eaf4beae4ab565877d0400669) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2c4e92d957692d64026a0b5ca83ae3b9') in 0.023375 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000017 seconds.
-  path: Assets/Sprites/ndead-warrior-character/PNG/undead/1/1_animation_walk_019.png
-  artifactKey: Guid(d43512487929a7e4a906ada85ef8d153) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/ndead-warrior-character/PNG/undead/1/1_animation_walk_019.png using Guid(d43512487929a7e4a906ada85ef8d153) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e1b338e1082d05778e63950036568c42') in 0.026588 seconds 
+  Time since last request: 0.000042 seconds.
+  path: Assets/UI/Sprites/ndead-warrior-character/PNG/undead/4/4_animation_attack_019.png
+  artifactKey: Guid(394549962c6aff443abe95edb24220af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/Sprites/ndead-warrior-character/PNG/undead/4/4_animation_attack_019.png using Guid(394549962c6aff443abe95edb24220af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '98c397356e340bc93c23f0396d56e62e') in 0.022356 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000017 seconds.
-  path: Assets/Sprites/ndead-warrior-character/PNG/undead/1/1_animation_hurt_019.png
-  artifactKey: Guid(2675df9b16a3de9478554bafce926a9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/ndead-warrior-character/PNG/undead/1/1_animation_hurt_019.png using Guid(2675df9b16a3de9478554bafce926a9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '998e8c772b267ace591261f6c146a0e5') in 0.021914 seconds 
+  Time since last request: 0.000047 seconds.
+  path: Assets/UI/Sprites/ndead-warrior-character/PNG/undead/4/4_animation_attack_014.png
+  artifactKey: Guid(60422cd409a00624985b1bafd80aea86) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/Sprites/ndead-warrior-character/PNG/undead/4/4_animation_attack_014.png using Guid(60422cd409a00624985b1bafd80aea86) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e0b2902fa7d404d6a4b70293eafc5bf1') in 0.023036 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000022 seconds.
-  path: Assets/Enemies/Skeleton/Sprites/Hurt/1_animation_hurt_019.png
-  artifactKey: Guid(2ea808fdb47d92140821bd7f7ada0e01) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Enemies/Skeleton/Sprites/Hurt/1_animation_hurt_019.png using Guid(2ea808fdb47d92140821bd7f7ada0e01) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e1b1eae861a98c67a3209d85e9b8670a') in 0.032460 seconds 
+  Time since last request: 0.000027 seconds.
+  path: Assets/UI/Sprites/ndead-warrior-character/PNG/undead/4/4_animation_hurt_003.png
+  artifactKey: Guid(d17428124130dc44c8230b2bc06b5525) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/Sprites/ndead-warrior-character/PNG/undead/4/4_animation_hurt_003.png using Guid(d17428124130dc44c8230b2bc06b5525) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3ed7ffcde12b1f52b5a1a5b5b9373167') in 0.025744 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 1.304577 seconds.
-  path: Assets/Enemies/Zombie/Attack/2_animation_attack_019.png
-  artifactKey: Guid(54fb28e7ad4c46041913b0a359bef7db) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Enemies/Zombie/Attack/2_animation_attack_019.png using Guid(54fb28e7ad4c46041913b0a359bef7db) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '145d6b7d9778dfcf555ae42020124860') in 0.031476 seconds 
+  Time since last request: 3.909178 seconds.
+  path: Assets/UI/Sprites/ndead-warrior-character/PNG/undead/5
+  artifactKey: Guid(d391a63b2981c26458ff5a74bdcbf7c7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/Sprites/ndead-warrior-character/PNG/undead/5 using Guid(d391a63b2981c26458ff5a74bdcbf7c7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5f799e48ac0adcde4826834f258dc891') in 0.001304 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000014 seconds.
-  path: Assets/Enemies/Zombie/Walk/2_animation_walk_019.png
-  artifactKey: Guid(c1530a28fdc3d5b4cadcd782c33844e7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Enemies/Zombie/Walk/2_animation_walk_019.png using Guid(c1530a28fdc3d5b4cadcd782c33844e7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd87a64af58bab5fab29b2c48fbc7f219') in 0.040656 seconds 
+  Time since last request: 0.052436 seconds.
+  path: Assets/UI/Sprites/ndead-warrior-character/PNG/undead/5/5_animation_attack_000.png
+  artifactKey: Guid(c7910088a7cbc2949923848eb51cc339) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/Sprites/ndead-warrior-character/PNG/undead/5/5_animation_attack_000.png using Guid(c7910088a7cbc2949923848eb51cc339) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '25595dd417db83af5247073e98f1a3d6') in 0.031608 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.169418 seconds.
-  path: Assets/Sprites/ndead-warrior-character/PNG/undead/3/3_animation_attack_019.png
-  artifactKey: Guid(fe9663efae85650498a60b0833691133) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/ndead-warrior-character/PNG/undead/3/3_animation_attack_019.png using Guid(fe9663efae85650498a60b0833691133) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fe05dcf4e386fd24a4af0105c7074611') in 0.049812 seconds 
+  Time since last request: 0.000032 seconds.
+  path: Assets/UI/Sprites/ndead-warrior-character/PNG/undead/5/5_animation_attack_017.png
+  artifactKey: Guid(f590034065e88ca48bf4ac7704254885) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/Sprites/ndead-warrior-character/PNG/undead/5/5_animation_attack_017.png using Guid(f590034065e88ca48bf4ac7704254885) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '82d9cee7f37e405ea297907c207acb63') in 0.054207 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000018 seconds.
-  path: Assets/Sprites/people-warrior-character/PNG/human/3/3_animation_walk_019.png
-  artifactKey: Guid(d5383fb122926ef4c9ae8886d2b100d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/people-warrior-character/PNG/human/3/3_animation_walk_019.png using Guid(d5383fb122926ef4c9ae8886d2b100d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'efb484b37bcee4d77811d5bf13af34e1') in 0.028324 seconds 
+  Time since last request: 0.000033 seconds.
+  path: Assets/UI/Sprites/ndead-warrior-character/PNG/undead/5/5_animation_hurt_004.png
+  artifactKey: Guid(72e5fd813c1c6b24eb3f3e5b0e5dcdfc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/Sprites/ndead-warrior-character/PNG/undead/5/5_animation_hurt_004.png using Guid(72e5fd813c1c6b24eb3f3e5b0e5dcdfc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '36510e8b1a1f36e16e3e76c6a8f8799d') in 0.028534 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.168278 seconds.
-  path: Assets/Sprites/people-warrior-character/PNG/human/4/4_animation_idle_019.png
-  artifactKey: Guid(5abc613936c1c8b4cac64515d25e01e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/people-warrior-character/PNG/human/4/4_animation_idle_019.png using Guid(5abc613936c1c8b4cac64515d25e01e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2536acd5f074833d1b988d631619a8f3') in 0.029088 seconds 
+  Time since last request: 0.000059 seconds.
+  path: Assets/UI/Sprites/ndead-warrior-character/PNG/undead/5/5_animation_attack_018.png
+  artifactKey: Guid(7827113dbe5e0ff418ffc2f0464120dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/Sprites/ndead-warrior-character/PNG/undead/5/5_animation_attack_018.png using Guid(7827113dbe5e0ff418ffc2f0464120dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7fac2033b6d2823f0bc836cf538ecaf4') in 0.032921 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000022 seconds.
-  path: Assets/Sprites/ndead-warrior-character/PNG/undead/5/5_animation_attack_019.png
-  artifactKey: Guid(b8d3010dbc0b4724399b0e74e12cc79d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/ndead-warrior-character/PNG/undead/5/5_animation_attack_019.png using Guid(b8d3010dbc0b4724399b0e74e12cc79d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'be9e873d5490d2996c21c695023b31e6') in 0.031191 seconds 
+  Time since last request: 0.000039 seconds.
+  path: Assets/UI/Sprites/ndead-warrior-character/PNG/undead/5/5_animation_attack_010.png
+  artifactKey: Guid(5ff79b8914325684ba26b50a341124f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/Sprites/ndead-warrior-character/PNG/undead/5/5_animation_attack_010.png using Guid(5ff79b8914325684ba26b50a341124f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5ec12b4aee0285841d13561d4a8a6cf7') in 0.028644 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000025 seconds.
-  path: Assets/Sprites/people-warrior-character/PNG/human/5/5_animation_walk_019.png
-  artifactKey: Guid(1df55b36fc17b34458d647881cad0a3e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/people-warrior-character/PNG/human/5/5_animation_walk_019.png using Guid(1df55b36fc17b34458d647881cad0a3e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4c3059629fe77b75de057c2256c0dca9') in 0.034363 seconds 
+  Time since last request: 1.995656 seconds.
+  path: Assets/UI/Sprites/ndead-warrior-character/PNG/undead/5/5_animation_hurt_005.png
+  artifactKey: Guid(4cf79a7370670334883ac70511f96d49) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/Sprites/ndead-warrior-character/PNG/undead/5/5_animation_hurt_005.png using Guid(4cf79a7370670334883ac70511f96d49) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a676524e09b1f37204582ae66b4609ba') in 0.026040 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000019 seconds.
-  path: Assets/Sprites/ndead-warrior-character/PNG/undead/6/6_animation_attack_019.png
-  artifactKey: Guid(01590d46d0d12404a8d14d29a785c5bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/ndead-warrior-character/PNG/undead/6/6_animation_attack_019.png using Guid(01590d46d0d12404a8d14d29a785c5bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3ec7f50fb1075b6b179e735bc80516df') in 0.028438 seconds 
+  Time since last request: 0.000028 seconds.
+  path: Assets/UI/Sprites/ndead-warrior-character/PNG/undead/5/5_animation_hurt_011.png
+  artifactKey: Guid(f421ca738ec306b4bb15ce43ab05ad01) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/Sprites/ndead-warrior-character/PNG/undead/5/5_animation_hurt_011.png using Guid(f421ca738ec306b4bb15ce43ab05ad01) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f7ea4d4e56ed519acc9d107b00c6d55b') in 0.032926 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.163799 seconds.
-  path: Assets/Sprites/ndead-warrior-character/PNG/undead/6/6_animation_hurt_019.png
-  artifactKey: Guid(917df2a5e70e92a408229e8f6f93c422) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/ndead-warrior-character/PNG/undead/6/6_animation_hurt_019.png using Guid(917df2a5e70e92a408229e8f6f93c422) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2629daf21ded9068e1a731ccd61e3309') in 0.029560 seconds 
+  Time since last request: 0.034976 seconds.
+  path: Assets/UI/Sprites/ndead-warrior-character/PNG/undead/5/5_animation_hurt_017.png
+  artifactKey: Guid(786ad65ce7b995f4c95720a52cdbf061) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/Sprites/ndead-warrior-character/PNG/undead/5/5_animation_hurt_017.png using Guid(786ad65ce7b995f4c95720a52cdbf061) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dbcdcf400d57e25e1c8f3780717e6f94') in 0.031781 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.275851 seconds.
+  path: Assets/UI/Sprites/ndead-warrior-character/PNG/undead/5/5_animation_idle_005.png
+  artifactKey: Guid(41469bf569e9ba549a3ca4f02c740498) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/Sprites/ndead-warrior-character/PNG/undead/5/5_animation_idle_005.png using Guid(41469bf569e9ba549a3ca4f02c740498) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8eb9c1282b22a1a08675f77ba71dfcef') in 0.025393 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.020495 seconds.
+  path: Assets/UI/Sprites/ndead-warrior-character/PNG/undead/5/5_animation_idle_009.png
+  artifactKey: Guid(148886237e7f5f14d9c0025e3f719f0a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/Sprites/ndead-warrior-character/PNG/undead/5/5_animation_idle_009.png using Guid(148886237e7f5f14d9c0025e3f719f0a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd54860333bc3b260a5a54d4501f17158') in 0.036168 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000036 seconds.
+  path: Assets/UI/Sprites/ndead-warrior-character/PNG/undead/5/5_animation_idle_015.png
+  artifactKey: Guid(ec0614bce1fb96b47ba7406eb02a4f01) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/Sprites/ndead-warrior-character/PNG/undead/5/5_animation_idle_015.png using Guid(ec0614bce1fb96b47ba7406eb02a4f01) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '071a9428f4c201d01754f6b82a00ceff') in 0.025958 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.032906 seconds.
+  path: Assets/UI/Sprites/ndead-warrior-character/PNG/undead/5/5_animation_walk_001.png
+  artifactKey: Guid(5d8bec805cc86e44da19cec9c9533816) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/Sprites/ndead-warrior-character/PNG/undead/5/5_animation_walk_001.png using Guid(5d8bec805cc86e44da19cec9c9533816) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bfb3d71b3a4064fac8a6cc125b41f13f') in 0.024546 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.291740 seconds.
+  path: Assets/UI/Sprites/ndead-warrior-character/PNG/undead/5/5_animation_walk_005.png
+  artifactKey: Guid(2a5e56ce4d3f23c439341fe588342e25) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/Sprites/ndead-warrior-character/PNG/undead/5/5_animation_walk_005.png using Guid(2a5e56ce4d3f23c439341fe588342e25) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b8012301cac76c320d204605217b4adf') in 0.024933 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/UI/Sprites/ndead-warrior-character/PNG/undead/5/5_animation_walk_011.png
+  artifactKey: Guid(2f7bd0aa28b3ed04f8790da6e0672abe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/Sprites/ndead-warrior-character/PNG/undead/5/5_animation_walk_011.png using Guid(2f7bd0aa28b3ed04f8790da6e0672abe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a3ac525fe1640f0dcee95afb89c17dda') in 0.025582 seconds 
 ========================================================================
 Received Import Request.
   Time since last request: 0.000026 seconds.
-  path: Assets/Sprites/people-warrior-character/PNG/human/7/7_animation_hurt_019.png
-  artifactKey: Guid(6590a4c6d752fdd478143b2b41fffd0a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/people-warrior-character/PNG/human/7/7_animation_hurt_019.png using Guid(6590a4c6d752fdd478143b2b41fffd0a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3d29a32f7d9ead4c2950137e2c5a6e0c') in 0.066377 seconds 
+  path: Assets/UI/Sprites/ndead-warrior-character/PNG/undead/5/5_animation_walk_014.png
+  artifactKey: Guid(60abb6f4a4f7c9843ac16e96e4ab4452) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/Sprites/ndead-warrior-character/PNG/undead/5/5_animation_walk_014.png using Guid(60abb6f4a4f7c9843ac16e96e4ab4452) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '208d9d5ceb630fc9ed0be05bbceba1c6') in 0.029713 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.176127 seconds.
-  path: Assets/Sprites/people-warrior-character/PNG/human/7/7_animation_walk_019.png
-  artifactKey: Guid(2f323e335ddb40c45badaa53183b9fbd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/people-warrior-character/PNG/human/7/7_animation_walk_019.png using Guid(2f323e335ddb40c45badaa53183b9fbd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '360ca9b8fad9d541803b4deba9436577') in 0.071738 seconds 
+  Time since last request: 10.135949 seconds.
+  path: Assets/UI/Sprites/ndead-warrior-character/PNG/undead/5/5_animation_walk_000.png
+  artifactKey: Guid(299a26f4e6a0ac64fa7900ada49e0d56) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/Sprites/ndead-warrior-character/PNG/undead/5/5_animation_walk_000.png using Guid(299a26f4e6a0ac64fa7900ada49e0d56) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '593b481b4acdebec5b9c5a89688acda8') in 0.035722 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.030025 seconds.
-  path: Assets/Tiles/tail_3/19.png
-  artifactKey: Guid(6cfc2186ece77584e9677641b74dff84) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Tiles/tail_3/19.png using Guid(6cfc2186ece77584e9677641b74dff84) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cf7605c0acd23ee0b16a121893766272') in 0.015384 seconds 
+  Time since last request: 0.000036 seconds.
+  path: Assets/UI/Sprites/ndead-warrior-character/PNG/undead/5/5_animation_walk_011.png
+  artifactKey: Guid(2f7bd0aa28b3ed04f8790da6e0672abe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/Sprites/ndead-warrior-character/PNG/undead/5/5_animation_walk_011.png using Guid(2f7bd0aa28b3ed04f8790da6e0672abe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bed1fb3bcb3d611fdd5d3e7b1a46bfe5') in 0.026159 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.147644 seconds.
-  path: Assets/Tiles/tail_4/19.png
-  artifactKey: Guid(3d349b0477beafa41a7b1a9618d70b83) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Tiles/tail_4/19.png using Guid(3d349b0477beafa41a7b1a9618d70b83) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b7c3af6d753ae94d2b4e95ab29a970be') in 0.018918 seconds 
+  Time since last request: 0.000029 seconds.
+  path: Assets/UI/Sprites/ndead-warrior-character/PNG/undead/5/5_animation_walk_019.png
+  artifactKey: Guid(5836dda81c767b54e8e72e10162e3e00) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/Sprites/ndead-warrior-character/PNG/undead/5/5_animation_walk_019.png using Guid(5836dda81c767b54e8e72e10162e3e00) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '47421042a09c8bbdaf626a44044ce0f5') in 0.028914 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.037413 seconds.
-  path: Assets/Sprites/2d-game-assets/PNG/tail_2/19.png
-  artifactKey: Guid(5c82505b2d54ce848895927906fe5329) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/2d-game-assets/PNG/tail_2/19.png using Guid(5c82505b2d54ce848895927906fe5329) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '69ae97cef448235c08a3535fbf162bfd') in 0.022132 seconds 
+  Time since last request: 0.000053 seconds.
+  path: Assets/UI/Sprites/ndead-warrior-character/PNG/undead/5/5_animation_walk_008.png
+  artifactKey: Guid(493cca1f8a8961145beddb2372b7c133) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/Sprites/ndead-warrior-character/PNG/undead/5/5_animation_walk_008.png using Guid(493cca1f8a8961145beddb2372b7c133) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b796ebbd3baa6264cf77f6aede29ed67') in 0.024095 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.250920 seconds.
-  path: Assets/Sprites/2d-game-assets/PNG/tail_3_square/19.png
-  artifactKey: Guid(cfe9e13d37d4f8744a4f2a8afbabf9bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/2d-game-assets/PNG/tail_3_square/19.png using Guid(cfe9e13d37d4f8744a4f2a8afbabf9bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7125a1f1c4f4847f242766d195be8298') in 0.018297 seconds 
+  Time since last request: 2.959833 seconds.
+  path: Assets/UI/Sprites/ndead-warrior-character/PNG/undead/5/5_animation_walk_000.png
+  artifactKey: Guid(299a26f4e6a0ac64fa7900ada49e0d56) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/Sprites/ndead-warrior-character/PNG/undead/5/5_animation_walk_000.png using Guid(299a26f4e6a0ac64fa7900ada49e0d56) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '51254b6e4440285ddf8154b35f2aca8f') in 0.026333 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.022286 seconds.
-  path: Assets/Sprites/2d-game-assets/PNG/tail_4_square/19.png
-  artifactKey: Guid(7ff32b9c9f9191a4c9db3c56392825c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/2d-game-assets/PNG/tail_4_square/19.png using Guid(7ff32b9c9f9191a4c9db3c56392825c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a001c3d827cc8dfc8f6e6f70c79d421d') in 0.020195 seconds 
+  Time since last request: 0.000027 seconds.
+  path: Assets/UI/Sprites/ndead-warrior-character/PNG/undead/5/5_animation_walk_006.png
+  artifactKey: Guid(3057a5d9c1e2f07419f9d56b870933df) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/Sprites/ndead-warrior-character/PNG/undead/5/5_animation_walk_006.png using Guid(3057a5d9c1e2f07419f9d56b870933df) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9850e3f94cfdff80e249d76c60871f42') in 0.022490 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 12.438617 seconds.
-  path: Assets/Sprites/2d-game-assets/PNG/tail_3/19.png
-  artifactKey: Guid(afa198a271edf7940be80ecbcd657413) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/2d-game-assets/PNG/tail_3/19.png using Guid(afa198a271edf7940be80ecbcd657413) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3aea467328638a4b9a5bdba8c7dd3bfb') in 0.018009 seconds 
+  Time since last request: 0.000033 seconds.
+  path: Assets/UI/Sprites/ndead-warrior-character/PNG/undead/5/5_animation_walk_007.png
+  artifactKey: Guid(9126222d15071ac45bb9a47d426b051a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/Sprites/ndead-warrior-character/PNG/undead/5/5_animation_walk_007.png using Guid(9126222d15071ac45bb9a47d426b051a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2c4d69ba1cdd511a3aa57dbbb52dffe8') in 0.027550 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 15.561899 seconds.
-  path: Assets/Sprites/2d-game-assets/PNG/tail_3/1.png
-  artifactKey: Guid(145e3f43f29867c47bf984dd1974109d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/2d-game-assets/PNG/tail_3/1.png using Guid(145e3f43f29867c47bf984dd1974109d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '51d43e36547cb787bac0852af3e756d6') in 0.026488 seconds 
+  Time since last request: 0.000043 seconds.
+  path: Assets/UI/Sprites/ndead-warrior-character/PNG/undead/5/5_animation_idle_015.png
+  artifactKey: Guid(ec0614bce1fb96b47ba7406eb02a4f01) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/Sprites/ndead-warrior-character/PNG/undead/5/5_animation_idle_015.png using Guid(ec0614bce1fb96b47ba7406eb02a4f01) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0338c4d8083c8ebcf3a100aaa81a98d4') in 0.026554 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000044 seconds.
+  path: Assets/UI/Sprites/ndead-warrior-character/PNG/undead/5/5_animation_walk_009.png
+  artifactKey: Guid(865be498059fd7e4f8763b0f4fabb02d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/Sprites/ndead-warrior-character/PNG/undead/5/5_animation_walk_009.png using Guid(865be498059fd7e4f8763b0f4fabb02d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3317046d5ee3f68de858b9736d60d911') in 0.022819 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 7.125105 seconds.
+  path: Assets/UI/Sprites/ndead-warrior-character/PNG/undead/5/5_animation_walk_000.png
+  artifactKey: Guid(299a26f4e6a0ac64fa7900ada49e0d56) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/Sprites/ndead-warrior-character/PNG/undead/5/5_animation_walk_000.png using Guid(299a26f4e6a0ac64fa7900ada49e0d56) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0925c2196f637f31691c2b27604f2a8b') in 0.027120 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000078 seconds.
+  path: Assets/UI/Sprites/ndead-warrior-character/PNG/undead/5/5_animation_walk_006.png
+  artifactKey: Guid(3057a5d9c1e2f07419f9d56b870933df) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/Sprites/ndead-warrior-character/PNG/undead/5/5_animation_walk_006.png using Guid(3057a5d9c1e2f07419f9d56b870933df) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '38b9ca56e33c7097205bf5319923c8ec') in 0.025104 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/UI/Sprites/ndead-warrior-character/PNG/undead/5/5_animation_walk_007.png
+  artifactKey: Guid(9126222d15071ac45bb9a47d426b051a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/Sprites/ndead-warrior-character/PNG/undead/5/5_animation_walk_007.png using Guid(9126222d15071ac45bb9a47d426b051a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8085cbc89c3b9f0f6c47ad2d7eb22ebb') in 0.029517 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/UI/Sprites/ndead-warrior-character/PNG/undead/5/5_animation_idle_012.png
+  artifactKey: Guid(5759a3fbcb92c3346be0f9acb1ac45f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/Sprites/ndead-warrior-character/PNG/undead/5/5_animation_idle_012.png using Guid(5759a3fbcb92c3346be0f9acb1ac45f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e7d6f6486b0fd9e53a2b9537015bb98a') in 0.025444 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000039 seconds.
+  path: Assets/UI/Sprites/ndead-warrior-character/PNG/undead/5/5_animation_idle_011.png
+  artifactKey: Guid(4f75f106fa2d4a040977a4b1b03913d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/Sprites/ndead-warrior-character/PNG/undead/5/5_animation_idle_011.png using Guid(4f75f106fa2d4a040977a4b1b03913d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '822a2d4a14a2beef6d0f242512646627') in 0.029635 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/UI/Sprites/ndead-warrior-character/PNG/undead/5/5_animation_idle_015.png
+  artifactKey: Guid(ec0614bce1fb96b47ba7406eb02a4f01) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/Sprites/ndead-warrior-character/PNG/undead/5/5_animation_idle_015.png using Guid(ec0614bce1fb96b47ba7406eb02a4f01) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '580fdae13a6c75ef1e17baf65459c9f1') in 0.027171 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/UI/Sprites/ndead-warrior-character/PNG/undead/5/5_animation_walk_010.png
+  artifactKey: Guid(2ca6fc50b43e59a40b9b441ff2f79af3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/Sprites/ndead-warrior-character/PNG/undead/5/5_animation_walk_010.png using Guid(2ca6fc50b43e59a40b9b441ff2f79af3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'beaeca7ef348811954522939d1cadba0') in 0.024210 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000043 seconds.
+  path: Assets/UI/Sprites/ndead-warrior-character/PNG/undead/5/5_animation_hurt_018.png
+  artifactKey: Guid(ada91db05083ffc4299f8a4fd725eaeb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/Sprites/ndead-warrior-character/PNG/undead/5/5_animation_hurt_018.png using Guid(ada91db05083ffc4299f8a4fd725eaeb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4dc7107800ee2a4091f9d5949e402cba') in 0.027545 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000040 seconds.
+  path: Assets/UI/Sprites/ndead-warrior-character/PNG/undead/5/5_animation_hurt_010.png
+  artifactKey: Guid(93852323e6845d14e8fe6bc2e87d0b9a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/Sprites/ndead-warrior-character/PNG/undead/5/5_animation_hurt_010.png using Guid(93852323e6845d14e8fe6bc2e87d0b9a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c18969e0a5782acf559a67a92670cfdc') in 0.029128 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000035 seconds.
+  path: Assets/UI/Sprites/ndead-warrior-character/PNG/undead/5/5_animation_hurt_006.png
+  artifactKey: Guid(e85594af003ae8847b7873add1415cc8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/Sprites/ndead-warrior-character/PNG/undead/5/5_animation_hurt_006.png using Guid(e85594af003ae8847b7873add1415cc8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd697587d8f41288b953273c08e9e0d0b') in 0.023590 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000039 seconds.
+  path: Assets/UI/Sprites/ndead-warrior-character/PNG/undead/5/5_animation_attack_013.png
+  artifactKey: Guid(67bef8be53a1ba946ae21dde6ec9f280) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/Sprites/ndead-warrior-character/PNG/undead/5/5_animation_attack_013.png using Guid(67bef8be53a1ba946ae21dde6ec9f280) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cfb2809276235b545c039487cd9f0071') in 0.023615 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000040 seconds.
+  path: Assets/UI/Sprites/ndead-warrior-character/PNG/undead/5/5_animation_attack_011.png
+  artifactKey: Guid(a1ac00f80e1cb48489348c91baefc9c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/Sprites/ndead-warrior-character/PNG/undead/5/5_animation_attack_011.png using Guid(a1ac00f80e1cb48489348c91baefc9c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b874e0ec5116a55443d3d59c8e57a0a0') in 0.023952 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000054 seconds.
+  path: Assets/UI/Sprites/ndead-warrior-character/PNG/undead/5/5_animation_hurt_002.png
+  artifactKey: Guid(2a32a6f64612e9b46b3a2a7845b5defc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/Sprites/ndead-warrior-character/PNG/undead/5/5_animation_hurt_002.png using Guid(2a32a6f64612e9b46b3a2a7845b5defc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7a83168fa0f5910e3c746bfac3b3cb04') in 0.026797 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/UI/Sprites/ndead-warrior-character/PNG/undead/5/5_animation_attack_005.png
+  artifactKey: Guid(74ae19a1662f9294aa8cc8c1f5605d24) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/Sprites/ndead-warrior-character/PNG/undead/5/5_animation_attack_005.png using Guid(74ae19a1662f9294aa8cc8c1f5605d24) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd9ff943fc6235d57dea4de00082f7c2c') in 0.029229 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000089 seconds.
+  path: Assets/UI/Sprites/ndead-warrior-character/PNG/undead/5/5_animation_attack_010.png
+  artifactKey: Guid(5ff79b8914325684ba26b50a341124f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/Sprites/ndead-warrior-character/PNG/undead/5/5_animation_attack_010.png using Guid(5ff79b8914325684ba26b50a341124f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e06a75294f821e104236b6a8839f2a6e') in 0.024664 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.048442 seconds.
+  path: Assets/UI/Sprites/ndead-warrior-character/PNG/undead/5/5_animation_attack_000.png
+  artifactKey: Guid(c7910088a7cbc2949923848eb51cc339) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/Sprites/ndead-warrior-character/PNG/undead/5/5_animation_attack_000.png using Guid(c7910088a7cbc2949923848eb51cc339) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c8fa0fc74428070562054b2c3a4d19b3') in 0.027854 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 29.608842 seconds.
+  path: Assets/Scripts/Enemies
+  artifactKey: Guid(2980eed1385916940bce880a702e4091) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Enemies using Guid(2980eed1385916940bce880a702e4091) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c3d63f3f006b4c2727018801e29768ff') in 0.001109 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 21.511353 seconds.
+  path: Assets/Scripts/Enemies/Evil
+  artifactKey: Guid(5119ae020a88d8f4685c3cb92b29e740) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Enemies/Evil using Guid(5119ae020a88d8f4685c3cb92b29e740) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '92b6154ff13121ad7540a95cc24659ed') in 0.001255 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 10.952863 seconds.
+  path: Assets/Scripts/Enemies/Evil/5_animation_attack_000.png
+  artifactKey: Guid(f8cbd0737ab683b4b9530984e2daf180) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Enemies/Evil/5_animation_attack_000.png using Guid(f8cbd0737ab683b4b9530984e2daf180) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f257b6b7c1495acb1884e8ca17fe8cf8') in 0.031397 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Scripts/Enemies/Evil/5_animation_attack_013.png
+  artifactKey: Guid(e3f972c07d542d445a00d4304b970afd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Enemies/Evil/5_animation_attack_013.png using Guid(e3f972c07d542d445a00d4304b970afd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '613f382ed017bb3edd345adc487af5bd') in 0.024140 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Scripts/Enemies/Evil/5_animation_attack_018.png
+  artifactKey: Guid(ecfbbe611a051e2478f7a2906e601e45) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Enemies/Evil/5_animation_attack_018.png using Guid(ecfbbe611a051e2478f7a2906e601e45) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd6932a7133c010058c1a4bd45c1be06d') in 0.024359 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Scripts/Enemies/Evil/5_animation_hurt_000.png
+  artifactKey: Guid(2a5b7f5c83cffd54b99885d5ec3af719) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Enemies/Evil/5_animation_hurt_000.png using Guid(2a5b7f5c83cffd54b99885d5ec3af719) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '70ec08ae8d1df4f108443a2f421dfbf0') in 0.020106 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000038 seconds.
+  path: Assets/Scripts/Enemies/Evil/5_animation_attack_004.png
+  artifactKey: Guid(f222bbec232aef74a8cffa48c8bd85e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Enemies/Evil/5_animation_attack_004.png using Guid(f222bbec232aef74a8cffa48c8bd85e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ad337fa5d2aac6b5ea24608e03ed04f6') in 0.021273 seconds 
 ========================================================================
 Received Import Request.
   Time since last request: 0.000021 seconds.
-  path: Assets/Sprites/2d-game-assets/PNG/tail_3/17.png
-  artifactKey: Guid(9dc7c5e2ba535ad4e88edf73fda92ed6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/2d-game-assets/PNG/tail_3/17.png using Guid(9dc7c5e2ba535ad4e88edf73fda92ed6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'baee63718463ab0e3e7a71b6bf333826') in 0.021885 seconds 
+  path: Assets/Scripts/Enemies/Evil/5_animation_hurt_004.png
+  artifactKey: Guid(9cc264765bdc91947a3b2980106013be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Enemies/Evil/5_animation_hurt_004.png using Guid(9cc264765bdc91947a3b2980106013be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f852e21f0a57917848a092e5059cb45e') in 0.020441 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000019 seconds.
-  path: Assets/Sprites/2d-game-assets/PNG/tail_3/11.png
-  artifactKey: Guid(989043443afb86948a6c175af33328a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/2d-game-assets/PNG/tail_3/11.png using Guid(989043443afb86948a6c175af33328a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '693f3676a8009ad9d7784a4cf4a36788') in 0.018682 seconds 
+  Time since last request: 0.000033 seconds.
+  path: Assets/Scripts/Enemies/Evil/5_animation_attack_014.png
+  artifactKey: Guid(20ed5cd215a085143a8c448952108f82) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Enemies/Evil/5_animation_attack_014.png using Guid(20ed5cd215a085143a8c448952108f82) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7f1976a9edfb6ea3a2d78f7144c4b41c') in 0.021077 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000015 seconds.
-  path: Assets/Sprites/2d-game-assets/PNG/tail_3/6.png
-  artifactKey: Guid(d698d08fc8e751c4292fac537841ea19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/2d-game-assets/PNG/tail_3/6.png using Guid(d698d08fc8e751c4292fac537841ea19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd683fe9b3af5c3147887a15a9b548cd8') in 0.022587 seconds 
+  Time since last request: 2.252972 seconds.
+  path: Assets/Scripts/Enemies/Evil/5_animation_hurt_005.png
+  artifactKey: Guid(801967ff778283d4bba4d96cb9b20459) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Enemies/Evil/5_animation_hurt_005.png using Guid(801967ff778283d4bba4d96cb9b20459) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd20dc2af1f472760f72122bc1c3208b5') in 0.025932 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000040 seconds.
+  path: Assets/Scripts/Enemies/Evil/5_animation_hurt_014.png
+  artifactKey: Guid(d76e2de7f25d64844b92722f864e6bc6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Enemies/Evil/5_animation_hurt_014.png using Guid(d76e2de7f25d64844b92722f864e6bc6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eb8292d78fe0f61dd7a200e926a1e9ae') in 0.025649 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000045 seconds.
+  path: Assets/Scripts/Enemies/Evil/5_animation_hurt_019.png
+  artifactKey: Guid(311ad9d2eab440f4f9aed7fe9c21470e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Enemies/Evil/5_animation_hurt_019.png using Guid(311ad9d2eab440f4f9aed7fe9c21470e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ff68334091163595f6e460bd4ed1d89b') in 0.024725 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Scripts/Enemies/Evil/5_animation_idle_002.png
+  artifactKey: Guid(5d51c211e37a5ba44a439ae6ffbafafe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Enemies/Evil/5_animation_idle_002.png using Guid(5d51c211e37a5ba44a439ae6ffbafafe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f43702108640c5467ece574f37423983') in 0.025918 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Scripts/Enemies/Evil/5_animation_idle_000.png
+  artifactKey: Guid(251688ca21987524abe4133a63988ea9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Enemies/Evil/5_animation_idle_000.png using Guid(251688ca21987524abe4133a63988ea9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7ad358eff5f6120d3abd2de527514200') in 0.026832 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 7.142225 seconds.
+  path: Assets/Scripts/Enemies/Evil/5_animation_idle_005.png
+  artifactKey: Guid(21d9b1341a2434a4ca920c6eb757c4ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Enemies/Evil/5_animation_idle_005.png using Guid(21d9b1341a2434a4ca920c6eb757c4ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '90c4f8f5791024a3645e4bd1c5cfb217') in 0.033010 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/Scripts/Enemies/Evil/5_animation_walk_011.png
+  artifactKey: Guid(acfda755baea0334faf4e8877453f779) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Enemies/Evil/5_animation_walk_011.png using Guid(acfda755baea0334faf4e8877453f779) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a7a6985508b303ab77ee0bbc7df9a408') in 0.029197 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000051 seconds.
+  path: Assets/Scripts/Enemies/Evil/5_animation_walk_019.png
+  artifactKey: Guid(36d92d66b8cb25f4bbb2a6976bf49a40) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Enemies/Evil/5_animation_walk_019.png using Guid(36d92d66b8cb25f4bbb2a6976bf49a40) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '49eab8f30be1eb885488cfbf4ff6177a') in 0.029199 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/Scripts/Enemies/Evil/5_animation_walk_004.png
+  artifactKey: Guid(754b274efeb663d42b5e12aed8cc0bb0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Enemies/Evil/5_animation_walk_004.png using Guid(754b274efeb663d42b5e12aed8cc0bb0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd7b3c5d0caa1fae535973990d85023a7') in 0.029026 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000036 seconds.
+  path: Assets/Scripts/Enemies/Evil/5_animation_walk_010.png
+  artifactKey: Guid(1ee498f8c35e36440927dd30f0384512) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Enemies/Evil/5_animation_walk_010.png using Guid(1ee498f8c35e36440927dd30f0384512) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd58169b1c7e4cc6185b419a79c4e181e') in 0.029362 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Scripts/Enemies/Evil/5_animation_walk_005.png
+  artifactKey: Guid(ddec295c407ac144ba456ee82a8e9971) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Enemies/Evil/5_animation_walk_005.png using Guid(ddec295c407ac144ba456ee82a8e9971) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd63a00a6e19866f676748e9f5f70a3fc') in 0.025698 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/Scripts/Enemies/Evil/5_animation_walk_000.png
+  artifactKey: Guid(294529ee69722fc48927fa0d1d16460d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Enemies/Evil/5_animation_walk_000.png using Guid(294529ee69722fc48927fa0d1d16460d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '91552bc3f9020da3b49ce8abd96294a8') in 0.030606 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000058 seconds.
+  path: Assets/Scripts/Enemies/Evil/5_animation_idle_016.png
+  artifactKey: Guid(61d841e3752928e41890280e41be43f5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Enemies/Evil/5_animation_idle_016.png using Guid(61d841e3752928e41890280e41be43f5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '62d201e3ee63df69fac8a2522bd62e0e') in 0.024528 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003631 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\games\WS GAME\RPG-WS\qwerty\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\games\WS GAME\RPG-WS\qwerty\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.47 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.956 seconds
+Domain Reload Profiling:
+	ReloadAssembly (956ms)
+		BeginReloadAssembly (130ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (6ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (46ms)
+		EndReloadAssembly (730ms)
+			LoadAssemblies (79ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (223ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (40ms)
+			SetupLoadedEditorAssemblies (347ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (23ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (2ms)
+				BeforeProcessingInitializeOnLoad (58ms)
+				ProcessInitializeOnLoadAttributes (233ms)
+				ProcessInitializeOnLoadMethodAttributes (29ms)
+				AfterProcessingInitializeOnLoad (2ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (6ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 2.22 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4632 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 27 unused Assets / (95.3 KB). Loaded Objects now: 5146.
+Memory consumption went from 177.3 MB to 177.2 MB.
+Total: 4.842800 ms (FindLiveObjects: 0.437000 ms CreateObjectMapping: 0.150400 ms MarkObjects: 4.193800 ms  DeleteObjects: 0.060100 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003533 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\games\WS GAME\RPG-WS\qwerty\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\games\WS GAME\RPG-WS\qwerty\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.36 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.985 seconds
+Domain Reload Profiling:
+	ReloadAssembly (985ms)
+		BeginReloadAssembly (114ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (5ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (39ms)
+		EndReloadAssembly (793ms)
+			LoadAssemblies (65ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (208ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (37ms)
+			SetupLoadedEditorAssemblies (431ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (22ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (54ms)
+				ProcessInitializeOnLoadAttributes (313ms)
+				ProcessInitializeOnLoadMethodAttributes (36ms)
+				AfterProcessingInitializeOnLoad (5ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (10ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 2.12 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4632 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 27 unused Assets / (95.3 KB). Loaded Objects now: 5161.
+Memory consumption went from 177.3 MB to 177.3 MB.
+Total: 3.326400 ms (FindLiveObjects: 0.345600 ms CreateObjectMapping: 0.134600 ms MarkObjects: 2.807200 ms  DeleteObjects: 0.038400 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003194 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\games\WS GAME\RPG-WS\qwerty\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\games\WS GAME\RPG-WS\qwerty\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.28 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.881 seconds
+Domain Reload Profiling:
+	ReloadAssembly (881ms)
+		BeginReloadAssembly (121ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (6ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (46ms)
+		EndReloadAssembly (688ms)
+			LoadAssemblies (70ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (190ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (43ms)
+			SetupLoadedEditorAssemblies (340ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (16ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (55ms)
+				ProcessInitializeOnLoadAttributes (230ms)
+				ProcessInitializeOnLoadMethodAttributes (33ms)
+				AfterProcessingInitializeOnLoad (3ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (8ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 2.22 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4632 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 27 unused Assets / (96.4 KB). Loaded Objects now: 5176.
+Memory consumption went from 177.4 MB to 177.3 MB.
+Total: 3.359300 ms (FindLiveObjects: 0.319600 ms CreateObjectMapping: 0.121400 ms MarkObjects: 2.873600 ms  DeleteObjects: 0.043800 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 637.648697 seconds.
+  path: Assets/Scripts/Enemies/Evil/Scripts/EvilEnemy.cs
+  artifactKey: Guid(4365a3592a050ed449eae282844b7102) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Enemies/Evil/Scripts/EvilEnemy.cs using Guid(4365a3592a050ed449eae282844b7102) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9a7077292fe1f737ec2b79530f583965') in 0.011210 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 473.161725 seconds.
+  path: Assets/TextMesh Pro/Examples & Extras/Resources/Fonts & Materials/Roboto-Bold SDF.asset
+  artifactKey: Guid(5302535af1044152a457ed104f1f4b91) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TextMesh Pro/Examples & Extras/Resources/Fonts & Materials/Roboto-Bold SDF.asset using Guid(5302535af1044152a457ed104f1f4b91) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '11773b441882841995c9ca7c371025fb') in 0.082128 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/TextMesh Pro/Shaders/TMPro_Mobile.cginc
+  artifactKey: Guid(c334973cef89a9840b0b0c507e0377ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TextMesh Pro/Shaders/TMPro_Mobile.cginc using Guid(c334973cef89a9840b0b0c507e0377ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1999694fbd3e051111afe8363ffdff0a') in 0.003443 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000038 seconds.
+  path: Assets/TextMesh Pro/Examples & Extras/Resources/Fonts & Materials/Roboto-Bold SDF - Surface.mat
+  artifactKey: Guid(e6b276ec991f467aa14ef1f3cc665993) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TextMesh Pro/Examples & Extras/Resources/Fonts & Materials/Roboto-Bold SDF - Surface.mat using Guid(e6b276ec991f467aa14ef1f3cc665993) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '29bf833bac17724a129e552ea92164eb') in 0.094729 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.350223 seconds.
+  path: Assets/UI/Sprites/ndead-warrior-character/PNG/undead/object/2.png
+  artifactKey: Guid(ed09f2f4aa1d2fc42a2d5abd9922a615) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/Sprites/ndead-warrior-character/PNG/undead/object/2.png using Guid(ed09f2f4aa1d2fc42a2d5abd9922a615) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '251e3022ff44ab6dfdd1f9587020ee5d') in 0.030072 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000036 seconds.
+  path: Assets/UI/Sprites/ndead-warrior-character/PNG/undead/object/6.png
+  artifactKey: Guid(c635a95f7ddbbb940a8f87e91efd3bfc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/Sprites/ndead-warrior-character/PNG/undead/object/6.png using Guid(c635a95f7ddbbb940a8f87e91efd3bfc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '57e5cf62523d380232e9cca21c13ad23') in 0.024848 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000053 seconds.
+  path: Assets/UI/Sprites/ndead-warrior-character/PNG/undead/object/7.png
+  artifactKey: Guid(efe1f4ee1b35c6345871080b8bb925ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/Sprites/ndead-warrior-character/PNG/undead/object/7.png using Guid(efe1f4ee1b35c6345871080b8bb925ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8ff254c745a64a97a52c80f083b66d7c') in 0.025523 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 17.429413 seconds.
+  path: Assets/TextMesh Pro/Examples & Extras/Resources/Fonts & Materials/Anton SDF - Sunny Days.mat
+  artifactKey: Guid(6522f30e342599e4e9dd4cc2cc03c830) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TextMesh Pro/Examples & Extras/Resources/Fonts & Materials/Anton SDF - Sunny Days.mat using Guid(6522f30e342599e4e9dd4cc2cc03c830) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3680e78904f2b4fb8b3a0f974023cac3') in 0.112527 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/TextMesh Pro/Examples & Extras/Materials/Ground - Logo Scene.mat
+  artifactKey: Guid(c719e38f25a9480abd2480ab621a2949) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TextMesh Pro/Examples & Extras/Materials/Ground - Logo Scene.mat using Guid(c719e38f25a9480abd2480ab621a2949) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2bba37dd179704551fa76a6446258c55') in 0.206934 seconds 
 Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
 AssetImportWorker is now disconnected from the server
 Process exiting
