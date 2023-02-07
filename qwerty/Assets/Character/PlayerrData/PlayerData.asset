@@ -15,3 +15,4 @@ MonoBehaviour:
   speedMove: 1
   maxHealth: 50
   damage: 1
+  totalDelaySeconds: 0.1

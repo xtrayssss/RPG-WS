@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speedMove: 10
   damage: 1
-  health: 0
+  health: 10
   maxHealth: 10
   isEnterAgroZone: 0
   isEnterAttackZone: 0
+  isHurt: 0

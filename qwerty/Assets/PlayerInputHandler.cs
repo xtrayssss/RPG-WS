@@ -1,10 +1,18 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class PlayerInputHandler : MonoBehaviour
 {
-   [field: SerializeField] public bool isAttack { get; set; }
+    public static PlayerInputHandler Instance { get; set; }
+    [field: SerializeField] public bool isAttack { get; set; }
     public Vector2 moveInput {get; set;}
+    private void Awake()
+    {
+        DontDestroyOnLoad(this);
+
+        Instance = this;
+    }
     public void OnMove(InputAction.CallbackContext callbackContext)
     {
         moveInput = callbackContext.ReadValue<Vector2>();
@@ -16,4 +24,5 @@ public class PlayerInputHandler : MonoBehaviour
             isAttack = true;
         }
     }
+    
 }

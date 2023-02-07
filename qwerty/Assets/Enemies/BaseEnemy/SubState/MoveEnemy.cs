@@ -26,6 +26,8 @@ namespace Assets.Enemies.BaseEntity
         private Tilemap bridgeTileMap;
         private EnemyData enemyData;
 
+        private const float DIRECTION_X = 0.71f;
+        private const float DIRECTION_Y = 0.81f + 0.405f;
 
         public MoveEnemy(Transform currentTransform, PlayerInputHandler playerInputHandler,
             AniamationManager.EnemyAnimation _animation, Tilemap groundTileMap,
@@ -75,6 +77,10 @@ namespace Assets.Enemies.BaseEntity
             {
                 currentState = State.Attack;
             }
+            if (enemyData.IsHurt)
+            {
+                currentState = State.Hurt;
+            }
         }
         #endregion
 
@@ -120,16 +126,13 @@ namespace Assets.Enemies.BaseEntity
             Vector2 direction = playerInputHandler.transform.position - currentTransform.position;
             direction = direction.normalized;
 
-            //Debug.Log(direction);
-            //Debug.Log(playerBehavior.CurrentMoveInput);
+            if (direction.x < 0.0f && direction.x < direction.y) return new Vector2(-DIRECTION_X, 0);
 
-            if (direction.x < 0.0f && direction.x < direction.y) return new Vector2(-0.72f, 0);
+            else if (direction.x > 0.0f && direction.x > direction.y) return new Vector2(DIRECTION_X, 0);
 
-            else if (direction.x > 0.0f && direction.x > direction.y) return new Vector2(0.72f, 0);
+            else if (direction.y > 0.0f && direction.y > direction.x) return new Vector2(0, DIRECTION_Y);
 
-            else if (direction.y > 0.0f && direction.y > direction.x) return new Vector2(0, 0.81f + 0.405f);
-
-            else if (direction.y < 0.0f && direction.y < direction.x) return new Vector2(0, -(0.81f + 0.405f));
+            else if (direction.y < 0.0f && direction.y < direction.x) return new Vector2(0, -(DIRECTION_Y));
 
             else return new Vector2(0f, 0f);
         }

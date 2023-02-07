@@ -43,6 +43,7 @@ namespace Assets.Character.Scripts
             }
         }
 
-        public bool CheckAttack() => inputHandler.isAttack;
+
+        public bool CheckAttack(Vector3 currentTransform, Vector3 targetTransform) => inputHandler.isAttack && currentTransform == targetTransform;
    }
 }

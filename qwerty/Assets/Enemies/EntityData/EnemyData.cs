@@ -9,6 +9,7 @@ public class EnemyData : ScriptableObject
     {
         isEnterAgroZone = false;
         isEnterAttackZone = false;
+        isHurt = false;
     }
 
     [SerializeField] private float speedMove = 2.0f;
@@ -22,10 +23,14 @@ public class EnemyData : ScriptableObject
     [SerializeField] private bool isEnterAgroZone;
    
     [SerializeField] private bool isEnterAttackZone;
+
+    [SerializeField] private bool isHurt;
+
     public float SpeedMove { get => speedMove; private set => speedMove = value; }
     public int Damage { get => damage; private set => damage = value; }
     public int Health { get => health; set => health = value; }
     public bool IsEnterAgroZone { get => isEnterAgroZone; set => isEnterAgroZone = value; }
     public bool IsEnterAttackZone { get => isEnterAttackZone; set => isEnterAttackZone = value; }
     public int MaxHealth { get => maxHealth; private set => maxHealth = value; }
+    public bool IsHurt { get => isHurt; set => isHurt = value; }
 }
