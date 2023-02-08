@@ -4,85 +4,118 @@ using UnityEngine.Tilemaps;
 
 public class GenerateLevel : MonoBehaviour
 {
-    [SerializeField] private int weight;
-    [SerializeField] private int height;
-    [SerializeField] private Tilemap tilemap;
+    #region Variables
+
+    [SerializeField] public Tile[] forceOfLightTiles;
+
+    [SerializeField] public Tile[] forceOfDarknessTiles;
+
+    public static GenerateLevel Instance;
+
+    [SerializeField] public int width;
+    
+    [SerializeField] public int height;
+
     [SerializeField] private Tilemap bridgeTileMap;
 
-    [SerializeField] Tilemap waterTileMap;
-    [SerializeField] Tile water;
-    [SerializeField] Tile bridge;
-
-    [SerializeField] Tilemap forceOfLight;
-    [SerializeField] Tilemap forceOfDarkness;
+    [SerializeField] private Tilemap waterTileMap;
     
-    [SerializeField] Tile[] forceOfLightTiles;
+    [SerializeField] public Tile water;
+    
+    [SerializeField] public Tile bridge;
 
-    [SerializeField] Tile[] forceOfDarknessTiles;
+    [SerializeField] private Tilemap forceOfLight;
+    
+    [SerializeField] private Tilemap forceOfDarkness;
+    
+    private int TotalAmountTiles { get => width * height;}
+    private int partLight { get => TotalAmountTiles / 2;}
 
-    public static Dictionary<Vector3Int, Vector3Int> dictionaryTile = new Dictionary<Vector3Int, Vector3Int>();
-
-
-    public int TotalAmountTiles { get => weight * height; private set => TotalAmountTiles = value; }
-    public int partLight { get => TotalAmountTiles / 2; private set => partLight = value; }
-    public int partDarkness { get => TotalAmountTiles / 2; private set => partDarkness = value; }
-
-    int count = 0;
-    int bridgePosY = 10;
-    int localX;
+    private int count = 0;
 
     private int darknessX;
-    private int darknessY;
-    public int GetRandomSize(int min, int max)
-    {
-        return Random.Range(min, max);
-    }
-    private void Awake()
-    {
-        RandomShiftLeftWater = GetRandomSize(1, 5);
-        RandomShiftRightWater = GetRandomSize(1,5);
-    }
+    
     public int RandomShiftLeftWater;
 
     public int RandomShiftRightWater;
 
+    private int bridgeStartBuildX;
+
+    private int bridgeLastBuildX;
+
+    private int randomBridgeY;
+    [field: SerializeField] public int AmountBridge { get; private set; }
+    #endregion
+
+    #region Awake
+    private void Awake()
+    {
+        Instance = this;
+        RandomShiftLeftWater = GetRandomSize(1, 5);
+        RandomShiftRightWater = GetRandomSize(1,5);
+        randomBridgeY = GetRandomSize(1, height);
+    }
+    #endregion
+
     private void Start()
     {
-        for (int x = 0; x < height && count < partLight; x++)
+        PartOfLight();
+        PartOfDarkness();
+        BridgeSpawn();
+    }
+
+    #region GetRandomSize
+    public int GetRandomSize(int min, int max) => Random.Range(min, max);
+    #endregion
+   
+    #region BridgeSpawn
+    public void BridgeSpawn()
+    {
+        int countBridge = 0;
+
+        while (AmountBridge > countBridge)
         {
-            darknessX = x;
-
-            for (int y = 0; y < weight && count < partLight; y++)
+            for (int x = bridgeStartBuildX; x <= bridgeLastBuildX; x++)
             {
-                count++;
-
-                forceOfLight.SetTile(new Vector3Int(x, y, 1), forceOfLightTiles[Random.Range(0, forceOfLightTiles.Length)]);
-                
-                if (x > weight / 2 - RandomShiftLeftWater && x <= weight / 2)
+                for (int y = 0; y < height; y++)
                 {
-                   forceOfLight.SetTile(new Vector3Int(x, y, 1), null);
-                   
-                   waterTileMap.SetTile(new Vector3Int(x, y, 0), water);
+                    if (randomBridgeY == y)
+                    {
+                        bridgeTileMap.SetTile(new Vector3Int(x, y, 1), bridge);
+                    }
                 }
-
-                //if (y == bridgePosY && x >= 10 && x <= 15)
-                //{
-                //    bridgeTileMap.SetTile(new Vector3Int(x, y, 1), bridge);
-                //}
-                darknessY = y;
             }
+
+            countBridge++;
+
+            randomBridgeY = GetRandomSize(1, height);
         }
+    }
+    #endregion
+
+    #region PartOfDarkness
+    private void PartOfDarkness()
+    {
         count = 0;
 
-        for (int darkX = darknessX; count < 1250; darkX++)
+        for (int darkX = width / 2; darkX < width; darkX++)
         {
-            for (int darkY = 0; darkY < weight; darkY++)
+            for (int darkY = 0; darkY < height; darkY++)
             {
-                if (darkX < (weight / 2 + RandomShiftRightWater))
+                if (darkX < (width / 2 + RandomShiftRightWater))
                 {
                     forceOfDarkness.SetTile(new Vector3Int(darkX, darkY, 1), null);
 
                     waterTileMap.SetTile(new Vector3Int(darkX, darkY, 0), water);
+                    
+                    if (bridgeStartBuildX == 0)
+                    {
+                        bridgeStartBuildX = darkX;
+                    }
+                    if (darkX + 1 >= (width / 2 + RandomShiftRightWater))
+                    {
+                        bridgeLastBuildX = darkX;
+                    }
                 }
                 else
                 {
@@ -92,4 +125,34 @@ public class GenerateLevel : MonoBehaviour
             }
         }
     }
+    #endregion
+
+    #region PartOfLight
+    private void PartOfLight()
+    {
+        for (int x = 0; x < width / 2; x++)
+        {
+            darknessX = x;
+
+            for (int y = 0; y < height; y++)
+            {
+                count++;
+
+                forceOfLight.SetTile(new Vector3Int(x, y, 1), forceOfLightTiles[Random.Range(0, forceOfLightTiles.Length)]);
+                
+                if (x > width / 2 - RandomShiftLeftWater && x <= width / 2)
+                {
+                    forceOfLight.SetTile(new Vector3Int(x, y, 1), null);
+
+                    waterTileMap.SetTile(new Vector3Int(x, y, 0), water);
+
+                    if (bridgeStartBuildX == 0)
+                    {
+                        bridgeStartBuildX = x;
+                    }
+                }
+            }
+        }
+    }
+    #endregion
 }

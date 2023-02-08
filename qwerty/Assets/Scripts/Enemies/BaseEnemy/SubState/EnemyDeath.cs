@@ -5,7 +5,7 @@ using UnityEngine.Tilemaps;
 namespace Assets.Enemies.BaseEnemy
 {
     [System.Serializable]
-    public class EnemyDeath
+    public class EnemyDeath : IDying
     {
         private GameObject currentObject;
         private BaseEntity.BaseEntity baseEntity;
@@ -18,15 +18,17 @@ namespace Assets.Enemies.BaseEnemy
         }
 
         #region Death
-        public void Death(float destroyTime, GameObject prefabGrave, Collider2D collider2D)
+        public void Death(float destroyTime)
         {
-            Vector3 centerTilePosition = StaticFunction.StaticFunction.SetPositionOnTheCenterTile(groundTileMap, currentObject.transform.position);
+            Vector3 centerTilePosition = 
+                StaticFunction.StaticFunction.SetPositionOnTheCenterTile(groundTileMap,
+                currentObject.transform.position);
 
-            SpawnGrave(prefabGrave, centerTilePosition);
+            SpawnGrave(baseEntity.prefabGrave, centerTilePosition);
 
             SpawnEffect(baseEntity.prefabEffectDeath, centerTilePosition);
 
-            SetActiveComponent(collider2D, destroyTime);
+            SetActiveComponent(currentObject.GetComponent<Collider2D>(), destroyTime);
         }
         #endregion
 

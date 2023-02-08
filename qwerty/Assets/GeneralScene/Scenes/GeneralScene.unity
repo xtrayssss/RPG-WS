@@ -154,7 +154,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weight: 50
   height: 50
-  tilemap: {fileID: 756111658}
   bridgeTileMap: {fileID: 1320552259}
   waterTileMap: {fileID: 682688030}
   water: {fileID: 11400000, guid: 28a0477cd3ec448488e92550cb3a1445, type: 2}
@@ -180,8 +179,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: aafdb7d5f55a1db48a118dd2050ed397, type: 2}
   - {fileID: 11400000, guid: 0a9c059623b81eb4cbbbc6f270106cec, type: 2}
   - {fileID: 11400000, guid: 59239733f6cf9bc4a9fe4143318b0e56, type: 2}
-  RandomShiftLeftWater: 0
-  RandomShiftRightWater: 0
+  <AmountBridge>k__BackingField: 7
 --- !u!4 &170312770
 Transform:
   m_ObjectHideFlags: 0
@@ -268,8 +266,8 @@ TilemapRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -136340397
-  m_SortingLayer: 7
+  m_SortingLayerID: 682537837
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
@@ -624,8 +622,8 @@ TilemapRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -136340397
-  m_SortingLayer: 7
+  m_SortingLayerID: 682537837
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
@@ -829,8 +827,8 @@ TilemapRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1294421997
-  m_SortingLayer: 3
-  m_SortingOrder: 0
+  m_SortingLayer: 4
+  m_SortingOrder: 10
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16

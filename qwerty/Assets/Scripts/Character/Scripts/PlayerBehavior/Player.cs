@@ -23,7 +23,9 @@ namespace Assets.Character.Scripts
         [SerializeField] private Tilemap groundTileMap;
         
         [SerializeField] private Tilemap bridgeTileMap;
-        
+
+        [SerializeField] private Tilemap evilTileMap;
+
         private PlayerInputHandler inputHandler;
 
         private PlayerDeath playerDeath;
@@ -40,7 +42,7 @@ namespace Assets.Character.Scripts
 
             player = GetComponent<PlayerInputHandler>();
 
-            playerMove = new PlayerMove(transform, player, PlayerData, groundTileMap, bridgeTileMap, animationManager, this);
+            playerMove = new PlayerMove(transform, player, PlayerData, groundTileMap, bridgeTileMap, animationManager, this, evilTileMap);
             
             FlipPlayer = new FlipPlayer(transform, playerMove, inputHandler);
 
@@ -48,7 +50,7 @@ namespace Assets.Character.Scripts
 
             attackPlayer = new AttackPlayer(PlayerData, inputHandler, animationManager, this);
 
-            playerDeath = new PlayerDeath(gameObject, _collider2D);
+            playerDeath = new PlayerDeath(gameObject, _collider2D, groundTileMap);
         }
         #endregion
 
@@ -57,6 +59,8 @@ namespace Assets.Character.Scripts
 
         [HideInInspector] public List<Collider2D> hittObjects = new List<Collider2D>();
         public Vector2 CurrentMoveInput { get; set; }
+
+        [field: SerializeField] public GameObject prefabGrave { get; set; }
         #endregion
 
         private void Awake()
@@ -65,7 +69,9 @@ namespace Assets.Character.Scripts
 
             InitializeDependency();
 
-            transform.position = StaticFunction.StaticFunction.SetPositionOnTheCenterTile(groundTileMap,transform.position);
+            Vector3Int randomPositionTile = StaticFunction.StaticFunction.GetRandomTileLeft(GenerateLevel.Instance.width / 2 - GenerateLevel.Instance.RandomShiftLeftWater, GenerateLevel.Instance.height);
+
+            transform.position = groundTileMap.CellToLocal(randomPositionTile);
 
             PlayerData.CurrentHealth = PlayerData.MaxHealth;
 
@@ -105,7 +111,7 @@ namespace Assets.Character.Scripts
                     HurtState();
                     break;
                 case State.Death:
-                    DeathState(0);
+                    Death(0);
                     break;
                 default:
                     break;
@@ -167,9 +173,9 @@ namespace Assets.Character.Scripts
         #endregion
 
         #region DeathState
-        public void DeathState(float destroyTime)
+        public void Death(float destroyTime)
         {
-            playerDeath.DeathState(destroyTime);
+            playerDeath.Death(destroyTime);
         }
         #endregion
 

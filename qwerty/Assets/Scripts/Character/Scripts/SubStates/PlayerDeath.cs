@@ -1,5 +1,6 @@
 ﻿using Assets.Interfaces;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
 namespace Assets.Character.Scripts
 {
@@ -7,19 +8,25 @@ namespace Assets.Character.Scripts
     {
         private GameObject playerGameOject;
         private Collider2D collider2D;
-        public PlayerDeath(GameObject playerGameOject, Collider2D collider2D)
+        private Tilemap groundTileMap;
+        public PlayerDeath(GameObject playerGameOject, Collider2D collider2D, Tilemap groundTileMap)
         {
             this.playerGameOject = playerGameOject;
             this.collider2D = collider2D;
+            this.groundTileMap = groundTileMap;
         }
 
-        public void DeathState(float destroyTime)
+        public void Death(float destroyTime)
         {
             collider2D.enabled = false;
 
-            if (CheckDestroyTimer(destroyTime)) playerGameOject.SetActive(false);
+            Vector3 gravePosition = 
+                StaticFunction.StaticFunction.SetPositionOnTheCenterTile(groundTileMap, 
+                playerGameOject.transform.position);
 
-            //GameObject.Destroy(playerGameOject.GetComponent<Player>(), destroyTime); 
+            SpawnGrave(playerGameOject.GetComponent<Player>().prefabGrave, gravePosition);
+
+            if (CheckDestroyTimer(destroyTime)) playerGameOject.SetActive(false);
         }
         private bool CheckDestroyTimer(float destroyTime)
         {
@@ -27,5 +34,7 @@ namespace Assets.Character.Scripts
 
             return destroyTime <= 0; 
         }
+        public void SpawnGrave(GameObject prefabGrave, Vector3 position) => 
+            GameObject.Instantiate(prefabGrave, position, Quaternion.identity);
     }
 }

@@ -65,7 +65,7 @@ namespace Assets.Enemies.BaseEntity
         {
             InitializeDependency();
 
-            transform.position = StaticFunction.StaticFunction.SetPositionOnTheCenterTile(groundTileMap, transform.position);
+            //transform.position = StaticFunction.StaticFunction.SetPositionOnTheCenterTile(groundTileMap, transform.position);
             
             EnemyData.Health = EnemyData.MaxHealth;
 
@@ -84,10 +84,12 @@ namespace Assets.Enemies.BaseEntity
         }
         #endregion
 
-
-
         protected virtual void Awake()
         {
+            Vector3Int randomPositionTile = StaticFunction.StaticFunction.GetRandomTileRight(GenerateLevel.Instance.width, GenerateLevel.Instance.height);
+
+            transform.position = groundTileMap.CellToLocal(randomPositionTile);
+
             Init();
         }
         protected virtual void Update()
@@ -193,7 +195,7 @@ namespace Assets.Enemies.BaseEntity
         #region DieEnemyState
         protected virtual void DieEnemy()
         {
-            DeathState(0);
+            Death(0);
         }
         #endregion
        
@@ -213,9 +215,9 @@ namespace Assets.Enemies.BaseEntity
         #endregion
 
         #region DeathState
-        public void DeathState(float destroyTime)
+        public void Death(float destroyTime)
         {
-            EnemyDeath.Death(destroyTime, prefabGrave, _collider2D);
+            EnemyDeath.Death(destroyTime);
         }
         #endregion
     }

@@ -1,7 +1,9 @@
-﻿namespace Assets.Interfaces
+﻿using UnityEngine;
+
+namespace Assets.Interfaces
 {
-    interface IDying
+    public interface IDying
     {
-        void DeathState(float destroyTime);
+        void Death(float destroyTime);
     }
 }

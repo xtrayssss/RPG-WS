@@ -7,7 +7,7 @@ namespace Assets.Behavior
     {
         private void DeathBehavior(IDying dying, float timeDestroy)
         {
-            dying.DeathState(timeDestroy);
+            dying.Death(timeDestroy);
         }
     }
 }

@@ -10,6 +10,7 @@ namespace Assets.Character.Scripts
         private PlayerData.PlayerData playerData;
         private Tilemap groundTileMap;
         private Tilemap bridgeTileMap;
+        private Tilemap evilTileMap;
         private AnimationManager.AnimationManager animationManager;
         private Player playerBehavior;
         #endregion
@@ -27,12 +28,13 @@ namespace Assets.Character.Scripts
         public Vector2 CurrentMoveInput { get; set; }
 
         private const float DirectionPositionX = 0.72f;
-        private const float DirectionPositionY = 0.81f - 0.18f;
+        private const float DirectionPositionY = 0.81f - 0.20f;
         #endregion
 
         public PlayerMove(Transform currentTransform, PlayerInputHandler player,
             PlayerData.PlayerData playerData, Tilemap groundTileMap, 
-            Tilemap bridgeTileMap, AnimationManager.AnimationManager animationManager,Player playerBehavior)
+            Tilemap bridgeTileMap, AnimationManager.AnimationManager animationManager,
+            Player playerBehavior, Tilemap evilTileMap)
         {
             this.currentTransform = currentTransform;
             this.player = player;
@@ -41,6 +43,7 @@ namespace Assets.Character.Scripts
             this.bridgeTileMap = bridgeTileMap;
             this.animationManager = animationManager;
             this.playerBehavior = playerBehavior;
+            this.evilTileMap = evilTileMap;
         }
         public PlayerMove() { }
 
@@ -136,7 +139,7 @@ namespace Assets.Character.Scripts
         #region CheckCollision
         public bool CheckCollision(Vector3Int targetPositionInt)
         {
-            return !groundTileMap.HasTile(targetPositionInt) && !bridgeTileMap.HasTile(targetPositionInt);
+            return !groundTileMap.HasTile(targetPositionInt) && !bridgeTileMap.HasTile(targetPositionInt) && !evilTileMap.HasTile(targetPositionInt);
         }
         #endregion
     }
