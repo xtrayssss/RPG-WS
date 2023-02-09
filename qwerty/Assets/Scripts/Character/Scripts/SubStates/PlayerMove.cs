@@ -109,7 +109,7 @@ namespace Assets.Character.Scripts
                     if (player.moveInput == Vector2.zero)
                     {
                         currentState = State.Idle;
-                        Debug.Log(123);
+                        //Debug.Log(123);
                     }
                 }
             }

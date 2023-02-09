@@ -27,6 +27,10 @@ public class GenerateLevel : MonoBehaviour
     [SerializeField] private Tilemap forceOfLight;
     
     [SerializeField] private Tilemap forceOfDarkness;
+
+    [SerializeField] private Tilemap fogTileMap;
+
+    [SerializeField] private Tile fogTile;
     
     private int TotalAmountTiles { get => width * height;}
     private int partLight { get => TotalAmountTiles / 2;}
@@ -82,6 +86,8 @@ public class GenerateLevel : MonoBehaviour
                     if (randomBridgeY == y)
                     {
                         bridgeTileMap.SetTile(new Vector3Int(x, y, 1), bridge);
+                        fogTileMap.SetTile(new Vector3Int(x, y, 1), fogTile);
+
                     }
                 }
             }
@@ -104,6 +110,8 @@ public class GenerateLevel : MonoBehaviour
             {
                 if (darkX < (width / 2 + RandomShiftRightWater))
                 {
+                    fogTileMap.SetTile(new Vector3Int(darkX, darkY, 1), fogTile);
+
                     forceOfDarkness.SetTile(new Vector3Int(darkX, darkY, 1), null);
 
                     waterTileMap.SetTile(new Vector3Int(darkX, darkY, 0), water);
@@ -120,6 +128,8 @@ public class GenerateLevel : MonoBehaviour
                 else
                 {
                     forceOfDarkness.SetTile(new Vector3Int(darkX, darkY, 1), forceOfDarknessTiles[Random.Range(0, forceOfDarknessTiles.Length)]);
+                    
+                    fogTileMap.SetTile(new Vector3Int(darkX, darkY, 1), fogTile);
                 }
                 count++;
             }
@@ -137,12 +147,15 @@ public class GenerateLevel : MonoBehaviour
             for (int y = 0; y < height; y++)
             {
                 count++;
+                fogTileMap.SetTile(new Vector3Int(x, y, 1), fogTile);
 
                 forceOfLight.SetTile(new Vector3Int(x, y, 1), forceOfLightTiles[Random.Range(0, forceOfLightTiles.Length)]);
                 
                 if (x > width / 2 - RandomShiftLeftWater && x <= width / 2)
                 {
                     forceOfLight.SetTile(new Vector3Int(x, y, 1), null);
+                    
+                    fogTileMap.SetTile(new Vector3Int(x, y, 1), fogTile);
 
                     waterTileMap.SetTile(new Vector3Int(x, y, 0), water);
 

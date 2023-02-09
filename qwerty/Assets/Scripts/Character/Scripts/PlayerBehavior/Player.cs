@@ -33,6 +33,18 @@ namespace Assets.Character.Scripts
         private Collider2D _collider2D;
 
         [SerializeField] private Transform GFX;
+
+        int startPositionX = 0;
+
+        int lastPositionX = 0;
+
+        int startPositionY = 0;
+
+        int lastPositionY = 0;
+
+        [SerializeField] private Tilemap fogTileMap;
+        [SerializeField] private Tile fogTile;
+        float coolDownAttack = 0f;
         #endregion
 
         #region InitializeDependency
@@ -87,13 +99,16 @@ namespace Assets.Character.Scripts
             PlayerData.CurrentHealth = PlayerData.MaxHealth;
 
             playerMove.targetPosition = transform.position;
+
+            SetSizeRewiev();
         }
 
         private void Start()
         {
             playerMove.Initialize();
             
-            attackPlayer.Initialize();  
+            attackPlayer.Initialize();
+
         }
         private void Update()
         {
@@ -113,6 +128,7 @@ namespace Assets.Character.Scripts
                     break;
                 case State.Move:
                     animationManager.MoveAnimation();
+                    RemoveFog();
                     playerMove.Tick(ref currentState);
                     break;
                 case State.Attack:
@@ -148,9 +164,11 @@ namespace Assets.Character.Scripts
         {
             injuredPlayer.AcceptDamage(damage);
 
-            currentState = State.Hurt;
-
-            PlayerData.IsHurt = true;
+            if (playerMove.CheckTargetPosition())
+            {
+                currentState = State.Hurt;
+                PlayerData.IsHurt = true;
+            }
         }
         #endregion
 
@@ -159,9 +177,13 @@ namespace Assets.Character.Scripts
         {
             animationManager.IdleAnimation();
 
-            if (attackPlayer.CheckAttack(transform.position, playerMove.targetPosition))
+            PlayerData.TimerCoolDownAttack -= Time.deltaTime;
+
+            if (attackPlayer.CheckAttack(transform.position, playerMove.targetPosition) && PlayerData.TimerCoolDownAttack <= 0)
             {
                 currentState = State.Attack;
+
+                PlayerData.TimerCoolDownAttack = PlayerData.TimerTotalCoolDownAttack;
             }
 
             if (inputHandler.moveInput != Vector2.zero && !attackPlayer.CheckAttack(transform.position, playerMove.targetPosition))
@@ -264,13 +286,39 @@ namespace Assets.Character.Scripts
             CheckRay(downRay.position, new Vector3(-playerMove.DirectionPositionY, -playerMove.DirectionPositionX), rayLength, enemyMask, raycastHitDown, Direction.Down);
         }
 
-        private void OnDrawGizmos()
+        private void SetSizeRewiev()
         {
-            Gizmos.DrawRay(rightRay.position, Vector2.right * rayLength);
-            Gizmos.DrawRay(leftRay.position, Vector2.left * rayLength);
+            startPositionX = groundTileMap.WorldToCell(transform.position).x - 2;
 
-            Gizmos.DrawRay(topRay.position, new Vector3(playerMove.DirectionPositionY, playerMove.DirectionPositionX - 0.4f));
-            Gizmos.DrawRay(downRay.position, new Vector3(-playerMove.DirectionPositionY, -playerMove.DirectionPositionX));
+            lastPositionX = groundTileMap.WorldToCell(transform.position).x + 2;
+            
+            startPositionY = groundTileMap.WorldToCell(transform.position).y - 2;
+
+            lastPositionY = groundTileMap.WorldToCell(transform.position).y + 2;
+
+
+            Debug.Log(startPositionX);
+            Debug.Log(lastPositionX);
+
+            Debug.Log(startPositionY);
+            Debug.Log(lastPositionY);
+        }
+        private void RemoveFog()
+        {
+            for (int x = startPositionX; x < lastPositionX; x++)
+            {
+                for (int y = startPositionY; y < lastPositionY; y++)
+                {
+                    //Debug.Log(x);
+                    fogTileMap.SetTile(new Vector3Int(x,y,1), null);
+                }
+            }
+            int testStartX = startPositionX;
+            int testLastX = lastPositionX;
+            int testStartY = startPositionY;
+            int testlastY = lastPositionY;
+
+            SetSizeRewiev();
         }
     }
 

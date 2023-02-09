@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: PlayerData
   m_EditorClassIdentifier: 
   speedMove: 1
-  maxHealth: 1000
+  maxHealth: 20
   damage: 1
   totalDelaySeconds: 0
   isHurt: 0
+  timerTotalCoolDownAttack: 0.2

@@ -63,6 +63,9 @@ TagManager:
   - name: Enemies
     uniqueID: 4154349429
     locked: 0
+  - name: FogTileMap
+    uniqueID: 1074423129
+    locked: 0
   - name: PlayerLayer
     uniqueID: 4158626899
     locked: 0

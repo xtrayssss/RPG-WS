@@ -65,8 +65,6 @@ namespace Assets.Enemies.BaseEntity
         private void Init()
         {
             InitializeDependency();
-
-            //transform.position = StaticFunction.StaticFunction.SetPositionOnTheCenterTile(groundTileMap, transform.position);
             
             EnemyData.Health = EnemyData.MaxHealth;
 
@@ -98,8 +96,6 @@ namespace Assets.Enemies.BaseEntity
             SwitcherState();
 
             flipEnemy.FlipRealize();
-
-            //Debug.Log(currentState);
         }
 
         #region SwitcherState
@@ -121,9 +117,6 @@ namespace Assets.Enemies.BaseEntity
                     break;
                 case State.Move:
                     Move();
-                    break;
-                case State.BeforeAttack:
-                    BeforeAttackState();
                     break;
                 default:
                     break;
@@ -160,14 +153,8 @@ namespace Assets.Enemies.BaseEntity
         #region AttackState
         protected virtual void Attack()
         {
-
-            //if (player.moveInput != Vector2.zero && EnemyData.IsEnterAgroZone)
-            //{
-            //    Debug.Log("sfd");
-            //    currentState = State.BeforeAttack;
-            //    return;
-            //}
             _animation.AttackAnimation();
+
             if (EnemyData.IsHurt)
             {
                 currentState = State.Hurt;
@@ -200,6 +187,10 @@ namespace Assets.Enemies.BaseEntity
             {
                 currentState = State.Attack;
             }
+            if (!EnemyData.IsHurt && !EnemyData.IsEnterAttackZone && !EnemyData.IsEnterAgroZone)
+            {
+                currentState = State.Idle;
+            }
         }
         #endregion
 
@@ -215,6 +206,7 @@ namespace Assets.Enemies.BaseEntity
         {
             enemyAccepted.AcceptDamage(damage);
             EnemyData.IsHurt = true;
+            currentState = State.Hurt;
         }
         #endregion
 
@@ -231,14 +223,5 @@ namespace Assets.Enemies.BaseEntity
             EnemyDeath.Death(destroyTime);
         }
         #endregion
-        private void BeforeAttackState()
-        {
-            _animation.IdleAnimation();
-
-            if (playerBehavior.playerMove.CheckTargetPosition())
-            {
-                Debug.Log("isReachedTargetPosition");
-            }
-        }
     }
 }
