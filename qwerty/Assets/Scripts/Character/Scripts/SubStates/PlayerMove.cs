@@ -17,8 +17,7 @@ namespace Assets.Character.Scripts
 
         #region Variables
         private bool hasMoved { get; set; } = true;
-
-        private Vector2 direction;
+        public Vector2 direction;
         public Vector3 targetPosition;
         private Vector3Int targetPositionInt;
         private float delaySeconds;
@@ -27,8 +26,9 @@ namespace Assets.Character.Scripts
 
         public Vector2 CurrentMoveInput { get; set; }
 
-        private const float DirectionPositionX = 0.72f;
-        private const float DirectionPositionY = 0.81f - 0.20f;
+        public float DirectionPositionX = 0.72f;
+
+        public float DirectionPositionY = 0.81f - 0.20f;
         #endregion
 
         public PlayerMove(Transform currentTransform, PlayerInputHandler player,
@@ -96,7 +96,7 @@ namespace Assets.Character.Scripts
         #region ReachedTargetPositon
         private void ReachedTargetPositon(ref State currentState)
         {
-            if (currentTransform.position == targetPosition)
+            if (CheckTargetPosition())
             {
                 delaySeconds -= Time.deltaTime;
 
@@ -109,6 +109,7 @@ namespace Assets.Character.Scripts
                     if (player.moveInput == Vector2.zero)
                     {
                         currentState = State.Idle;
+                        Debug.Log(123);
                     }
                 }
             }
@@ -126,13 +127,40 @@ namespace Assets.Character.Scripts
         #region SetDirection
         private void SetDirection(ref Vector2 direction)
         {
-            if (player.moveInput.x < 0.0f) direction = new Vector2(-DirectionPositionX, 0);
+            if (player.moveInput.x < 0.0f && Player.DirectionsChecks[((int)Direction.left)])
+            {
+                direction = Vector2.zero;
+            }
+            else
+            {
+                if (player.moveInput.x < 0.0f) direction = new Vector2(-DirectionPositionX, 0);
+            }
 
-            if (player.moveInput.x > 0.0f) direction = new Vector2(DirectionPositionX, 0);
+            if (player.moveInput.x > 0.0f && Player.DirectionsChecks[((int)Direction.Right)])
+            {
+                direction = Vector2.zero;
+            }
+            else
+            {
+                if (player.moveInput.x > 0.0f) direction = new Vector2(DirectionPositionX, 0);
+            }
+            if (player.moveInput.y > 0.0f && Player.DirectionsChecks[((int)Direction.Top)])
+            {
+                direction = Vector2.zero;
+            }
+            else
+            {
+                if (player.moveInput.y > 0.0f) direction = new Vector2(DirectionPositionX / 2.0f, DirectionPositionY);
+            }
+            if (player.moveInput.y < 0.0f && Player.DirectionsChecks[((int)Direction.Down)])
+            {
+                direction = Vector2.zero;
+            }
+            else
+            {
+                if (player.moveInput.y < 0.0f) direction = new Vector2(-DirectionPositionX / 2.0f, -DirectionPositionY);
+            }
 
-            if (player.moveInput.y < 0.0f) direction = new Vector2(-DirectionPositionX / 2.0f, -DirectionPositionY);
-
-            if (player.moveInput.y > 0.0f) direction = new Vector2(DirectionPositionX / 2.0f, DirectionPositionY);
         }
         #endregion
 
@@ -142,5 +170,10 @@ namespace Assets.Character.Scripts
             return !groundTileMap.HasTile(targetPositionInt) && !bridgeTileMap.HasTile(targetPositionInt) && !evilTileMap.HasTile(targetPositionInt);
         }
         #endregion
+
+        public bool CheckTargetPosition()
+        {
+            return currentTransform.position == targetPosition;
+        }
     }
 }

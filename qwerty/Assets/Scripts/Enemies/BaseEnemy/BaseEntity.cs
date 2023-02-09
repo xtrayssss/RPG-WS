@@ -5,6 +5,7 @@ using Assets.Interfaces;
 using UnityEngine.Tilemaps;
 using System.Collections.Generic;
 using Assets.Enemies.BaseEnemy;
+using System;
 
 namespace Assets.Enemies.BaseEntity
 {
@@ -52,7 +53,7 @@ namespace Assets.Enemies.BaseEntity
             player = FindObjectOfType<PlayerInputHandler>();
             playerMove = new PlayerMove();
             playerBehavior = FindObjectOfType<Player>();
-            moveEnemy = new MoveEnemy(transform, player, _animation, groundTileMap, bridgeTileMap, EnemyData);
+            moveEnemy = new MoveEnemy(transform, player, _animation, groundTileMap, bridgeTileMap, EnemyData, ref currentState, playerBehavior);
             flipEnemy = new FlipEnemy(transform, playerBehavior);
             zoneCheckerEnemy = new ZoneCheckerEnemy(EnemyData);
             EnemyTakeDamage = new EnemyTakeDamage(EnemyData, hittObjects);
@@ -98,7 +99,7 @@ namespace Assets.Enemies.BaseEntity
 
             flipEnemy.FlipRealize();
 
-            Debug.Log(currentState);
+            //Debug.Log(currentState);
         }
 
         #region SwitcherState
@@ -121,10 +122,14 @@ namespace Assets.Enemies.BaseEntity
                 case State.Move:
                     Move();
                     break;
+                case State.BeforeAttack:
+                    BeforeAttackState();
+                    break;
                 default:
                     break;
             }
         }
+
         #endregion
 
         #region IdleState
@@ -155,8 +160,14 @@ namespace Assets.Enemies.BaseEntity
         #region AttackState
         protected virtual void Attack()
         {
-            _animation.AttackAnimation();
 
+            //if (player.moveInput != Vector2.zero && EnemyData.IsEnterAgroZone)
+            //{
+            //    Debug.Log("sfd");
+            //    currentState = State.BeforeAttack;
+            //    return;
+            //}
+            _animation.AttackAnimation();
             if (EnemyData.IsHurt)
             {
                 currentState = State.Hurt;
@@ -220,5 +231,14 @@ namespace Assets.Enemies.BaseEntity
             EnemyDeath.Death(destroyTime);
         }
         #endregion
+        private void BeforeAttackState()
+        {
+            _animation.IdleAnimation();
+
+            if (playerBehavior.playerMove.CheckTargetPosition())
+            {
+                Debug.Log("isReachedTargetPosition");
+            }
+        }
     }
 }

@@ -8,7 +8,7 @@ namespace Assets.Character.Scripts
     public class Player : MonoBehaviour, IDamagable, IDying
     {
         #region Dependency
-        private PlayerMove playerMove;
+        public PlayerMove playerMove { get; set; }
 
         public FlipPlayer FlipPlayer { get; set; }
 
@@ -31,6 +31,8 @@ namespace Assets.Character.Scripts
         private PlayerDeath playerDeath;
 
         private Collider2D _collider2D;
+
+        [SerializeField] private Transform GFX;
         #endregion
 
         #region InitializeDependency
@@ -44,7 +46,7 @@ namespace Assets.Character.Scripts
 
             playerMove = new PlayerMove(transform, player, PlayerData, groundTileMap, bridgeTileMap, animationManager, this, evilTileMap);
             
-            FlipPlayer = new FlipPlayer(transform, playerMove, inputHandler);
+            FlipPlayer = new FlipPlayer(transform, playerMove, inputHandler, GFX);
 
             injuredPlayer = new InjuredPlayer(PlayerData, animationManager);
 
@@ -59,8 +61,17 @@ namespace Assets.Character.Scripts
 
         [HideInInspector] public List<Collider2D> hittObjects = new List<Collider2D>();
         public Vector2 CurrentMoveInput { get; set; }
-
         [field: SerializeField] public GameObject prefabGrave { get; set; }
+        
+        [SerializeField] private float rayLength;
+
+        [SerializeField] private Transform rightRay;
+        [SerializeField] private Transform leftRay;
+        [SerializeField] private Transform topRay;
+        [SerializeField] private Transform downRay;
+        [SerializeField] private LayerMask enemyMask;
+
+        [field: SerializeField] public static bool[] DirectionsChecks { get; set; } = new bool[4];
         #endregion
 
         private void Awake()
@@ -87,10 +98,10 @@ namespace Assets.Character.Scripts
         private void Update()
         {
             FlipPlayer.Tick();
-            
+            Raycast();
             CheckState();
-            Debug.Log(inputHandler.moveInput);
-            //Debug.Log(currentState);
+            //Debug.Log(inputHandler.moveInput);
+            Debug.Log(currentState);
         }
 
         private void CheckState()
@@ -115,6 +126,20 @@ namespace Assets.Character.Scripts
                     break;
                 default:
                     break;
+            }
+        }
+
+        public void CheckRay(Vector3 startPosition, Vector3 targetPosition, float rayLength, LayerMask enemyMask, RaycastHit2D raycastHit2D, Direction enumDirection)
+        {
+            raycastHit2D = Physics2D.Raycast(startPosition, targetPosition, rayLength, enemyMask);
+
+            if (raycastHit2D.collider != null)
+            {
+                DirectionsChecks[((int)enumDirection)] = true;
+            }
+            else
+            {
+                DirectionsChecks[((int)enumDirection)] = false;
             }
         }
 
@@ -144,7 +169,7 @@ namespace Assets.Character.Scripts
                 currentState = State.Move;
             }
 
-            if (PlayerData.IsHurt)
+            if (PlayerData.IsHurt && player.moveInput == Vector2.zero)
             {
                 currentState = State.Hurt;
             }
@@ -216,6 +241,46 @@ namespace Assets.Character.Scripts
             }
         }
         #endregion
+
+        public void Raycast()
+        {
+            RaycastHit2D raycastHitRight = new RaycastHit2D();
+
+            CheckRay(rightRay.position, Vector3.right, rayLength, enemyMask, raycastHitRight, Direction.Right);
+
+            
+            RaycastHit2D raycastHitleft = new RaycastHit2D();
+
+            CheckRay(leftRay.position, Vector3.left, rayLength, enemyMask, raycastHitleft, Direction.left);
+
+
+            RaycastHit2D raycastHitTop = new RaycastHit2D();
+
+            CheckRay(topRay.position, new Vector3(playerMove.DirectionPositionY, playerMove.DirectionPositionX - 0.4f), rayLength, enemyMask, raycastHitTop, Direction.Top);
+
+
+            RaycastHit2D raycastHitDown = new RaycastHit2D();
+           
+            CheckRay(downRay.position, new Vector3(-playerMove.DirectionPositionY, -playerMove.DirectionPositionX), rayLength, enemyMask, raycastHitDown, Direction.Down);
+        }
+
+        private void OnDrawGizmos()
+        {
+            Gizmos.DrawRay(rightRay.position, Vector2.right * rayLength);
+            Gizmos.DrawRay(leftRay.position, Vector2.left * rayLength);
+
+            Gizmos.DrawRay(topRay.position, new Vector3(playerMove.DirectionPositionY, playerMove.DirectionPositionX - 0.4f));
+            Gizmos.DrawRay(downRay.position, new Vector3(-playerMove.DirectionPositionY, -playerMove.DirectionPositionX));
+        }
     }
+
+}
+
+public enum Direction
+{
+    Right,
+    left,
+    Top,
+    Down
 }
 

@@ -7,5 +7,6 @@
         Attack,
         Hurt,
         Death,
+        BeforeAttack
     }
 }

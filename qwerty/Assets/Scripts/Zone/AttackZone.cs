@@ -13,10 +13,13 @@ namespace Assets.Zone.AttackZone
         protected override void OnTriggerEnter2D(Collider2D collision)
         {
             base.OnTriggerEnter2D(collision);
-
-            if (!baseEntity.hittObjects.Contains(collision))
+           
+            if (collision.tag == "Player")
             {
-                baseEntity.hittObjects.Add(collision);
+                if (!baseEntity.hittObjects.Contains(collision))
+                {
+                    baseEntity.hittObjects.Add(collision);
+                }
             }
         }
 
@@ -24,7 +27,13 @@ namespace Assets.Zone.AttackZone
         {
             base.OnTriggerExit2D(collision);
 
-           baseEntity.hittObjects.Clear();
+            if (collision.tag == "Player")
+            {
+                if (!baseEntity.hittObjects.Contains(collision))
+                {
+                    baseEntity.hittObjects.Clear();
+                }
+            }
         }
 
     }
